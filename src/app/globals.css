@@ -1,0 +1,77 @@
+@import "tailwindcss";
+
+@theme inline {
+  /* Brand Colors - Sky Blue (from logo #7dd3e8) */
+  --color-cyan-50: #eef9fc;
+  --color-cyan-100: #d4f0f7;
+  --color-cyan-200: #a8e4f0;
+  --color-cyan-300: #7dd3e8;
+  --color-cyan-400: #5ac4de;
+  --color-cyan-500: #3ab0d0;
+  --color-cyan-600: #2d93b0;
+  --color-cyan-700: #237490;
+  --color-cyan-800: #1a5670;
+  --color-cyan-900: #113a4d;
+
+  /* Brand Colors - Navy */
+  --color-navy-50: #eef2f5;
+  --color-navy-100: #c9d5de;
+  --color-navy-200: #a4b8c7;
+  --color-navy-300: #6d8da3;
+  --color-navy-400: #3d6580;
+  --color-navy-500: #0c1f2e;
+  --color-navy-600: #0a1a27;
+  --color-navy-700: #081420;
+  --color-navy-800: #060f18;
+  --color-navy-900: #040a10;
+
+  /* Font Families */
+  --font-rubik: var(--font-rubik), "Rubik", sans-serif;
+  --font-questrial: var(--font-questrial), "Questrial", sans-serif;
+
+  /* Animations */
+  --animate-marquee: marquee 30s linear infinite;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-questrial);
+  color: var(--color-navy-900);
+  background: #ffffff;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-navy-50);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-cyan-500);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-cyan-600);
+}
+
+/* Firefox scrollbar */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-cyan-500) var(--color-navy-50);
+}
