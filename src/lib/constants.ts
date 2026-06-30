@@ -57,7 +57,7 @@ export const NAV_ITEMS: NavItem[] = [
       { label: "── Programs ──", href: "/residential" },
       { label: "Summer 2026 Pricing", href: "/residential/pricing" },
       { label: "Biennial Service Program", href: "/residential/biennial-service" },
-      { label: "Flight Club — $30/mo", href: "/comfort-club" },
+      { label: "Flight Club — $30/mo", href: "/flight-club" },
     ],
   },
   {

@@ -220,7 +220,7 @@ export default function ResidentialPage() {
           </p>
           <div className="mt-8">
             <Button
-              href="/comfort-club"
+              href="/flight-club"
               size="lg"
               className="bg-white text-cyan-600 hover:bg-white/90"
             >

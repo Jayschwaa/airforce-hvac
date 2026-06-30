@@ -13,9 +13,9 @@ import { Button } from "@/components/ui/Button";
 import { Card } from "@/components/ui/Card";
 import { Accordion } from "@/components/ui/Accordion";
 import {
-  COMFORT_CLUB_PLANS,
-  COMFORT_CLUB_ADDONS,
-} from "@/data/comfortClub";
+  FLIGHT_CLUB_PLANS,
+  FLIGHT_CLUB_ADDONS,
+} from "@/data/flightClub";
 import { PHONE, PHONE_HREF } from "@/lib/constants";
 
 export const metadata: Metadata = {
@@ -98,7 +98,7 @@ const WHY_JOIN = [
   },
 ];
 
-export default function ComfortClubPage() {
+export default function FlightClubPage() {
   return (
     <>
       {/* ── Hero ────────────────────────────────────────────── */}
@@ -130,7 +130,7 @@ export default function ComfortClubPage() {
             centered
           />
           <div className="mx-auto mt-12 grid max-w-3xl gap-8 md:grid-cols-2">
-            {COMFORT_CLUB_PLANS.map((plan) => {
+            {FLIGHT_CLUB_PLANS.map((plan) => {
               const isAnnual = plan.interval === "year";
               return (
                 <Card
@@ -201,7 +201,7 @@ export default function ComfortClubPage() {
             centered
           />
           <div className="mx-auto mt-10 grid max-w-xl gap-6 sm:grid-cols-2">
-            {COMFORT_CLUB_ADDONS.map((addon) => (
+            {FLIGHT_CLUB_ADDONS.map((addon) => (
               <Card key={addon.name} className="p-6 text-center">
                 <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-cyan-50">
                   <Plus className="h-6 w-6 text-cyan-500" />

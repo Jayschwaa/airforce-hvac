@@ -50,7 +50,7 @@ const SOCIAL_ICON_MAP: Record<string, React.ComponentType<{ className?: string }
 const companyLinks = [
   { label: "About", href: "/about" },
   { label: "Commercial", href: "/commercial" },
-  { label: "Flight Club", href: "/comfort-club" },
+  { label: "Flight Club", href: "/flight-club" },
   { label: "Service Areas", href: "/service-areas" },
   { label: "Financing", href: "/financing" },
   { label: "Contact", href: "/contact" },

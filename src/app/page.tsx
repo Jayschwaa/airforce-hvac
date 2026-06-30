@@ -3,7 +3,7 @@ import { HeroSection } from "@/components/home/HeroSection";
 import { ServicesGrid } from "@/components/home/ServicesGrid";
 import { BeforeAfter } from "@/components/home/BeforeAfter";
 import { TestimonialsSection } from "@/components/home/TestimonialsSection";
-import { ComfortClubCTA } from "@/components/home/ComfortClubCTA";
+import { FlightClubCTA } from "@/components/home/FlightClubCTA";
 import { VendorPartners } from "@/components/home/VendorPartners";
 import { EmergencyCTA } from "@/components/home/EmergencyCTA";
 import { ResidentialCommercialSplit } from "@/components/home/ResidentialCommercialSplit";
@@ -38,7 +38,7 @@ export default function Home() {
       <TestimonialsSection />
       <EndMarketsSection />
       <BeforeAfter />
-      <ComfortClubCTA />
+      <FlightClubCTA />
       <VendorPartners />
       <EmergencyCTA />
       <ServiceAreasSection />

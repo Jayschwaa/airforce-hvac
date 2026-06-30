@@ -9,7 +9,7 @@ const benefits = [
   "Discounted pricing on all services",
 ];
 
-export function ComfortClubCTA() {
+export function FlightClubCTA() {
   return (
     <section className="bg-gradient-to-r from-cyan-50 via-cyan-100 to-cyan-50 py-16">
       <Container>

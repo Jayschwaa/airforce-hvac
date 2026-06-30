@@ -1,4 +1,4 @@
-export interface ComfortClubPlan {
+export interface FlightClubPlan {
   name: string;
   price: string;
   interval: "month" | "year";
@@ -6,12 +6,12 @@ export interface ComfortClubPlan {
   benefits: string[];
 }
 
-export interface ComfortClubAddon {
+export interface FlightClubAddon {
   name: string;
   price: string;
 }
 
-export const COMFORT_CLUB_PLANS: ComfortClubPlan[] = [
+export const FLIGHT_CLUB_PLANS: FlightClubPlan[] = [
   {
     name: "Monthly",
     price: "$30",
@@ -39,7 +39,7 @@ export const COMFORT_CLUB_PLANS: ComfortClubPlan[] = [
   },
 ];
 
-export const COMFORT_CLUB_ADDONS: ComfortClubAddon[] = [
+export const FLIGHT_CLUB_ADDONS: FlightClubAddon[] = [
   { name: "Filter Club", price: "$6/mo" },
   { name: "Plumbing Add-On", price: "$10/mo" },
 ];
