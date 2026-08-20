@@ -33,13 +33,13 @@ const services = [
     icon: Wrench,
     title: "Roof Repair",
     description:
-      "Targeted repairs for leaks, damaged tiles, cracked shingles, deteriorating flashing, and worn sealants. South Florida\u2019s combination of intense UV radiation, salt air, and driving rain accelerates roof wear \u2014 timely repairs prevent small issues from becoming major damage.",
+      "Targeted repairs for leaks, damaged tiles, cracked shingles, deteriorating flashing, and worn sealants. South Florida’s combination of intense UV radiation, salt air, and driving rain accelerates roof wear — timely repairs prevent small issues from becoming major damage.",
   },
   {
     icon: RefreshCw,
     title: "Roof Replacement",
     description:
-      "Full tear-off and replacement using Florida Building Code-rated materials designed to withstand Category 5 winds. We work with architectural shingles, concrete and clay tile, metal roofing, and flat roof systems \u2014 all backed by manufacturer warranties.",
+      "Full tear-off and replacement using Florida Building Code-rated materials designed to withstand Category 5 winds. We work with architectural shingles, concrete and clay tile, metal roofing, and flat roof systems — all backed by manufacturer warranties.",
   },
   {
     icon: CloudRain,
@@ -51,13 +51,13 @@ const services = [
     icon: ArrowDownToLine,
     title: "Gutter Installation",
     description:
-      "Seamless aluminum gutter installation sized for South Florida\u2019s heavy rainfall. Properly functioning gutters protect your foundation, prevent fascia rot, and reduce erosion around your home. We also offer gutter guards to minimize maintenance.",
+      "Seamless aluminum gutter installation sized for South Florida’s heavy rainfall. Properly functioning gutters protect your foundation, prevent fascia rot, and reduce erosion around your home. We also offer gutter guards to minimize maintenance.",
   },
   {
     icon: Wind,
     title: "Attic Ventilation",
     description:
-      "Balanced attic ventilation systems that reduce heat buildup and moisture accumulation. In South Florida, poor attic ventilation can push temperatures above 150\u00B0F, baking your roof deck from below and driving up cooling costs significantly.",
+      "Balanced attic ventilation systems that reduce heat buildup and moisture accumulation. In South Florida, poor attic ventilation can push temperatures above 150°F, baking your roof deck from below and driving up cooling costs significantly.",
   },
 ];
 
@@ -65,12 +65,12 @@ const faqs = [
   {
     question: "How often should I have my roof inspected in South Florida?",
     answer:
-      "We recommend an annual inspection, ideally before hurricane season begins in June. You should also schedule an inspection after any major storm event and if you notice interior water stains, missing tiles, or granule buildup in your gutters. Florida\u2019s intense UV exposure and tropical weather cause roofing materials to degrade faster than in cooler, drier climates.",
+      "We recommend an annual inspection, ideally before hurricane season begins in June. You should also schedule an inspection after any major storm event and if you notice interior water stains, missing tiles, or granule buildup in your gutters. Florida’s intense UV exposure and tropical weather cause roofing materials to degrade faster than in cooler, drier climates.",
   },
   {
     question: "How long does a roof typically last in South Florida?",
     answer:
-      "Roof lifespan in South Florida depends on the material: asphalt shingles last 15\u201320 years, concrete and clay tile last 25\u201350 years, and metal roofing can last 40\u201370 years. However, storm damage, poor ventilation, and salt air exposure near the coast can shorten these lifespans. Regular maintenance and timely repairs are key to maximizing your roof\u2019s life.",
+      "Roof lifespan in South Florida depends on the material: asphalt shingles last 15–20 years, concrete and clay tile last 25–50 years, and metal roofing can last 40–70 years. However, storm damage, poor ventilation, and salt air exposure near the coast can shorten these lifespans. Regular maintenance and timely repairs are key to maximizing your roof’s life.",
   },
   {
     question: "Do you help with insurance claims after storm damage?",
@@ -107,7 +107,7 @@ export default function ResidentialRoofingPage() {
             Residential Roofing Services
           </h1>
           <p className="mt-6 max-w-2xl text-lg text-gray-600">
-            Your roof is your home\u2019s first defense against South Florida\u2019s
+            Your roof is your home’s first defense against South Florida’s
             hurricanes, heavy rain, and relentless sun. From routine inspections
             to full replacements with hurricane-rated materials, Air Force HVAC
             keeps your roof strong and your home protected.
@@ -174,7 +174,7 @@ export default function ResidentialRoofingPage() {
           <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
             <Button
               href="/contact"
-              className="bg-white text-cyan-600 hover:bg-white/90"
+              variant="white"
               size="lg"
             >
               Contact Us
