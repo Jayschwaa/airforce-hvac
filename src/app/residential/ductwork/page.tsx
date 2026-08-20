@@ -26,25 +26,25 @@ const services = [
     icon: Wind,
     title: "Duct Installation",
     description:
-      "Custom ductwork design and installation for new construction, additions, and homes converting from window units to central air. We work with metal, spiral, and flex duct systems \u2014 engineered for optimal airflow in South Florida\u2019s cooling-dominant climate.",
+      "Custom ductwork design and installation for new construction, additions, and homes converting from window units to central air. We work with metal, spiral, and flex duct systems — engineered for optimal airflow in South Florida’s cooling-dominant climate.",
   },
   {
     icon: Wrench,
     title: "Duct Repair & Sealing",
     description:
-      "Leaky ducts waste 20\u201330% of your conditioned air, forcing your AC to work harder in Florida\u2019s heat. We locate and seal disconnections, gaps, and deteriorating joints using Aeroseal technology and manual sealing methods to restore your system\u2019s efficiency.",
+      "Leaky ducts waste 20–30% of your conditioned air, forcing your AC to work harder in Florida’s heat. We locate and seal disconnections, gaps, and deteriorating joints using Aeroseal technology and manual sealing methods to restore your system’s efficiency.",
   },
   {
     icon: Sparkles,
     title: "Duct Cleaning",
     description:
-      "Thorough cleaning that removes dust, mold, pet dander, and debris from your entire duct system. South Florida\u2019s humidity promotes mold growth inside ducts, and dirty ducts recirculate contaminants every time your AC cycles on.",
+      "Thorough cleaning that removes dust, mold, pet dander, and debris from your entire duct system. South Florida’s humidity promotes mold growth inside ducts, and dirty ducts recirculate contaminants every time your AC cycles on.",
   },
   {
     icon: ThermometerSun,
     title: "Duct Insulation",
     description:
-      "Proper duct insulation prevents condensation and energy loss \u2014 especially critical in South Florida where uninsulated ducts in hot attics and crawlspaces sweat, drip, and grow mold. Insulation also reduces the temperature gain that makes your AC work overtime.",
+      "Proper duct insulation prevents condensation and energy loss — especially critical in South Florida where uninsulated ducts in hot attics and crawlspaces sweat, drip, and grow mold. Insulation also reduces the temperature gain that makes your AC work overtime.",
   },
   {
     icon: SlidersHorizontal,
@@ -64,22 +64,22 @@ const faqs = [
   {
     question: "How do I know if my ductwork needs repair or replacement?",
     answer:
-      "Signs include rooms that are noticeably warmer or cooler than others, excessive dust around vents, musty odors when the AC runs, rising energy bills despite regular AC maintenance, and visible damage or disconnections in accessible duct sections. Ductwork older than 15 years in South Florida\u2019s harsh attic conditions is often a candidate for replacement. We offer free ductwork inspections to assess your system.",
+      "Signs include rooms that are noticeably warmer or cooler than others, excessive dust around vents, musty odors when the AC runs, rising energy bills despite regular AC maintenance, and visible damage or disconnections in accessible duct sections. Ductwork older than 15 years in South Florida’s harsh attic conditions is often a candidate for replacement. We offer free ductwork inspections to assess your system.",
   },
   {
     question: "Can leaky ducts really impact my energy bill that much?",
     answer:
-      "Absolutely. The U.S. Department of Energy estimates that leaky ducts lose 20\u201330% of conditioned air before it reaches your living spaces. In South Florida, where your AC runs nearly year-round and attic temperatures can exceed 150\u00B0F, that lost air is replaced by superheated attic air being pulled into the duct system. Sealing your ducts is one of the highest-ROI home improvements available.",
+      "Absolutely. The U.S. Department of Energy estimates that leaky ducts lose 20–30% of conditioned air before it reaches your living spaces. In South Florida, where your AC runs nearly year-round and attic temperatures can exceed 150°F, that lost air is replaced by superheated attic air being pulled into the duct system. Sealing your ducts is one of the highest-ROI home improvements available.",
   },
   {
     question: "Why is duct insulation so important in Florida?",
     answer:
-      "Florida\u2019s extreme heat means your attic can reach 140\u2013160\u00B0F in summer. Uninsulated ducts running through that space absorb tremendous heat, warming your cooled air by 10\u201320 degrees before it reaches your rooms. Uninsulated ducts also sweat in Florida\u2019s humid air, creating condensation that leads to mold growth, water stains on ceilings, and structural damage over time.",
+      "Florida’s extreme heat means your attic can reach 140–160°F in summer. Uninsulated ducts running through that space absorb tremendous heat, warming your cooled air by 10–20 degrees before it reaches your rooms. Uninsulated ducts also sweat in Florida’s humid air, creating condensation that leads to mold growth, water stains on ceilings, and structural damage over time.",
   },
   {
     question: "How often should ductwork be professionally cleaned?",
     answer:
-      "We recommend professional duct cleaning every 3\u20135 years for most South Florida homes. Schedule cleaning sooner if you notice musty odors from your vents, see visible mold near registers, have completed renovation work, or have household members with allergies or asthma. Homes with multiple pets may also benefit from more frequent cleaning.",
+      "We recommend professional duct cleaning every 3–5 years for most South Florida homes. Schedule cleaning sooner if you notice musty odors from your vents, see visible mold near registers, have completed renovation work, or have household members with allergies or asthma. Homes with multiple pets may also benefit from more frequent cleaning.",
   },
 ];
 
@@ -106,10 +106,10 @@ export default function ResidentialDuctworkPage() {
             Residential Ductwork Services
           </h1>
           <p className="mt-6 max-w-2xl text-lg text-gray-600">
-            Your ductwork is the backbone of your home\u2019s comfort system. Leaky,
+            Your ductwork is the backbone of your home’s comfort system. Leaky,
             dirty, or poorly insulated ducts waste energy, degrade air quality,
             and create hot spots throughout your home. Our ductwork specialists
-            fix these problems with solutions designed for South Florida\u2019s
+            fix these problems with solutions designed for South Florida’s
             demanding climate.
           </p>
           <div className="mt-8 flex flex-col gap-4 sm:flex-row">
@@ -174,7 +174,7 @@ export default function ResidentialDuctworkPage() {
           <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
             <Button
               href="/contact"
-              className="bg-white text-cyan-600 hover:bg-white/90"
+              variant="white"
               size="lg"
             >
               Contact Us
