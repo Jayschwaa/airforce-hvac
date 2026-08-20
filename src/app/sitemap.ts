@@ -21,6 +21,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/residential/roofing`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
     { url: `${baseUrl}/residential/indoor-air-quality`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
     { url: `${baseUrl}/residential/ductwork`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${baseUrl}/residential/leak-detection`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${baseUrl}/residential/slab-leaks`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${baseUrl}/residential/video-camera-inspection`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${baseUrl}/residential/emergency-plumbing`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
 
     // Commercial
     { url: `${baseUrl}/commercial`, lastModified: now, changeFrequency: "weekly", priority: 0.9 },
