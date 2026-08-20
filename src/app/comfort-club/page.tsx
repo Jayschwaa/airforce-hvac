@@ -101,7 +101,6 @@ const WHY_JOIN = [
 export default function ComfortClubPage() {
   return (
     <>
-      {/* ── Hero ────────────────────────────────────────────── */}
       <section className="bg-gradient-to-br from-white via-cyan-50/50 to-white py-20 md:py-28 border-b border-gray-100">
         <Container className="text-center">
           <nav className="mb-6 text-sm text-gray-400">
@@ -121,7 +120,6 @@ export default function ComfortClubPage() {
         </Container>
       </section>
 
-      {/* ── Pricing Cards ──────────────────────────────────── */}
       <section className="py-20">
         <Container>
           <SectionHeading
@@ -192,7 +190,6 @@ export default function ComfortClubPage() {
         </Container>
       </section>
 
-      {/* ── Add-Ons ────────────────────────────────────────── */}
       <section className="bg-gray-50 py-16 md:py-20">
         <Container>
           <SectionHeading
@@ -218,7 +215,6 @@ export default function ComfortClubPage() {
         </Container>
       </section>
 
-      {/* ── What's Included ────────────────────────────────── */}
       <section className="py-16 md:py-20">
         <Container>
           <SectionHeading
@@ -233,7 +229,6 @@ export default function ComfortClubPage() {
         </Container>
       </section>
 
-      {/* ── Why Join ───────────────────────────────────────── */}
       <section className="bg-gray-50 py-16 md:py-20">
         <Container>
           <SectionHeading
@@ -260,7 +255,6 @@ export default function ComfortClubPage() {
         </Container>
       </section>
 
-      {/* ── CTA ────────────────────────────────────────────── */}
       <section className="bg-gradient-to-r from-cyan-500 to-cyan-600 py-16 md:py-20">
         <Container className="text-center">
           <h2 className="font-rubik text-3xl font-bold text-white md:text-4xl">
@@ -274,7 +268,7 @@ export default function ComfortClubPage() {
             <Button
               href={PHONE_HREF}
               size="lg"
-              className="bg-white text-cyan-600 hover:bg-white/90"
+              variant="white"
             >
               Call {PHONE}
             </Button>
