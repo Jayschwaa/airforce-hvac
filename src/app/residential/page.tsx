@@ -182,7 +182,7 @@ export default function ResidentialPage() {
         </Container>
       </section>
 
-      {/* ── Guarantees ──────────────────────────────────────── */}
+      {/* ── Guarantees ─────────────────────────────────────── */}
       <section className="bg-gray-50 py-16 md:py-24">
         <Container>
           <SectionHeading
@@ -222,7 +222,7 @@ export default function ResidentialPage() {
             <Button
               href="/comfort-club"
               size="lg"
-              className="bg-white text-cyan-600 hover:bg-white/90"
+              variant="white"
             >
               Learn About Flight Club
             </Button>
