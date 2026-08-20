@@ -41,7 +41,7 @@ export const BLOG_POSTS: BlogPost[] = [
       "## Beware of $199 Duct Cleaning Deals",
       "Discount duct cleaning services advertise low prices but often add hidden charges on-site — like per-foot trunk line fees. They typically use lower-grade equipment and don't include air handler cleaning. Air Force HVAC offers transparent pricing at $95 per vent with free trunk line cleaning and full air handler service included.",
       "## Take the First Step",
-      "If you can't remember the last time your ducts were cleaned — or if you're experiencing any of the signs above — it's time. Call Air Force HVAC at (305) 335-6991 for a duct cleaning consultation. We serve all of Miami-Dade, Broward, and Palm Beach Counties, 24/7.",
+      "If you can't remember the last time your ducts were cleaned — or if you're experiencing any of the signs above — it's time. Call Air Force HVAC at 1-855-291-7007 for a duct cleaning consultation. We serve all of Miami-Dade, Broward, and Palm Beach Counties, 24/7.",
     ],
   },
   {
@@ -70,7 +70,7 @@ export const BLOG_POSTS: BlogPost[] = [
       "## When It Makes Sense to Invest in Quality",
       "Duct cleaning isn't something you do every month. It's a once-every-few-years investment in your family's air quality and your system's longevity. Cutting corners on a service you'll only do a handful of times makes no sense — especially when the 'savings' from a discount service often disappear once the hidden fees are tallied.",
       "## The Bottom Line",
-      "A quality duct cleaning improves your indoor air quality, reduces dust throughout your home, helps allergy and asthma sufferers, and supports your HVAC system's efficiency and lifespan. It's worth doing right. Call Air Force HVAC at (305) 335-6991 for honest, transparent duct cleaning service across South Florida.",
+      "A quality duct cleaning improves your indoor air quality, reduces dust throughout your home, helps allergy and asthma sufferers, and supports your HVAC system's efficiency and lifespan. It's worth doing right. Call Air Force HVAC at 1-855-291-7007 for honest, transparent duct cleaning service across South Florida.",
     ],
   },
 
@@ -101,7 +101,7 @@ export const BLOG_POSTS: BlogPost[] = [
       "Leaky ducts can waste 20-30% of your cooled air. If certain rooms feel warmer than others, or if your energy bills seem too high for your system's age, you may have duct leaks. Our team can perform a duct inspection and seal any leaks to improve efficiency.",
       "## When to Replace vs. Repair",
       "If your system is over 10 years old, requires frequent repairs, uses R-22 refrigerant (which is being phased out), or your energy bills keep climbing despite maintenance, it may be time for a replacement. Modern systems are 20-40% more efficient than units from just a decade ago.",
-      "Ready to schedule a tune-up or get a free estimate on a new system? Call Air Force HVAC at (305) 335-6991 or visit our residential HVAC page to learn more about our services.",
+      "Ready to schedule a tune-up or get a free estimate on a new system? Call Air Force HVAC at 1-855-291-7007 or visit our residential HVAC page to learn more about our services.",
     ],
   },
   {
@@ -126,7 +126,7 @@ export const BLOG_POSTS: BlogPost[] = [
       "## 5. Clogged Drains & Sewer Lines",
       "Tree roots love South Florida's warm, moist soil — and they love your sewer line even more. Root intrusion is one of the top causes of sewer backups in our area. Regular drain cleaning and annual sewer camera inspections can prevent costly emergency backups.",
       "## Prevention Is Key",
-      "Most plumbing emergencies are preventable with regular maintenance. Our Flight Club membership includes priority plumbing service and member-only pricing. Don't wait for a midnight leak — schedule a plumbing inspection today by calling (305) 335-6991.",
+      "Most plumbing emergencies are preventable with regular maintenance. Our Flight Club membership includes priority plumbing service and member-only pricing. Don't wait for a midnight leak — schedule a plumbing inspection today by calling 1-855-291-7007.",
     ],
   },
   {
@@ -152,7 +152,7 @@ export const BLOG_POSTS: BlogPost[] = [
       "Flickering lights, buzzing outlets, warm switch plates, frequently tripping breakers, or a burning smell near outlets all indicate electrical problems that need immediate professional attention. These aren't DIY projects — electrical work requires a licensed electrician for safety and code compliance.",
       "## LED Lighting Upgrades",
       "Switching to LED lighting throughout your home can reduce lighting energy use by 75%. In South Florida, where lights are on for extended hours, this adds up fast. Plus, LEDs generate less heat, reducing the load on your AC system.",
-      "Need an electrical inspection or upgrade? Air Force HVAC's licensed electricians serve all of Broward, Miami-Dade, and Palm Beach Counties. Call (305) 335-6991 for a free estimate.",
+      "Need an electrical inspection or upgrade? Air Force HVAC's licensed electricians serve all of Broward, Miami-Dade, and Palm Beach Counties. Call 1-855-291-7007 for a free estimate.",
     ],
   },
   {
@@ -179,7 +179,7 @@ export const BLOG_POSTS: BlogPost[] = [
       "A new roof can significantly reduce your homeowner's insurance premium. Many Florida insurers offer discounts for impact-resistant materials, secondary water barriers, and roofs that meet or exceed the current building code. Ask your insurance agent about available discounts before choosing materials.",
       "## When It's Time to Replace",
       "Signs you need a new roof: your roof is over 20 years old, you see daylight through the roof boards, shingles are curling or missing, there's significant granule loss in gutters, you have recurring leaks, or you notice sagging areas. Don't wait until a hurricane is in the forecast — schedule your roof assessment today.",
-      "Air Force HVAC provides complete roofing services across South Florida. Call (305) 335-6991 for a free roof inspection and estimate.",
+      "Air Force HVAC provides complete roofing services across South Florida. Call 1-855-291-7007 for a free roof inspection and estimate.",
     ],
   },
   {
@@ -205,7 +205,7 @@ export const BLOG_POSTS: BlogPost[] = [
       "## Signs Your Home Has Poor IAQ",
       "Watch for these indicators: musty or stale odors, visible mold growth, condensation on windows, family members experiencing increased allergies or respiratory issues, excessive dust on surfaces, and humidity levels consistently above 60%.",
       "## Take Action Today",
-      "Our IAQ specialists can assess your home's air quality and recommend the right combination of solutions for your situation. From UV light installation to whole-home dehumidification, we'll help you breathe easier. Call Air Force HVAC at (305) 335-6991 to schedule an IAQ assessment.",
+      "Our IAQ specialists can assess your home's air quality and recommend the right combination of solutions for your situation. From UV light installation to whole-home dehumidification, we'll help you breathe easier. Call Air Force HVAC at 1-855-291-7007 to schedule an IAQ assessment.",
     ],
   },
   {
@@ -234,7 +234,7 @@ export const BLOG_POSTS: BlogPost[] = [
       "**Undersized returns**: Many South Florida homes have inadequate return air pathways, causing the system to work harder and reducing efficiency.",
       "## The Solution: Professional Duct Assessment",
       "Our technicians use duct leakage testing, thermal cameras, and airflow measurements to identify exactly where your duct system is failing. Solutions range from simple sealing with mastic (not duct tape, which fails in heat) to partial or complete duct replacement.",
-      "A properly sealed and insulated duct system can improve your HVAC efficiency by 20-30%, potentially saving you $700-1,000+ per year. Contact Air Force HVAC at (305) 335-6991 for a duct assessment.",
+      "A properly sealed and insulated duct system can improve your HVAC efficiency by 20-30%, potentially saving you $700-1,000+ per year. Contact Air Force HVAC at 1-855-291-7007 for a duct assessment.",
     ],
   },
 
@@ -261,7 +261,7 @@ export const BLOG_POSTS: BlogPost[] = [
       "## Boilers: Not Just for Cold Climates",
       "Even in South Florida, commercial buildings need boilers for domestic hot water, reheat coils, and dehumidification systems. Modern high-efficiency condensing boilers can achieve 95%+ efficiency compared to 80% for older atmospheric models.",
       "## The Air Force HVAC Advantage",
-      "With $40M+ in national facilities sales, our team has the expertise to design, install, and maintain mechanical systems of any scale. We take an ownership mindset with every project — treating your equipment as if it were our own. Contact us at (305) 335-6991 for a mechanical systems assessment.",
+      "With $40M+ in national facilities sales, our team has the expertise to design, install, and maintain mechanical systems of any scale. We take an ownership mindset with every project — treating your equipment as if it were our own. Contact us at 1-855-291-7007 for a mechanical systems assessment.",
     ],
   },
   {
@@ -286,7 +286,7 @@ export const BLOG_POSTS: BlogPost[] = [
       "## Making the Right Choice",
       "For warehouses, retail, and restaurants: RTUs are typically the best value. For multifamily and office buildings: split systems offer better zone control. For hospitals and data centers: both may be used in combination with other systems.",
       "## Our Approach",
-      "At Air Force HVAC, we don't push one solution over another. We analyze your building's specific needs and recommend the most cost-effective option. Our value engineering approach has saved clients 10%+ on commercial projects by right-sizing equipment and optimizing system design. Call (305) 335-6991 for a free commercial consultation.",
+      "At Air Force HVAC, we don't push one solution over another. We analyze your building's specific needs and recommend the most cost-effective option. Our value engineering approach has saved clients 10%+ on commercial projects by right-sizing equipment and optimizing system design. Call 1-855-291-7007 for a free commercial consultation.",
     ],
   },
   {
@@ -310,7 +310,7 @@ export const BLOG_POSTS: BlogPost[] = [
       "## South Florida Code Compliance",
       "Commercial ductwork in South Florida must meet the Florida Mechanical Code, including: proper fire/smoke dampers at rated barriers, sealing requirements (Seal Class A for medium-pressure systems), insulation requirements (R-6 minimum for most applications), and testing requirements for high-pressure systems.",
       "## The Air Force HVAC Difference",
-      "Our duct design and installation team uses Manual D calculations, CFD modeling when needed, and decades of real-world South Florida experience to deliver ductwork that performs. We also offer value engineering to reduce ductwork costs without sacrificing performance. Contact us at (305) 335-6991.",
+      "Our duct design and installation team uses Manual D calculations, CFD modeling when needed, and decades of real-world South Florida experience to deliver ductwork that performs. We also offer value engineering to reduce ductwork costs without sacrificing performance. Contact us at 1-855-291-7007.",
     ],
   },
   {
@@ -334,7 +334,7 @@ export const BLOG_POSTS: BlogPost[] = [
       "## Recommended Frequency",
       "General commercial: every 3-5 years. Healthcare facilities: every 1-2 years. Restaurants and food service: annually. Multifamily common areas: every 2-3 years. After renovation or construction: immediately.",
       "## Portfolio Pricing Available",
-      "Property managers with multiple buildings benefit from our portfolio pricing. We've partnered with institutional clients like Brookfield Properties to maintain consistent air quality across entire portfolios. Contact us at (305) 335-6991 for a customized maintenance plan.",
+      "Property managers with multiple buildings benefit from our portfolio pricing. We've partnered with institutional clients like Brookfield Properties to maintain consistent air quality across entire portfolios. Contact us at 1-855-291-7007 for a customized maintenance plan.",
     ],
   },
   {
@@ -361,7 +361,7 @@ export const BLOG_POSTS: BlogPost[] = [
       "The earlier, the better. Ideally, bring us in during the design development phase (before construction documents are finalized). However, even during the bidding phase, our VE review can identify significant savings. Post-bid VE is also possible but offers fewer opportunities.",
       "## The Ownership Mindset",
       "Our value engineering isn't about cutting corners — it's about spending smarter. We treat every project as if we're the building owner, asking: 'If this were my money, would I approve this specification?' That mindset is why clients like Brookfield Properties and Tredway trust us with their portfolios.",
-      "Ready to see what value engineering can save on your next project? Contact Air Force HVAC at (305) 335-6991 for a free plan review.",
+      "Ready to see what value engineering can save on your next project? Contact Air Force HVAC at 1-855-291-7007 for a free plan review.",
     ],
   },
   {
@@ -385,7 +385,7 @@ export const BLOG_POSTS: BlogPost[] = [
       "When Air Force HVAC handles your electrical work alongside HVAC, plumbing, and roofing, you benefit from: single point of contact for all mechanical and electrical trades, coordinated scheduling that reduces project timeline, shared mobilization costs, and fewer change orders from trade conflicts.",
       "## Code Compliance in Florida",
       "Florida's electrical code is based on the National Electrical Code (NEC) with state-specific amendments. Our licensed electricians stay current on all requirements including arc-fault protection, GFCI requirements, energy code compliance (Florida Energy Conservation Code), and local jurisdiction amendments.",
-      "Need commercial electrical services? Call Air Force HVAC at (305) 335-6991 to discuss your project.",
+      "Need commercial electrical services? Call Air Force HVAC at 1-855-291-7007 to discuss your project.",
     ],
   },
   {
@@ -408,7 +408,7 @@ export const BLOG_POSTS: BlogPost[] = [
       "When re-piping a multifamily building, key decisions include material selection (copper vs. PEX), phasing strategy to minimize tenant disruption, permit requirements and inspection coordination, and coordination with other building improvements (if you're already opening walls, consider updating electrical and HVAC too).",
       "## Portfolio Maintenance Programs",
       "Property managers overseeing multiple buildings benefit from our portfolio maintenance programs. Regular inspections, preventive maintenance, and priority emergency response keep your properties running smoothly. We currently serve institutional clients managing thousands of units across South Florida.",
-      "Call Air Force HVAC at (305) 335-6991 to discuss your commercial plumbing needs.",
+      "Call Air Force HVAC at 1-855-291-7007 to discuss your commercial plumbing needs.",
     ],
   },
   {
@@ -434,7 +434,7 @@ export const BLOG_POSTS: BlogPost[] = [
       "**Proactive Repairs**: Address issues immediately. A $200 repair today prevents a $20,000 problem tomorrow. Keep a dedicated roof maintenance budget.",
       "## The Multi-Trade Approach",
       "When we install or service rooftop HVAC equipment, we inspect the surrounding roof area and address any issues. This integrated approach — roofing + HVAC under one contractor — prevents the \"not my problem\" finger-pointing that happens when multiple contractors work on the same roof.",
-      "Request a commercial roof assessment by calling Air Force HVAC at (305) 335-6991.",
+      "Request a commercial roof assessment by calling Air Force HVAC at 1-855-291-7007.",
     ],
   },
 
@@ -461,7 +461,7 @@ export const BLOG_POSTS: BlogPost[] = [
       "The cheapest equipment isn't always the best value. A $10,000 RTU that lasts 12 years costs more per year than a $14,000 unit that lasts 20 years. Energy efficiency, maintenance costs, warranty coverage, and parts availability all factor into true lifecycle cost. We help clients model total cost of ownership to make informed decisions.",
       "## The Air Force HVAC Track Record",
       "Our clients — from affordable housing developers to institutional property managers — consistently see 10%+ savings on their commercial HVAC projects. We achieve this through value engineering, multi-trade coordination, and an ownership mindset that treats every dollar as if it were our own.",
-      "Ready to save on your next project? Call (305) 335-6991 for a free plan review and cost analysis.",
+      "Ready to save on your next project? Call 1-855-291-7007 for a free plan review and cost analysis.",
     ],
   },
   {
@@ -488,7 +488,7 @@ export const BLOG_POSTS: BlogPost[] = [
       "**Don't skimp on duct insulation**: In Florida's climate, under-insulated ducts in hot attics waste enormous amounts of energy. R-8 is the minimum, but R-10 or R-13 pays for itself within 2-3 years.",
       "**Don't use flex duct as primary ductwork**: While cheaper upfront, flex duct has higher friction loss, kinks easily during other trade work, and restricts airflow over time. Use sheet metal for main trunks and limit flex to final connections.",
       "**Don't delay HVAC coordination**: Late changes to HVAC layout cause conflicts with framing, electrical, and plumbing — leading to expensive field modifications.",
-      "Contact Air Force HVAC at (305) 335-6991 to discuss your new construction project. We offer free plan reviews for qualifying developments.",
+      "Contact Air Force HVAC at 1-855-291-7007 to discuss your new construction project. We offer free plan reviews for qualifying developments.",
     ],
   },
   {
@@ -513,7 +513,7 @@ export const BLOG_POSTS: BlogPost[] = [
       "Based on our project history, clients who bundle multiple trades with Air Force HVAC typically save 8-15% compared to hiring separate specialty contractors. On a $500,000 mechanical scope, that's $40,000-75,000 in real savings.",
       "## Our Multi-Trade Capabilities",
       "Air Force HVAC offers: HVAC (installation, repair, maintenance, duct cleaning), Electrical (panels, lighting, tenant buildouts, generators), Plumbing (re-pipes, water heaters, drain services), and Roofing (TPO, metal, tile, modified bitumen). All licensed, insured, and performed by our own trained technicians.",
-      "Get a multi-trade bid on your next project. Call (305) 335-6991 or visit our commercial page to learn more.",
+      "Get a multi-trade bid on your next project. Call 1-855-291-7007 or visit our commercial page to learn more.",
     ],
   },
   {
@@ -537,7 +537,7 @@ export const BLOG_POSTS: BlogPost[] = [
       "Air Force HVAC has delivered HVAC solutions for affordable housing developments across South Florida, including projects with Brookfield Properties and Tredway. We understand the compliance requirements, budget constraints, and quality expectations unique to this sector.",
       "## The Bottom Line",
       "Every dollar saved on HVAC is a dollar that can fund additional units, better finishes, or improved amenities. Our value engineering approach typically identifies 10%+ in savings on affordable housing HVAC scopes — without compromising quality or compliance.",
-      "Contact us at (305) 335-6991 for a free bid on your next affordable housing development.",
+      "Contact us at 1-855-291-7007 for a free bid on your next affordable housing development.",
     ],
   },
 ];
