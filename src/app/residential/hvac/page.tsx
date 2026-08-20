@@ -27,25 +27,25 @@ const services = [
     icon: Wrench,
     title: "AC Repair",
     description:
-      "Fast, reliable air conditioning repair for all makes and models. Our trucks carry common parts so most repairs are completed in a single visit — critical when South Florida temperatures climb above 90\u00B0F.",
+      "Fast, reliable air conditioning repair for all makes and models. Our trucks carry common parts so most repairs are completed in a single visit — critical when South Florida temperatures climb above 90°F.",
   },
   {
     icon: Snowflake,
     title: "AC Installation",
     description:
-      "Complete system replacement and new construction installs. We perform Manual J load calculations to size your system correctly for your home\u2019s layout, insulation, and Florida\u2019s extreme heat and humidity.",
+      "Complete system replacement and new construction installs. We perform Manual J load calculations to size your system correctly for your home’s layout, insulation, and Florida’s extreme heat and humidity.",
   },
   {
     icon: Settings,
     title: "AC Maintenance & Tune-Ups",
     description:
-      "Preventive maintenance that catches refrigerant leaks, clogged drains, and worn capacitors before they cause a breakdown. Essential in South Florida where your AC runs 10\u201312 months per year.",
+      "Preventive maintenance that catches refrigerant leaks, clogged drains, and worn capacitors before they cause a breakdown. Essential in South Florida where your AC runs 10–12 months per year.",
   },
   {
     icon: Thermometer,
     title: "Thermostat Replacement",
     description:
-      "Upgrade to a smart or programmable thermostat for better comfort and lower energy bills. We install and configure Nest, Ecobee, Honeywell, and more \u2014 optimized for Florida\u2019s cooling-dominant climate.",
+      "Upgrade to a smart or programmable thermostat for better comfort and lower energy bills. We install and configure Nest, Ecobee, Honeywell, and more — optimized for Florida’s cooling-dominant climate.",
   },
   {
     icon: Wind,
@@ -57,7 +57,7 @@ const services = [
     icon: AlertTriangle,
     title: "Emergency AC Service",
     description:
-      "24/7 emergency repair when your AC fails at the worst possible time. In South Florida\u2019s heat, a broken AC is more than discomfort \u2014 it\u2019s a health risk for seniors, children, and pets.",
+      "24/7 emergency repair when your AC fails at the worst possible time. In South Florida’s heat, a broken AC is more than discomfort — it’s a health risk for seniors, children, and pets.",
   },
 ];
 
@@ -70,17 +70,17 @@ const faqs = [
   {
     question: "How often should I have my AC serviced in South Florida?",
     answer:
-      "We recommend twice-yearly maintenance \u2014 once in early spring before peak summer, and once in the fall. South Florida\u2019s year-round heat means your AC runs far more than systems in cooler climates, accelerating wear on components. Regular tune-ups can extend your system\u2019s life by 5\u20137 years and reduce energy bills by up to 15%.",
+      "We recommend twice-yearly maintenance — once in early spring before peak summer, and once in the fall. South Florida’s year-round heat means your AC runs far more than systems in cooler climates, accelerating wear on components. Regular tune-ups can extend your system’s life by 5–7 years and reduce energy bills by up to 15%.",
   },
   {
     question: "When should I replace my AC system instead of repairing it?",
     answer:
-      "Consider replacement if your system is over 12\u201315 years old, uses R-22 refrigerant (which is no longer manufactured), requires frequent repairs, or your energy bills have been climbing steadily. A new high-efficiency system can cut cooling costs by 30\u201350% \u2014 a significant savings when your AC runs nearly year-round in Florida.",
+      "Consider replacement if your system is over 12–15 years old, uses R-22 refrigerant (which is no longer manufactured), requires frequent repairs, or your energy bills have been climbing steadily. A new high-efficiency system can cut cooling costs by 30–50% — a significant savings when your AC runs nearly year-round in Florida.",
   },
   {
     question: "How quickly can you respond to an AC emergency?",
     answer:
-      "For emergency calls within our Palm Beach and Broward County service area, we typically have a technician on-site within 2\u20134 hours. Flight Club members receive priority scheduling and are often seen within 1\u20132 hours. We understand that in South Florida, a failed AC system is an urgent situation.",
+      "For emergency calls within our Palm Beach and Broward County service area, we typically have a technician on-site within 2–4 hours. Flight Club members receive priority scheduling and are often seen within 1–2 hours. We understand that in South Florida, a failed AC system is an urgent situation.",
   },
 ];
 
@@ -131,7 +131,7 @@ export default function ResidentialHvacPage() {
               {
                 icon: AlertTriangle,
                 title: "24/7 Emergency Service",
-                text: "AC emergencies don\u2019t wait for business hours. Our technicians are available around the clock, including weekends and holidays.",
+                text: "AC emergencies don’t wait for business hours. Our technicians are available around the clock, including weekends and holidays.",
               },
               {
                 icon: Settings,
@@ -141,7 +141,7 @@ export default function ResidentialHvacPage() {
               {
                 icon: Timer,
                 title: "Upfront, Honest Pricing",
-                text: "You\u2019ll know the exact cost before we start. No hidden fees, no pressure to upsell, and no overtime charges for Flight Club members.",
+                text: "You’ll know the exact cost before we start. No hidden fees, no pressure to upsell, and no overtime charges for Flight Club members.",
               },
             ].map((item) => (
               <div key={item.title} className="flex gap-4">
@@ -166,7 +166,7 @@ export default function ResidentialHvacPage() {
           <SectionHeading
             label="Our Services"
             heading="Residential AC & HVAC Solutions"
-            subtitle="From routine maintenance to full system replacements, we handle every aspect of your home\u2019s comfort."
+            subtitle="From routine maintenance to full system replacements, we handle every aspect of your home’s comfort."
             centered
           />
           <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
@@ -211,7 +211,7 @@ export default function ResidentialHvacPage() {
           <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
             <Button
               href="/contact"
-              className="bg-white text-cyan-600 hover:bg-white/90"
+              variant="white"
               size="lg"
             >
               Contact Us
