@@ -182,7 +182,7 @@ export default function ResidentialPage() {
         </Container>
       </section>
 
-      {/* ── Guarantees ─────────────────────────────────────── */}
+      {/* ── Guarantees ──────────────────────────────────────── */}
       <section className="bg-gray-50 py-16 md:py-24">
         <Container>
           <SectionHeading
