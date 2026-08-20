@@ -10,6 +10,8 @@ const variantStyles = {
     "bg-transparent border-2 border-cyan-500 text-cyan-500 hover:bg-cyan-500 hover:text-white focus:ring-cyan-500",
   ghost:
     "bg-transparent text-cyan-500 hover:bg-cyan-50 focus:ring-cyan-500",
+  white:
+    "bg-white text-cyan-600 hover:bg-white/90 focus:ring-cyan-500",
 } as const;
 
 const sizeStyles = {
