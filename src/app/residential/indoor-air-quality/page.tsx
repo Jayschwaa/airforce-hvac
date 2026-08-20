@@ -18,7 +18,7 @@ import { PHONE, PHONE_HREF } from "@/lib/constants";
 export const metadata: Metadata = {
   title: "Indoor Air Quality Services | Air Purification & Humidity Control | Air Force HVAC",
   description:
-    "Improve your South Florida home\u2019s indoor air quality. Air purification, UV light treatment, humidity control, duct cleaning, and allergen reduction. Serving Palm Beach & Broward Counties.",
+    "Improve your South Florida home’s indoor air quality. Air purification, UV light treatment, humidity control, duct cleaning, and allergen reduction. Serving Palm Beach & Broward Counties.",
 };
 
 const services = [
@@ -26,19 +26,19 @@ const services = [
     icon: Leaf,
     title: "Air Purification Systems",
     description:
-      "Whole-home HEPA filtration and electronic air cleaners that capture 99.97% of airborne particles. South Florida\u2019s year-round pollen seasons, mold spores, and high particulate counts make air purification especially valuable for allergy and asthma sufferers.",
+      "Whole-home HEPA filtration and electronic air cleaners that capture 99.97% of airborne particles. South Florida’s year-round pollen seasons, mold spores, and high particulate counts make air purification especially valuable for allergy and asthma sufferers.",
   },
   {
     icon: Sun,
     title: "UV Light Treatment",
     description:
-      "UV-C germicidal lights installed inside your ductwork and near the evaporator coil to neutralize mold, bacteria, and viruses. Florida\u2019s humidity creates ideal conditions for mold growth on AC coils \u2014 UV treatment keeps your system clean and your air safe.",
+      "UV-C germicidal lights installed inside your ductwork and near the evaporator coil to neutralize mold, bacteria, and viruses. Florida’s humidity creates ideal conditions for mold growth on AC coils — UV treatment keeps your system clean and your air safe.",
   },
   {
     icon: Droplets,
     title: "Humidity Control",
     description:
-      "Whole-home dehumidifiers that maintain optimal 45\u201355% relative humidity levels. South Florida\u2019s outdoor humidity regularly exceeds 80%, and your AC alone cannot always keep indoor moisture in check. Excess humidity leads to mold, musty odors, and structural damage.",
+      "Whole-home dehumidifiers that maintain optimal 45–55% relative humidity levels. South Florida’s outdoor humidity regularly exceeds 80%, and your AC alone cannot always keep indoor moisture in check. Excess humidity leads to mold, musty odors, and structural damage.",
   },
   {
     icon: Wind,
@@ -64,7 +64,7 @@ const faqs = [
   {
     question: "Why is indoor air quality such a big concern in South Florida?",
     answer:
-      "South Florida\u2019s combination of high humidity, warm temperatures, and extended pollen seasons creates ideal conditions for mold growth, dust mites, and airborne allergens. Because homes are sealed up with the AC running for most of the year, contaminants accumulate indoors and can reach concentrations 2\u20135 times higher than outdoor levels. Proper IAQ solutions are not a luxury here \u2014 they are a health necessity.",
+      "South Florida’s combination of high humidity, warm temperatures, and extended pollen seasons creates ideal conditions for mold growth, dust mites, and airborne allergens. Because homes are sealed up with the AC running for most of the year, contaminants accumulate indoors and can reach concentrations 2–5 times higher than outdoor levels. Proper IAQ solutions are not a luxury here — they are a health necessity.",
   },
   {
     question: "Will a whole-home dehumidifier reduce my energy bills?",
@@ -79,7 +79,7 @@ const faqs = [
   {
     question: "How often should I have my ducts cleaned in South Florida?",
     answer:
-      "We recommend professional duct cleaning every 3\u20135 years for most South Florida homes. However, you may want to schedule cleaning sooner if you notice musty odors from your vents, have completed a renovation, recently moved into a new home, or have pets that shed heavily. Homes with allergy or asthma sufferers benefit from more frequent cleaning.",
+      "We recommend professional duct cleaning every 3–5 years for most South Florida homes. However, you may want to schedule cleaning sooner if you notice musty odors from your vents, have completed a renovation, recently moved into a new home, or have pets that shed heavily. Homes with allergy or asthma sufferers benefit from more frequent cleaning.",
   },
 ];
 
@@ -107,8 +107,8 @@ export default function ResidentialIndoorAirQualityPage() {
           </h1>
           <p className="mt-6 max-w-2xl text-lg text-gray-600">
             Breathe cleaner, healthier air in your South Florida home. Our IAQ
-            experts design custom solutions \u2014 from air purification and UV
-            treatment to humidity control and duct cleaning \u2014 that address the
+            experts design custom solutions — from air purification and UV
+            treatment to humidity control and duct cleaning — that address the
             unique air quality challenges of living in a tropical climate.
           </p>
           <div className="mt-8 flex flex-col gap-4 sm:flex-row">
@@ -128,7 +128,7 @@ export default function ResidentialIndoorAirQualityPage() {
           <SectionHeading
             label="Our Services"
             heading="Cleaner Air for Your Home"
-            subtitle="Advanced indoor air quality solutions designed for South Florida\u2019s unique climate challenges."
+            subtitle="Advanced indoor air quality solutions designed for South Florida’s unique climate challenges."
             centered
           />
           <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
@@ -173,7 +173,7 @@ export default function ResidentialIndoorAirQualityPage() {
           <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
             <Button
               href="/contact"
-              className="bg-white text-cyan-600 hover:bg-white/90"
+              variant="white"
               size="lg"
             >
               Contact Us
