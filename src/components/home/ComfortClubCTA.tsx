@@ -36,7 +36,7 @@ export function ComfortClubCTA() {
               <Button
                 variant="primary"
                 size="lg"
-                href="tel:+13053356991"
+                href="tel:+18552917007"
               >
                 <Phone className="h-5 w-5 mr-2" />
                 Call to Join

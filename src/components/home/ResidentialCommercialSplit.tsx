@@ -77,11 +77,11 @@ export function ResidentialCommercialSplit() {
             </div>
 
             <div className="grid grid-cols-2 gap-3">
-              <Button href="tel:+13053356991" size="md">
+              <Button href="tel:+18552917007" size="md">
                 <Phone className="h-4 w-4 mr-2" />
                 Call Now
               </Button>
-              <Button href="sms:+13053356991" variant="outline" size="md">
+              <Button href="sms:+18552917007" variant="outline" size="md">
                 <MessageSquare className="h-4 w-4 mr-2" />
                 Text Us
               </Button>
@@ -123,11 +123,11 @@ export function ResidentialCommercialSplit() {
             </div>
 
             <div className="grid grid-cols-2 gap-3">
-              <Button href="tel:+13053356991" variant="secondary" size="md">
+              <Button href="tel:+18552917007" variant="secondary" size="md">
                 <Phone className="h-4 w-4 mr-2" />
                 Call Now
               </Button>
-              <Button href="sms:+13053356991" variant="outline" size="md">
+              <Button href="sms:+18552917007" variant="outline" size="md">
                 <MessageSquare className="h-4 w-4 mr-2" />
                 Text Us
               </Button>
