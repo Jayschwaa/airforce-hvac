@@ -76,7 +76,6 @@ function renderContent(paragraphs: string[]) {
         </p>
       );
     }
-    // Handle paragraphs with bold sections
     const parts = p.split(/(\*\*[^*]+\*\*)/g);
     return (
       <p key={i} className="text-gray-700 leading-relaxed mb-4">
@@ -104,14 +103,12 @@ export default async function BlogPostPage({
   const post = BLOG_POSTS.find((p) => p.slug === slug);
   if (!post) notFound();
 
-  // Get related posts (same category, excluding current)
   const related = BLOG_POSTS.filter(
     (p) => p.category === post.category && p.slug !== post.slug
   ).slice(0, 3);
 
   return (
     <>
-      {/* Breadcrumb */}
       <div className="border-b border-gray-100 bg-gray-50">
         <Container>
           <nav className="flex items-center gap-2 py-3 text-sm text-gray-500">
@@ -133,11 +130,9 @@ export default async function BlogPostPage({
         </Container>
       </div>
 
-      {/* Article */}
       <article className="py-12 bg-white">
         <Container>
           <div className="mx-auto max-w-3xl">
-            {/* Meta */}
             <div className="flex flex-wrap items-center gap-3 mb-6">
               <span
                 className={`inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-xs font-semibold ${categoryColors[post.category]}`}
@@ -162,27 +157,22 @@ export default async function BlogPostPage({
               </span>
             </div>
 
-            {/* Title */}
             <h1 className="font-rubik text-3xl font-bold text-navy-500 leading-tight md:text-4xl">
               {post.title}
             </h1>
 
-            {/* Description */}
             <p className="mt-4 text-lg text-gray-600 leading-relaxed">
               {post.description}
             </p>
 
-            {/* Divider */}
             <div className="my-8 flex items-center gap-3">
               <div className="h-px flex-1 bg-gray-200" />
               <div className="h-2 w-2 rounded-full bg-cyan-400" />
               <div className="h-px flex-1 bg-gray-200" />
             </div>
 
-            {/* Content */}
             <div className="prose-like">{renderContent(post.content)}</div>
 
-            {/* CTA Box */}
             <div className="mt-12 rounded-2xl border border-cyan-200 bg-cyan-50 p-8 text-center">
               <h3 className="font-rubik text-xl font-bold text-navy-500">
                 Ready to Get Started?
@@ -207,14 +197,13 @@ export default async function BlogPostPage({
                     ? "Residential Services"
                     : "Commercial Services"}
                 </Button>
-                <Button href="tel:+13053356991" variant="outline" size="md">
+                <Button href="tel:+18552917007" variant="outline" size="md">
                   <Phone className="h-4 w-4 mr-1" />
-                  (305) 335-6991
+                  1-855-291-7007
                 </Button>
               </div>
             </div>
 
-            {/* Back link */}
             <div className="mt-8">
               <Link
                 href="/blog"
@@ -228,7 +217,6 @@ export default async function BlogPostPage({
         </Container>
       </article>
 
-      {/* Related Posts */}
       {related.length > 0 && (
         <section className="py-12 bg-gray-50 border-t border-gray-100">
           <Container>
