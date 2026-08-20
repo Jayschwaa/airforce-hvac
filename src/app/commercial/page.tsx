@@ -346,7 +346,7 @@ export default function CommercialPage() {
             <Button
               href="/contact"
               size="lg"
-              className="bg-white text-cyan-600 hover:bg-white/90"
+              variant="white"
             >
               Request a Consultation
             </Button>
