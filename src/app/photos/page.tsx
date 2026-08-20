@@ -58,6 +58,10 @@ const photos = [
     src: "/images/photos/blower-inspection.jpg",
     alt: "Air Force HVAC team inspecting inside a large commercial blower unit",
   },
+  {
+    src: "/images/photos/hvac-unit-service.jpg",
+    alt: "Air Force HVAC technicians servicing a residential outdoor condenser unit",
+  },
 ];
 
 export default function PhotosPage() {
@@ -98,11 +102,11 @@ export default function PhotosPage() {
 
           <div className="mt-12 text-center">
             <a
-              href="tel:+13053356991"
+              href="tel:+18552917007"
               className="inline-flex items-center gap-2 rounded-lg bg-cyan-500 px-8 py-4 font-rubik font-semibold text-white transition-all hover:bg-cyan-600"
             >
               <Phone className="h-5 w-5" />
-              Call (305) 335-6991
+              Call 1-855-291-7007
             </a>
           </div>
         </Container>
