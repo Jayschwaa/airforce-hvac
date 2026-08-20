@@ -1,8 +1,8 @@
 // ── Company Info ──────────────────────────────────────────────
 
 export const COMPANY_NAME = "Air Force HVAC" as const;
-export const PHONE = "(305) 335-6991" as const;
-export const PHONE_HREF = "tel:+13053356991" as const;
+export const PHONE = "1-855-291-7007" as const;
+export const PHONE_HREF = "tel:+18552917007" as const;
 export const EMAIL = "Jason@airforceteam.com" as const;
 export const ADMIN_EMAIL = "admin@airforceteam.com" as const;
 export const TAGLINE = "Your Space, Our Mission" as const;
@@ -49,6 +49,10 @@ export const NAV_ITEMS: NavItem[] = [
       { label: "── Services ──", href: "/residential" },
       { label: "HVAC", href: "/residential/hvac" },
       { label: "Plumbing", href: "/residential/plumbing" },
+      { label: "Leak Detection", href: "/residential/leak-detection" },
+      { label: "Slab Leaks", href: "/residential/slab-leaks" },
+      { label: "Video Camera Inspection", href: "/residential/video-camera-inspection" },
+      { label: "Emergency Plumbing", href: "/residential/emergency-plumbing" },
       { label: "Electrical", href: "/residential/electrical" },
       { label: "Roofing", href: "/residential/roofing" },
       { label: "Indoor Air Quality", href: "/residential/indoor-air-quality" },

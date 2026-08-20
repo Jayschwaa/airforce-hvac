@@ -8,7 +8,7 @@ export function cn(...args: ClassValue[]): string {
 }
 
 /**
- * Format a raw phone string (e.g. "+13053356991") into a readable format.
+ * Format a raw phone string (e.g. "+18552917007") into a readable format.
  * If the string already looks formatted it is returned as-is.
  */
 export function formatPhone(phone: string): string {
