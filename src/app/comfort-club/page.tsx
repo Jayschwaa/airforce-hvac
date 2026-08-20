@@ -233,7 +233,7 @@ export default function ComfortClubPage() {
         </Container>
       </section>
 
-      {/* ── Why Join ──────────────────────────────────────── */}
+      {/* ── Why Join ───────────────────────────────────────── */}
       <section className="bg-gray-50 py-16 md:py-20">
         <Container>
           <SectionHeading
