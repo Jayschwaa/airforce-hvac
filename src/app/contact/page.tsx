@@ -169,7 +169,7 @@ export default function ContactPage() {
             <Button
               href={PHONE_HREF}
               size="lg"
-              className="bg-white text-cyan-600 hover:bg-white/90"
+              variant="white"
             >
               Call Now
             </Button>
