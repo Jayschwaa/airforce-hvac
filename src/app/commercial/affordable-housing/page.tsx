@@ -162,8 +162,8 @@ export default function AffordableHousingPage() {
               />
               <p className="mt-6 text-lg leading-relaxed text-gray-600">
                 Affordable housing operators work with tighter margins than any
-                other sector. That is exactly why we approach every project as
-                if we have equity in the outcome. We engineer cost out of the
+                other sector. That is exactly why we approach every project as if
+                we have equity in the outcome. We engineer cost out of the
                 project — not quality — so your property performs better for
                 tenants and investors alike.
               </p>
