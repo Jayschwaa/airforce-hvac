@@ -134,14 +134,14 @@ export default function BiennialServicePage() {
             </p>
             <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-3">
               <a
-                href="tel:+13053356991"
+                href="tel:+18552917007"
                 className="inline-flex items-center gap-2 rounded-lg bg-cyan-500 px-8 py-4 font-rubik font-semibold text-white transition-all hover:bg-cyan-600"
               >
                 <Phone className="h-5 w-5" />
-                Book Now — (305) 335-6991
+                Book Now — 1-855-291-7007
               </a>
               <a
-                href="sms:+13053356991"
+                href="sms:+18552917007"
                 className="inline-flex items-center gap-2 rounded-lg border-2 border-white/30 px-8 py-4 font-rubik font-semibold text-white transition-all hover:bg-white/10"
               >
                 <MessageSquare className="h-5 w-5" />
@@ -265,14 +265,14 @@ export default function BiennialServicePage() {
             </p>
             <div className="mt-6 flex flex-col sm:flex-row items-center justify-center gap-3">
               <a
-                href="tel:+13053356991"
+                href="tel:+18552917007"
                 className="inline-flex items-center gap-2 rounded-lg bg-white px-8 py-4 font-rubik font-bold text-cyan-600 transition-all hover:bg-white/90"
               >
                 <Phone className="h-5 w-5" />
-                (305) 335-6991
+                1-855-291-7007
               </a>
               <a
-                href="sms:+13053356991"
+                href="sms:+18552917007"
                 className="inline-flex items-center gap-2 rounded-lg border-2 border-white px-8 py-4 font-rubik font-semibold text-white transition-all hover:bg-white hover:text-cyan-600"
               >
                 <MessageSquare className="h-5 w-5" />
