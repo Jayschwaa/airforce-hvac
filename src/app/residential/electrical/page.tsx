@@ -27,13 +27,13 @@ const services = [
     icon: Zap,
     title: "Panel Upgrades",
     description:
-      "Upgrade your electrical panel to handle modern loads. Many South Florida homes built in the 1970s\u201390s still have 100-amp panels or outdated Federal Pacific and Zinsco breakers that are safety hazards. We upgrade to 200-amp or 400-amp service to support new AC systems, EV chargers, and more.",
+      "Upgrade your electrical panel to handle modern loads. Many South Florida homes built in the 1970s–90s still have 100-amp panels or outdated Federal Pacific and Zinsco breakers that are safety hazards. We upgrade to 200-amp or 400-amp service to support new AC systems, EV chargers, and more.",
   },
   {
     icon: Cable,
     title: "Wiring & Rewiring",
     description:
-      "New circuit installation, aluminum-to-copper rewiring, and whole-home rewiring for older properties. Florida\u2019s building codes are among the strictest in the country \u2014 all of our work is fully permitted and inspected.",
+      "New circuit installation, aluminum-to-copper rewiring, and whole-home rewiring for older properties. Florida’s building codes are among the strictest in the country — all of our work is fully permitted and inspected.",
   },
   {
     icon: ToggleRight,
@@ -45,13 +45,13 @@ const services = [
     icon: Fan,
     title: "Ceiling Fan Installation",
     description:
-      "Proper ceiling fan installation with secure mounting and correct wiring. In South Florida, ceiling fans supplement your AC to improve air circulation and can reduce cooling costs by making rooms feel 4\u20136 degrees cooler.",
+      "Proper ceiling fan installation with secure mounting and correct wiring. In South Florida, ceiling fans supplement your AC to improve air circulation and can reduce cooling costs by making rooms feel 4–6 degrees cooler.",
   },
   {
     icon: Lightbulb,
     title: "Lighting Upgrades",
     description:
-      "Recessed lighting, under-cabinet lighting, landscape lighting, and LED retrofits. We design and install lighting solutions that enhance your home\u2019s aesthetics while reducing energy consumption in the Florida heat.",
+      "Recessed lighting, under-cabinet lighting, landscape lighting, and LED retrofits. We design and install lighting solutions that enhance your home’s aesthetics while reducing energy consumption in the Florida heat.",
   },
   {
     icon: Battery,
@@ -63,7 +63,7 @@ const services = [
     icon: ShieldCheck,
     title: "Surge Protection",
     description:
-      "Whole-home surge protection systems that guard your electronics and appliances from lightning strikes and grid surges. South Florida sees more lightning per square mile than almost anywhere in the country \u2014 surge protection is essential, not optional.",
+      "Whole-home surge protection systems that guard your electronics and appliances from lightning strikes and grid surges. South Florida sees more lightning per square mile than almost anywhere in the country — surge protection is essential, not optional.",
   },
 ];
 
@@ -76,17 +76,17 @@ const faqs = [
   {
     question: "Do I need a permit for electrical work in South Florida?",
     answer:
-      "Yes, virtually all electrical work beyond simple fixture swaps requires a permit in Palm Beach and Broward Counties. This includes panel upgrades, new circuit installation, rewiring, and generator hookups. Air Force HVAC pulls all necessary permits and schedules inspections as part of our service \u2014 you never have to visit a permitting office.",
+      "Yes, virtually all electrical work beyond simple fixture swaps requires a permit in Palm Beach and Broward Counties. This includes panel upgrades, new circuit installation, rewiring, and generator hookups. Air Force HVAC pulls all necessary permits and schedules inspections as part of our service — you never have to visit a permitting office.",
   },
   {
     question: "What size whole-home generator do I need for hurricane season?",
     answer:
-      "For a typical South Florida home, a 14\u201320 kW generator covers essential circuits including air conditioning, refrigerator, lights, and a few outlets. For whole-home coverage including an electric range, pool pump, and EV charger, 22\u201326 kW is common. We perform a detailed load analysis and help you prioritize circuits within your budget.",
+      "For a typical South Florida home, a 14–20 kW generator covers essential circuits including air conditioning, refrigerator, lights, and a few outlets. For whole-home coverage including an electric range, pool pump, and EV charger, 22–26 kW is common. We perform a detailed load analysis and help you prioritize circuits within your budget.",
   },
   {
     question: "Is whole-home surge protection worth it in South Florida?",
     answer:
-      "Absolutely. South Florida is in \u201CLightning Alley\u201D \u2014 the region with the highest lightning density in the United States. A single lightning strike near your home can send voltage spikes through power lines and destroy computers, smart TVs, HVAC controls, and appliances. A whole-home surge protector costs a fraction of replacing those items and provides continuous protection.",
+      "Absolutely. South Florida is in “Lightning Alley” — the region with the highest lightning density in the United States. A single lightning strike near your home can send voltage spikes through power lines and destroy computers, smart TVs, HVAC controls, and appliances. A whole-home surge protector costs a fraction of replacing those items and provides continuous protection.",
   },
 ];
 
@@ -180,7 +180,7 @@ export default function ResidentialElectricalPage() {
           <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
             <Button
               href="/contact"
-              className="bg-white text-cyan-600 hover:bg-white/90"
+              variant="white"
               size="lg"
             >
               Contact Us
