@@ -33,7 +33,7 @@ export function StickyMobileCTA() {
           Call Now
         </a>
         <a
-          href="sms:+13053356991"
+          href="sms:+18552917007"
           className="flex-1 flex items-center justify-center h-11 rounded-lg bg-cyan-500 text-white font-rubik font-semibold text-sm transition-colors hover:bg-cyan-600"
         >
           Text Us

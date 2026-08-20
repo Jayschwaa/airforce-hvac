@@ -167,13 +167,13 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
               </a>
 
               <Button
-                href="tel:+13053356991"
+                href="tel:+18552917007"
                 variant="primary"
                 size="md"
                 className="w-full mt-4"
                 onClick={onClose}
               >
-                Call (305) 335-6991
+                Call 1-855-291-7007
               </Button>
             </div>
           </motion.div>

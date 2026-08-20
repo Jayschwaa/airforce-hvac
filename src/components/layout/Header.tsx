@@ -188,7 +188,7 @@ export function Header() {
             >
               {PHONE}
             </a>
-            <Button href="tel:+13053356991" variant="primary" size="sm">
+            <Button href="tel:+18552917007" variant="primary" size="sm">
               Get a Quote
             </Button>
           </div>
