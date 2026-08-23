@@ -42,19 +42,24 @@ src/lib/constants.ts      Brand, contact details, navigation
 
 Tokens are defined in `src/app/globals.css` under `@theme inline`.
 
-| Token | Value | Notes |
-|---|---|---|
-| `ink-800` | `#101820` | Primary dark surface |
-| `ink-900` | `#080C11` | Deepest surface (hero, chart) |
-| `gold-400` | `#E8B33C` | The mark colour — **ink surfaces only** |
-| `gold-700` | `#8C5E15` | Gold *text* on light surfaces |
-| `cream-100` | `#FBF8F2` | Page background |
+| Token | Value | Contrast on cream | Notes |
+|---|---|---|---|
+| `forest-400` | `#4A7764` | 4.82:1 | Lightest step safe for caption text |
+| `forest-500` | `#2C5C42` | 7.29:1 | Secondary prose |
+| `forest-800` | `#10301F` | 13.53:1 | Primary type + main dark surface |
+| `forest-900` | `#071A12` | 17.02:1 | Deepest surface (hero, chart) |
+| `gold-400` | `#E8B33C` | 1.81:1 | The mark colour — **forest surfaces only** |
+| `gold-700` | `#8C5E15` | 5.32:1 | Gold *text* on light surfaces |
+| `cream-100` | `#FBF8F2` | — | Page background |
 
-**Contrast rule:** `gold-400` measures 1.87:1 against cream and fails
-contrast on light surfaces. It may carry meaning only on ink. Use
+`forest-300` and lighter are decorative only and must never carry type.
+
+**Contrast rule:** `gold-400` measures 1.81:1 against cream and fails
+contrast on light surfaces. It may carry meaning only on forest. Use
 `gold-700` for gold-coloured text on light backgrounds. The compounding
-chart is rendered on `ink-900` for exactly this reason — its two-shade gold
-ramp clears 3:1 there and separates by 16.9 ΔE under CVD simulation.
+chart is rendered on `forest-900` for exactly this reason — there gold-400
+and gold-600 clear 10.0:1 and 5.3:1 and separate by 16.9 ΔE under CVD
+simulation.
 
 Type: **Fraunces** for display, **Inter** for everything else — including
 every figure, since a display face on a number reads as decoration.

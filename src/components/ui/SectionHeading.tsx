@@ -13,7 +13,7 @@ export function SectionHeading({
   heading: React.ReactNode;
   subtitle?: React.ReactNode;
   centered?: boolean;
-  /** "dark" = ink type on light surfaces. "light" = cream type on ink surfaces. */
+  /** "dark" = forest type on light surfaces. "light" = cream type on forest surfaces. */
   tone?: "dark" | "light";
   className?: string;
   as?: "h1" | "h2" | "h3";
@@ -47,7 +47,7 @@ export function SectionHeading({
           Tag === "h1"
             ? "text-[2.5rem] leading-[1.04] sm:text-6xl lg:text-[4.25rem]"
             : "text-[2rem] leading-[1.08] sm:text-[2.75rem]",
-          light ? "text-cream-100" : "text-ink-800",
+          light ? "text-cream-100" : "text-forest-800",
         )}
       >
         {heading}
@@ -58,7 +58,7 @@ export function SectionHeading({
           className={cn(
             "mt-5 text-lg leading-relaxed",
             centered && "mx-auto max-w-2xl",
-            light ? "text-cream-100/70" : "text-ink-500",
+            light ? "text-cream-100/70" : "text-forest-500",
           )}
         >
           {subtitle}

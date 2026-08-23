@@ -12,7 +12,7 @@ export function CTABand({
   cta?: string;
 }) {
   return (
-    <section className="bg-ink-800 py-20 sm:py-24">
+    <section className="bg-forest-800 py-20 sm:py-24">
       <Container>
         <div className="grid items-center gap-10 lg:grid-cols-12">
           <div className="lg:col-span-7">

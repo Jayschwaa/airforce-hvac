@@ -52,7 +52,7 @@ function Slider({
         onChange={(e) => onChange(Number(e.target.value))}
         aria-describedby={`${id}-hint`}
         className="mt-3 h-1.5 w-full cursor-pointer appearance-none rounded-full outline-none
-                   focus-visible:ring-2 focus-visible:ring-gold-400 focus-visible:ring-offset-4 focus-visible:ring-offset-ink-900
+                   focus-visible:ring-2 focus-visible:ring-gold-400 focus-visible:ring-offset-4 focus-visible:ring-offset-forest-900
                    [&::-webkit-slider-thumb]:h-5 [&::-webkit-slider-thumb]:w-5 [&::-webkit-slider-thumb]:appearance-none
                    [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-gold-400
                    [&::-webkit-slider-thumb]:shadow-[0_0_0_4px_rgba(232,179,60,0.2)]
@@ -85,14 +85,14 @@ function Output({
     <div
       className={
         emphasis
-          ? "rounded-2xl bg-gold-400 p-6 text-ink-900"
+          ? "rounded-2xl bg-gold-400 p-6 text-forest-900"
           : "rounded-2xl border border-cream-100/12 p-6"
       }
     >
       <div
         className={
           emphasis
-            ? "text-xs font-bold uppercase tracking-[0.14em] text-ink-900/65"
+            ? "text-xs font-bold uppercase tracking-[0.14em] text-forest-900/65"
             : "text-xs font-bold uppercase tracking-[0.14em] text-cream-100/50"
         }
       >
@@ -100,14 +100,14 @@ function Output({
       </div>
       <div
         className={`mt-2 font-sans text-[2.25rem] font-semibold leading-none tracking-[-0.04em] ${
-          emphasis ? "text-ink-900" : "text-cream-100"
+          emphasis ? "text-forest-900" : "text-cream-100"
         }`}
       >
         {value}
       </div>
       <div
         className={`mt-2 text-[0.8125rem] leading-snug ${
-          emphasis ? "text-ink-900/70" : "text-cream-100/45"
+          emphasis ? "text-forest-900/70" : "text-cream-100/45"
         }`}
       >
         {note}
@@ -141,7 +141,7 @@ export function UpsideCalculator() {
   }, [units, opexPerUnit, recoveryPct, capRate]);
 
   return (
-    <section className="bg-ink-900 py-20 sm:py-28">
+    <section className="bg-forest-900 py-20 sm:py-28">
       <Container>
         <div className="max-w-3xl">
           <SectionHeading

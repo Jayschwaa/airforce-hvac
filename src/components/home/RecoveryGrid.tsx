@@ -17,7 +17,7 @@ export function RecoveryGrid() {
           />
         </div>
 
-        <div className="mt-14 grid gap-px overflow-hidden rounded-2xl border border-ink-800/10 bg-ink-800/10 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-14 grid gap-px overflow-hidden rounded-2xl border border-forest-800/10 bg-forest-800/10 sm:grid-cols-2 lg:grid-cols-4">
           {RECOVERY_CATEGORIES.map((c, i) => {
             const Icon = c.icon;
             return (
@@ -30,10 +30,10 @@ export function RecoveryGrid() {
                     className="h-6 w-6 text-gold-600 transition-transform duration-300 group-hover:-translate-y-0.5"
                     aria-hidden="true"
                   />
-                  <h3 className="mt-5 font-display text-xl font-bold tracking-tight text-ink-800">
+                  <h3 className="mt-5 font-display text-xl font-bold tracking-tight text-forest-800">
                     {c.title}
                   </h3>
-                  <p className="mt-2 flex-1 text-[0.9375rem] leading-relaxed text-ink-500">
+                  <p className="mt-2 flex-1 text-[0.9375rem] leading-relaxed text-forest-500">
                     {c.short}
                   </p>
                   <p className="mt-5 flex items-center gap-1.5 text-[0.8125rem] font-semibold text-gold-700">

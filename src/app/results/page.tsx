@@ -19,7 +19,7 @@ export const metadata: Metadata = {
 export default function ResultsPage() {
   return (
     <>
-      <section className="bg-ink-900 py-20 sm:py-24">
+      <section className="bg-forest-900 py-20 sm:py-24">
         <Container>
           <div className="max-w-3xl">
             <SectionHeading
@@ -67,34 +67,34 @@ export default function ResultsPage() {
           <div className="mt-14 space-y-6">
             {CASE_STUDIES.map((cs) => (
               <Reveal key={cs.headline}>
-                <article className="overflow-hidden rounded-2xl border border-ink-800/10 bg-cream-50">
+                <article className="overflow-hidden rounded-2xl border border-forest-800/10 bg-cream-50">
                   <div className="grid lg:grid-cols-12">
-                    <div className="border-b border-ink-800/8 p-8 sm:p-10 lg:col-span-7 lg:border-b-0 lg:border-r">
+                    <div className="border-b border-forest-800/8 p-8 sm:p-10 lg:col-span-7 lg:border-b-0 lg:border-r">
                       <div className="flex flex-wrap items-center gap-x-3 gap-y-2">
-                        <span className="rounded-full bg-ink-800 px-3 py-1 text-[0.6875rem] font-bold uppercase tracking-wider text-gold-400">
+                        <span className="rounded-full bg-forest-800 px-3 py-1 text-[0.6875rem] font-bold uppercase tracking-wider text-gold-400">
                           {cs.sector}
                         </span>
-                        <span className="text-[0.8125rem] text-ink-400">{cs.scale}</span>
+                        <span className="text-[0.8125rem] text-forest-400">{cs.scale}</span>
                       </div>
 
-                      <h3 className="mt-5 font-display text-2xl font-black leading-tight tracking-[-0.02em] text-ink-800 sm:text-[1.75rem]">
+                      <h3 className="mt-5 font-display text-2xl font-black leading-tight tracking-[-0.02em] text-forest-800 sm:text-[1.75rem]">
                         {cs.headline}
                       </h3>
 
                       <div className="mt-7 space-y-5">
                         <div>
-                          <h4 className="text-xs font-bold uppercase tracking-[0.18em] text-ink-400">
+                          <h4 className="text-xs font-bold uppercase tracking-[0.18em] text-forest-400">
                             The situation
                           </h4>
-                          <p className="mt-2.5 leading-relaxed text-ink-600">
+                          <p className="mt-2.5 leading-relaxed text-forest-600">
                             {cs.problem}
                           </p>
                         </div>
                         <div>
-                          <h4 className="text-xs font-bold uppercase tracking-[0.18em] text-ink-400">
+                          <h4 className="text-xs font-bold uppercase tracking-[0.18em] text-forest-400">
                             What we did
                           </h4>
-                          <p className="mt-2.5 leading-relaxed text-ink-600">
+                          <p className="mt-2.5 leading-relaxed text-forest-600">
                             {cs.found}
                           </p>
                         </div>
@@ -102,18 +102,18 @@ export default function ResultsPage() {
                     </div>
 
                     <div className="bg-cream-200/50 p-8 sm:p-10 lg:col-span-5">
-                      <h4 className="text-xs font-bold uppercase tracking-[0.18em] text-ink-400">
+                      <h4 className="text-xs font-bold uppercase tracking-[0.18em] text-forest-400">
                         The four numbers
                       </h4>
                       <dl className="mt-6 space-y-6">
                         {cs.metrics.map((m, i) => (
                           <div key={m.label}>
-                            <dt className="text-[0.8125rem] text-ink-500">{m.label}</dt>
+                            <dt className="text-[0.8125rem] text-forest-500">{m.label}</dt>
                             <dd
                               className={`mt-1 font-sans text-[1.75rem] font-semibold leading-none tracking-[-0.04em] ${
                                 i === cs.metrics.length - 1
                                   ? "text-gold-700"
-                                  : "text-ink-800"
+                                  : "text-forest-800"
                               }`}
                             >
                               {m.value}
@@ -130,8 +130,8 @@ export default function ResultsPage() {
         </Container>
       </section>
 
-      {/* Compounding — the chart lives on ink, where gold clears contrast. */}
-      <section className="mt-12 bg-ink-900 py-20 sm:py-28">
+      {/* Compounding — the chart lives on forest, where gold clears contrast. */}
+      <section className="mt-12 bg-forest-900 py-20 sm:py-28">
         <Container>
           <div className="grid gap-14 lg:grid-cols-12 lg:gap-16">
             <div className="lg:col-span-5">

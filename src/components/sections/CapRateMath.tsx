@@ -31,18 +31,18 @@ export function CapRateMath() {
         <div className="grid gap-14 lg:grid-cols-12 lg:gap-20">
           <div className="lg:col-span-5">
             <Reveal>
-              <h2 className="font-display text-[2rem] font-black leading-[1.08] tracking-[-0.03em] text-ink-800 sm:text-[2.75rem]">
+              <h2 className="font-display text-[2rem] font-black leading-[1.08] tracking-[-0.03em] text-forest-800 sm:text-[2.75rem]">
                 You don&rsquo;t need another building.
                 <span className="block text-gold-700">
                   You need this one to earn more.
                 </span>
               </h2>
-              <p className="mt-6 text-lg leading-relaxed text-ink-500">
+              <p className="mt-6 text-lg leading-relaxed text-forest-500">
                 Acquiring NOI is expensive, slow and competitive. Recovering
                 NOI you are already generating — and quietly handing to a
                 utility — costs you nothing and takes ninety days.
               </p>
-              <p className="mt-4 leading-relaxed text-ink-500">
+              <p className="mt-4 leading-relaxed text-forest-500">
                 This is the entire argument. A recurring expense reduction is
                 not a rebate. It is a permanent change to the income statement,
                 and it capitalises into value at whatever cap rate you underwrite
@@ -55,7 +55,7 @@ export function CapRateMath() {
             <div className="grid gap-4 sm:grid-cols-3">
               {steps.map((s, i) => (
                 <Reveal key={s.label} delay={i * 0.1}>
-                  <div className="relative h-full rounded-2xl border border-ink-800/8 bg-cream-50 p-6">
+                  <div className="relative h-full rounded-2xl border border-forest-800/8 bg-cream-50 p-6">
                     {i < steps.length - 1 && (
                       <ArrowRight
                         className="absolute -right-3 top-1/2 hidden h-5 w-5 -translate-y-1/2 text-gold-600 sm:block"
@@ -64,15 +64,15 @@ export function CapRateMath() {
                     )}
                     <div
                       className={`font-sans text-[2.5rem] font-semibold leading-none tracking-[-0.04em] ${
-                        i === steps.length - 1 ? "text-gold-700" : "text-ink-800"
+                        i === steps.length - 1 ? "text-gold-700" : "text-forest-800"
                       }`}
                     >
                       {s.value}
                     </div>
-                    <p className="mt-3 font-medium leading-snug text-ink-800">
+                    <p className="mt-3 font-medium leading-snug text-forest-800">
                       {s.label}
                     </p>
-                    <p className="mt-2 text-[0.8125rem] leading-relaxed text-ink-400">
+                    <p className="mt-2 text-[0.8125rem] leading-relaxed text-forest-400">
                       {s.note}
                     </p>
                   </div>
@@ -81,7 +81,7 @@ export function CapRateMath() {
             </div>
 
             <Reveal delay={0.3}>
-              <p className="mt-6 border-l-2 border-gold-400 pl-5 text-[0.9375rem] leading-relaxed text-ink-500">
+              <p className="mt-6 border-l-2 border-gold-400 pl-5 text-[0.9375rem] leading-relaxed text-forest-500">
                 Across a portfolio the arithmetic stops being abstract quickly.
                 Six figures of recovered annual expense on a mid-sized book is
                 seven figures of value — created without a shovel, a permit, or

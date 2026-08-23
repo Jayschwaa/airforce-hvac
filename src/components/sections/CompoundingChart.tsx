@@ -7,11 +7,12 @@ import { COMPOUNDING } from "@/data/results";
  * Cumulative savings across a seven-year hold, as a stacked column chart.
  *
  * Palette note: the marks are gold-400 (#E8B33C) and gold-600 (#B47C18).
- * That pair measures 16.9 ΔE under deutan/protan simulation and clears 3:1
- * against this ink surface — but gold-400 sits at 1.87:1 on cream, which is
- * why this chart is only ever rendered on ink. Two ordered shades of one
- * hue, not two categorical hues: the segments are "earlier" and "this year",
- * which is a sequence, not an identity.
+ * That pair measures 16.9 ΔE under deutan/protan simulation, and against the
+ * forest-900 ground they clear 9.4:1 and 5.0:1 respectively. gold-400 sits
+ * at 1.81:1 on cream, which is why this chart is only ever rendered on
+ * forest. Two ordered shades of one hue, not two categorical hues: the
+ * segments are "earlier" and "this year", which is a sequence, not an
+ * identity.
  */
 
 const W = 720;

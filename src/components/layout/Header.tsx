@@ -28,7 +28,7 @@ export function Header() {
         className={cn(
           "sticky top-0 z-50 border-b transition-all duration-300",
           scrolled
-            ? "border-ink-800/10 bg-cream-100/85 backdrop-blur-md"
+            ? "border-forest-800/10 bg-cream-100/85 backdrop-blur-md"
             : "border-transparent bg-cream-100",
         )}
       >
@@ -48,8 +48,8 @@ export function Header() {
                   className={cn(
                     "relative rounded-full px-4 py-2 text-[0.9375rem] font-medium transition-colors",
                     active
-                      ? "text-ink-800"
-                      : "text-ink-500 hover:text-ink-800",
+                      ? "text-forest-800"
+                      : "text-forest-500 hover:text-forest-800",
                   )}
                 >
                   {item.label}
@@ -65,13 +65,13 @@ export function Header() {
           </nav>
 
           <div className="hidden shrink-0 lg:block">
-            <Button href="/contact" variant="ink" size="sm">
+            <Button href="/contact" variant="forest" size="sm">
               Get your free analysis
             </Button>
           </div>
 
           <button
-            className="rounded-full p-2 text-ink-800 transition-colors hover:bg-ink-800/5 lg:hidden"
+            className="rounded-full p-2 text-forest-800 transition-colors hover:bg-forest-800/5 lg:hidden"
             onClick={() => setMenuOpen(true)}
             aria-label="Open menu"
           >

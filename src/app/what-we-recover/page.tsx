@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 export default function WhatWeRecoverPage() {
   return (
     <>
-      <section className="bg-ink-900 py-20 sm:py-24">
+      <section className="bg-forest-900 py-20 sm:py-24">
         <Container>
           <div className="max-w-3xl">
             <SectionHeading
@@ -30,14 +30,14 @@ export default function WhatWeRecoverPage() {
       </section>
 
       {/* Index */}
-      <section className="border-b border-ink-800/8 bg-cream-200/50 py-10">
+      <section className="border-b border-forest-800/8 bg-cream-200/50 py-10">
         <Container>
           <ul className="flex flex-wrap gap-x-3 gap-y-2.5">
             {RECOVERY_CATEGORIES.map((c) => (
               <li key={c.slug}>
                 <a
                   href={`#${c.slug}`}
-                  className="inline-flex rounded-full border border-ink-800/15 px-4 py-1.5 text-[0.875rem] text-ink-600 transition-colors hover:border-gold-500 hover:bg-cream-50 hover:text-ink-800"
+                  className="inline-flex rounded-full border border-forest-800/15 px-4 py-1.5 text-[0.875rem] text-forest-600 transition-colors hover:border-gold-500 hover:bg-cream-50 hover:text-forest-800"
                 >
                   {c.title}
                 </a>
@@ -47,7 +47,7 @@ export default function WhatWeRecoverPage() {
         </Container>
       </section>
 
-      <div className="divide-y divide-ink-800/8">
+      <div className="divide-y divide-forest-800/8">
         {RECOVERY_CATEGORIES.map((c, i) => {
           const Icon = c.icon;
           return (
@@ -61,19 +61,19 @@ export default function WhatWeRecoverPage() {
                   <div className="grid gap-10 lg:grid-cols-12 lg:gap-16">
                     <div className="lg:col-span-5">
                       <div className="flex items-center gap-3">
-                        <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-ink-800">
+                        <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-forest-800">
                           <Icon className="h-5 w-5 text-gold-400" aria-hidden="true" />
                         </span>
-                        <span className="tabular text-[0.8125rem] font-bold text-ink-300">
+                        <span className="tabular text-[0.8125rem] font-bold text-forest-300">
                           {String(i + 1).padStart(2, "0")}
                         </span>
                       </div>
 
-                      <h2 className="mt-5 font-display text-[1.75rem] font-black leading-tight tracking-[-0.03em] text-ink-800 sm:text-[2rem]">
+                      <h2 className="mt-5 font-display text-[1.75rem] font-black leading-tight tracking-[-0.03em] text-forest-800 sm:text-[2rem]">
                         {c.title}
                       </h2>
 
-                      <p className="mt-4 text-lg leading-relaxed text-ink-500">
+                      <p className="mt-4 text-lg leading-relaxed text-forest-500">
                         {c.hook}
                       </p>
 
@@ -83,7 +83,7 @@ export default function WhatWeRecoverPage() {
                     </div>
 
                     <div className="lg:col-span-7">
-                      <h3 className="text-xs font-bold uppercase tracking-[0.18em] text-ink-400">
+                      <h3 className="text-xs font-bold uppercase tracking-[0.18em] text-forest-400">
                         What we actually find
                       </h3>
                       <ul className="mt-5 space-y-3.5">
@@ -93,7 +93,7 @@ export default function WhatWeRecoverPage() {
                               className="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-gold-500"
                               aria-hidden="true"
                             />
-                            <span className="leading-relaxed text-ink-600">{f}</span>
+                            <span className="leading-relaxed text-forest-600">{f}</span>
                           </li>
                         ))}
                       </ul>

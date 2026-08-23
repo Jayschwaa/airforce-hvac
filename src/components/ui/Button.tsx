@@ -2,16 +2,16 @@ import Link from "next/link";
 import { cn } from "@/lib/utils";
 
 const variantStyles = {
-  /* gold-400 on ink is the signature pair — validated at high contrast */
+  /* gold-400 on forest is the signature pair — validated at high contrast */
   primary:
-    "bg-gold-400 text-ink-900 hover:bg-gold-300 focus-visible:ring-gold-400",
-  ink: "bg-ink-800 text-cream-100 hover:bg-ink-700 focus-visible:ring-ink-800",
+    "bg-gold-400 text-forest-900 hover:bg-gold-300 focus-visible:ring-gold-400",
+  forest: "bg-forest-800 text-cream-100 hover:bg-forest-700 focus-visible:ring-forest-800",
   outline:
-    "bg-transparent border border-ink-800/25 text-ink-800 hover:border-ink-800 hover:bg-ink-800 hover:text-cream-100 focus-visible:ring-ink-800",
+    "bg-transparent border border-forest-800/25 text-forest-800 hover:border-forest-800 hover:bg-forest-800 hover:text-cream-100 focus-visible:ring-forest-800",
   outlineLight:
-    "bg-transparent border border-cream-100/30 text-cream-100 hover:bg-cream-100 hover:text-ink-900 focus-visible:ring-cream-100",
+    "bg-transparent border border-cream-100/30 text-cream-100 hover:bg-cream-100 hover:text-forest-900 focus-visible:ring-cream-100",
   ghost:
-    "bg-transparent text-gold-700 hover:text-ink-800 underline underline-offset-4 decoration-gold-400 decoration-2 focus-visible:ring-gold-700",
+    "bg-transparent text-gold-700 hover:text-forest-800 underline underline-offset-4 decoration-gold-400 decoration-2 focus-visible:ring-gold-700",
 } as const;
 
 const sizeStyles = {

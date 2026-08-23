@@ -41,7 +41,7 @@ export function MobileMenu({
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.2 }}
-          className="fixed inset-0 z-[60] bg-ink-900 lg:hidden"
+          className="fixed inset-0 z-[60] bg-forest-900 lg:hidden"
           role="dialog"
           aria-modal="true"
           aria-label="Site menu"

@@ -1,24 +1,32 @@
 @import "tailwindcss";
 
 @theme inline {
-  /* ── Brand: Ink ─────────────────────────────────────────────
-     The ground the brand stands on. Deep, blue-black, institutional. */
-  --color-ink-50: #f5f7f9;
-  --color-ink-100: #e6ebf0;
-  --color-ink-200: #c8d2dc;
-  --color-ink-300: #9aa9b8;
-  --color-ink-400: #64798c;
-  --color-ink-500: #3c5063;
-  --color-ink-600: #26374a;
-  --color-ink-700: #1a2836;
-  --color-ink-800: #101820;
-  --color-ink-900: #080c11;
+  /* ── Brand: Forest ─────────────────────────────────────────
+     The ground the brand stands on. Deep conservatory green — the
+     old-money counterpart to gold, and warmer than a blue-black.
+     Text steps measured against cream (#FBF8F2):
+       forest-400  4.82:1  smallest step safe for body/caption text
+       forest-500  7.29:1  secondary prose
+       forest-800 13.53:1  primary type and the main dark surface
+     forest-300 and lighter are decorative only — never type. */
+  --color-forest-50: #f2f7f4;
+  --color-forest-100: #deeae3;
+  --color-forest-200: #b9d2c6;
+  --color-forest-300: #87ae9c;
+  --color-forest-400: #4a7764;
+  --color-forest-500: #2c5c42;
+  --color-forest-600: #1c4530;
+  --color-forest-700: #17402a;
+  --color-forest-800: #10301f;
+  --color-forest-900: #071a12;
 
   /* ── Brand: Gold ────────────────────────────────────────────
      The money colour. gold-400 is the mark colour and only ever sits on
-     ink; it measures 1.87:1 on cream, so it must never carry text or
-     meaning on a light surface. Use gold-700 for gold-coloured text on
-     light — that is the accessible step. */
+     forest, where it measures 9.4:1 (forest-900) / 7.5:1 (forest-800).
+     On cream it is 1.81:1, so it must never carry text or meaning on a
+     light surface — use gold-700 (5.32:1 on cream) for gold-coloured
+     text on light. gold-600 is the chart's second step: 5.0:1 on
+     forest-900, and 16.9 delta-E from gold-400 under CVD simulation. */
   --color-gold-50: #fdf8ec;
   --color-gold-100: #faeecb;
   --color-gold-200: #f5dc98;
@@ -66,7 +74,7 @@ html {
 
 body {
   font-family: var(--font-sans);
-  color: var(--color-ink-800);
+  color: var(--color-forest-800);
   background: var(--color-cream-100);
   -webkit-font-smoothing: antialiased;
 }
@@ -90,21 +98,21 @@ body {
 
 ::selection {
   background: var(--color-gold-300);
-  color: var(--color-ink-900);
+  color: var(--color-forest-900);
 }
 
 ::-webkit-scrollbar { width: 10px; }
 ::-webkit-scrollbar-track { background: var(--color-cream-200); }
 ::-webkit-scrollbar-thumb {
-  background: var(--color-ink-300);
+  background: var(--color-forest-300);
   border-radius: 5px;
   border: 2px solid var(--color-cream-200);
 }
-::-webkit-scrollbar-thumb:hover { background: var(--color-ink-400); }
+::-webkit-scrollbar-thumb:hover { background: var(--color-forest-400); }
 
 * {
   scrollbar-width: thin;
-  scrollbar-color: var(--color-ink-300) var(--color-cream-200);
+  scrollbar-color: var(--color-forest-300) var(--color-cream-200);
 }
 
 @media (prefers-reduced-motion: reduce) {

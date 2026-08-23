@@ -6,7 +6,7 @@ import { PHONE, PHONE_HREF, FEE_MODEL } from "@/lib/constants";
 
 export function HeroSection() {
   return (
-    <section className="relative overflow-hidden bg-ink-900">
+    <section className="relative overflow-hidden bg-forest-900">
       {/* Warm bloom behind the artwork, kept well under the text. */}
       <div
         aria-hidden="true"

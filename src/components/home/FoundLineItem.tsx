@@ -31,7 +31,7 @@ const ROWS: readonly Row[] = [
 export function FoundLineItem() {
   return (
     <div aria-hidden="true" className="relative mx-auto max-w-md select-none">
-      <div className="rounded-2xl border border-cream-100/12 bg-ink-800 p-7 shadow-2xl">
+      <div className="rounded-2xl border border-cream-100/12 bg-forest-800 p-7 shadow-2xl">
         <div className="flex items-start justify-between border-b border-cream-100/10 pb-5">
           <div>
             <p className="text-[0.6875rem] font-bold uppercase tracking-[0.16em] text-cream-100/40">
@@ -91,14 +91,14 @@ export function FoundLineItem() {
 
       {/* The result, pinned to the corner of the statement. */}
       <div className="absolute -bottom-8 -left-4 rounded-2xl bg-gold-400 px-6 py-4 shadow-xl sm:-left-10">
-        <div className="flex items-center gap-2 text-[0.6875rem] font-bold uppercase tracking-[0.14em] text-ink-900/65">
+        <div className="flex items-center gap-2 text-[0.6875rem] font-bold uppercase tracking-[0.14em] text-forest-900/65">
           <Check className="h-3.5 w-3.5" />
           Recovered
         </div>
-        <div className="tabular mt-1 font-sans text-3xl font-semibold leading-none tracking-[-0.04em] text-ink-900">
+        <div className="tabular mt-1 font-sans text-3xl font-semibold leading-none tracking-[-0.04em] text-forest-900">
           $612,000
         </div>
-        <div className="mt-1 text-[0.75rem] text-ink-900/65">
+        <div className="mt-1 text-[0.75rem] text-forest-900/65">
           + $188K every year after
         </div>
       </div>

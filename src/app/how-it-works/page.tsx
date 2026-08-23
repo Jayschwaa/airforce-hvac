@@ -42,7 +42,7 @@ const GUARANTEES = [
 export default function HowItWorksPage() {
   return (
     <>
-      <section className="bg-ink-900 py-20 sm:py-24">
+      <section className="bg-forest-900 py-20 sm:py-24">
         <Container>
           <div className="max-w-3xl">
             <SectionHeading
@@ -59,7 +59,7 @@ export default function HowItWorksPage() {
       {/* The steps */}
       <section className="py-20 sm:py-28">
         <Container>
-          <ol className="space-y-px overflow-hidden rounded-2xl border border-ink-800/10 bg-ink-800/10">
+          <ol className="space-y-px overflow-hidden rounded-2xl border border-forest-800/10 bg-forest-800/10">
             {PROCESS.map((step) => {
               const Icon = step.icon;
               return (
@@ -67,10 +67,10 @@ export default function HowItWorksPage() {
                   <li className="grid gap-6 bg-cream-50 p-8 sm:p-10 lg:grid-cols-12 lg:gap-10">
                     <div className="lg:col-span-4">
                       <div className="flex items-center gap-4">
-                        <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-ink-800">
+                        <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-forest-800">
                           <Icon className="h-5 w-5 text-gold-400" aria-hidden="true" />
                         </span>
-                        <span className="tabular font-sans text-3xl font-semibold tracking-[-0.04em] text-ink-200">
+                        <span className="tabular font-sans text-3xl font-semibold tracking-[-0.04em] text-forest-200">
                           {step.n}
                         </span>
                       </div>
@@ -80,12 +80,12 @@ export default function HowItWorksPage() {
                     </div>
 
                     <div className="lg:col-span-8">
-                      <h2 className="font-display text-2xl font-bold leading-snug tracking-tight text-ink-800">
+                      <h2 className="font-display text-2xl font-bold leading-snug tracking-tight text-forest-800">
                         {step.title}
                       </h2>
-                      <p className="mt-4 leading-relaxed text-ink-500">{step.body}</p>
-                      <p className="mt-5 border-l-2 border-gold-400 pl-4 text-[0.875rem] text-ink-600">
-                        <span className="font-semibold text-ink-800">Your effort: </span>
+                      <p className="mt-4 leading-relaxed text-forest-500">{step.body}</p>
+                      <p className="mt-5 border-l-2 border-gold-400 pl-4 text-[0.875rem] text-forest-600">
+                        <span className="font-semibold text-forest-800">Your effort: </span>
                         {step.yourEffort}
                       </p>
                     </div>
@@ -98,7 +98,7 @@ export default function HowItWorksPage() {
       </section>
 
       {/* The commercial model */}
-      <section className="bg-ink-800 py-20 sm:py-28">
+      <section className="bg-forest-800 py-20 sm:py-28">
         <Container>
           <div className="grid gap-14 lg:grid-cols-12 lg:gap-20">
             <div className="lg:col-span-5">

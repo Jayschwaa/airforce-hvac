@@ -5,7 +5,7 @@ import { HEADLINE_STATS } from "@/data/results";
 
 export function StatsRow() {
   return (
-    <section className="border-b border-ink-800/8 py-16">
+    <section className="border-b border-forest-800/8 py-16">
       <Container>
         <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
           {HEADLINE_STATS.map((s) => (

@@ -23,7 +23,7 @@ export const metadata: Metadata = {
 export default function ContactPage() {
   return (
     <>
-      <section className="bg-ink-900 py-20 sm:py-24">
+      <section className="bg-forest-900 py-20 sm:py-24">
         <Container>
           <div className="max-w-3xl">
             <SectionHeading
@@ -45,8 +45,8 @@ export default function ContactPage() {
             </div>
 
             <div className="lg:col-span-5">
-              <div className="rounded-2xl border border-ink-800/10 bg-cream-50 p-8">
-                <h2 className="font-display text-xl font-bold tracking-tight text-ink-800">
+              <div className="rounded-2xl border border-forest-800/10 bg-cream-50 p-8">
+                <h2 className="font-display text-xl font-bold tracking-tight text-forest-800">
                   Or reach us directly
                 </h2>
 
@@ -57,10 +57,10 @@ export default function ContactPage() {
                   >
                     <Phone className="mt-0.5 h-4.5 w-4.5 shrink-0 text-gold-600" aria-hidden="true" />
                     <span>
-                      <span className="block text-[0.75rem] font-bold uppercase tracking-wider text-ink-400">
+                      <span className="block text-[0.75rem] font-bold uppercase tracking-wider text-forest-400">
                         Phone
                       </span>
-                      <span className="tabular text-ink-800">{PHONE}</span>
+                      <span className="tabular text-forest-800">{PHONE}</span>
                     </span>
                   </a>
 
@@ -70,20 +70,20 @@ export default function ContactPage() {
                   >
                     <Mail className="mt-0.5 h-4.5 w-4.5 shrink-0 text-gold-600" aria-hidden="true" />
                     <span>
-                      <span className="block text-[0.75rem] font-bold uppercase tracking-wider text-ink-400">
+                      <span className="block text-[0.75rem] font-bold uppercase tracking-wider text-forest-400">
                         Email
                       </span>
-                      <span className="text-ink-800">{EMAIL}</span>
+                      <span className="text-forest-800">{EMAIL}</span>
                     </span>
                   </a>
 
                   <p className="flex items-start gap-3.5">
                     <MapPin className="mt-0.5 h-4.5 w-4.5 shrink-0 text-gold-600" aria-hidden="true" />
                     <span>
-                      <span className="block text-[0.75rem] font-bold uppercase tracking-wider text-ink-400">
+                      <span className="block text-[0.75rem] font-bold uppercase tracking-wider text-forest-400">
                         Office
                       </span>
-                      <span className="text-ink-800">
+                      <span className="text-forest-800">
                         {ADDRESS.street}, {ADDRESS.unit}
                         <br />
                         {ADDRESS.city}, {ADDRESS.state} {ADDRESS.zip}
@@ -94,24 +94,24 @@ export default function ContactPage() {
                   <p className="flex items-start gap-3.5">
                     <Clock className="mt-0.5 h-4.5 w-4.5 shrink-0 text-gold-600" aria-hidden="true" />
                     <span>
-                      <span className="block text-[0.75rem] font-bold uppercase tracking-wider text-ink-400">
+                      <span className="block text-[0.75rem] font-bold uppercase tracking-wider text-forest-400">
                         Hours
                       </span>
-                      <span className="text-ink-800">{HOURS.display}</span>
-                      <span className="mt-0.5 block text-[0.8125rem] text-ink-400">
+                      <span className="text-forest-800">{HOURS.display}</span>
+                      <span className="mt-0.5 block text-[0.8125rem] text-forest-400">
                         {HOURS.description}
                       </span>
                     </span>
                   </p>
                 </div>
 
-                <p className="mt-7 border-t border-ink-800/10 pt-5 text-[0.8125rem] text-ink-400">
+                <p className="mt-7 border-t border-forest-800/10 pt-5 text-[0.8125rem] text-forest-400">
                   {COVERAGE}
                 </p>
               </div>
 
               {/* What happens next */}
-              <div className="mt-6 rounded-2xl bg-ink-800 p-8">
+              <div className="mt-6 rounded-2xl bg-forest-800 p-8">
                 <h2 className="font-display text-xl font-bold tracking-tight text-cream-100">
                   What happens next
                 </h2>

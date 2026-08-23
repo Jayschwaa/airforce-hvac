@@ -26,24 +26,24 @@ export function ProcessStrip() {
             const Icon = step.icon;
             return (
               <Reveal key={step.n} delay={i * 0.1}>
-                <li className="relative border-t-2 border-ink-800/10 pt-6">
+                <li className="relative border-t-2 border-forest-800/10 pt-6">
                   <span
                     className="absolute -top-px left-0 h-0.5 w-12 bg-gold-400"
                     aria-hidden="true"
                   />
                   <div className="flex items-center gap-3">
                     <Icon className="h-5 w-5 text-gold-600" aria-hidden="true" />
-                    <span className="tabular text-[0.8125rem] font-bold text-ink-300">
+                    <span className="tabular text-[0.8125rem] font-bold text-forest-300">
                       {step.n}
                     </span>
                   </div>
-                  <h3 className="mt-4 font-display text-xl font-bold leading-snug tracking-tight text-ink-800">
+                  <h3 className="mt-4 font-display text-xl font-bold leading-snug tracking-tight text-forest-800">
                     {step.title}
                   </h3>
                   <p className="mt-1.5 text-[0.8125rem] font-semibold uppercase tracking-wider text-gold-700">
                     {step.duration}
                   </p>
-                  <p className="mt-4 text-[0.9375rem] leading-relaxed text-ink-500">
+                  <p className="mt-4 text-[0.9375rem] leading-relaxed text-forest-500">
                     {step.body}
                   </p>
                 </li>

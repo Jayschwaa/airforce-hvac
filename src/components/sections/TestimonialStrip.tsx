@@ -12,12 +12,12 @@ export function TestimonialStrip() {
             <Reveal key={t.quote} delay={i * 0.1}>
               <figure className="flex h-full flex-col">
                 <Quote className="h-7 w-7 text-gold-400" aria-hidden="true" />
-                <blockquote className="mt-5 flex-1 font-display text-xl font-semibold leading-snug tracking-tight text-ink-800">
+                <blockquote className="mt-5 flex-1 font-display text-xl font-semibold leading-snug tracking-tight text-forest-800">
                   &ldquo;{t.quote}&rdquo;
                 </blockquote>
-                <figcaption className="mt-6 border-t border-ink-800/10 pt-4 text-[0.875rem]">
-                  <span className="block font-semibold text-ink-800">{t.name}</span>
-                  <span className="text-ink-400">{t.role}</span>
+                <figcaption className="mt-6 border-t border-forest-800/10 pt-4 text-[0.875rem]">
+                  <span className="block font-semibold text-forest-800">{t.name}</span>
+                  <span className="text-forest-400">{t.role}</span>
                 </figcaption>
               </figure>
             </Reveal>

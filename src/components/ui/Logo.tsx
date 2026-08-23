@@ -11,12 +11,12 @@ export function Logo({
   showTagline = false,
 }: {
   className?: string;
-  /** "dark" = ink text for light surfaces. "light" = cream text for ink surfaces. */
+  /** "dark" = forest text for light surfaces. "light" = cream text for forest surfaces. */
   variant?: "dark" | "light";
   showTagline?: boolean;
 }) {
-  const wordColor = variant === "light" ? "text-cream-100" : "text-ink-800";
-  const taglineColor = variant === "light" ? "text-cream-100/55" : "text-ink-400";
+  const wordColor = variant === "light" ? "text-cream-100" : "text-forest-800";
+  const taglineColor = variant === "light" ? "text-cream-100/55" : "text-forest-400";
 
   return (
     <span className={cn("inline-flex items-center gap-2.5", className)}>

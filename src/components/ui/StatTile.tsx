@@ -82,7 +82,7 @@ function Sparkline({ points, tone }: { points: readonly number[]; tone: "dark" |
         strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
-        className={tone === "light" ? "stroke-cream-100/30" : "stroke-ink-200"}
+        className={tone === "light" ? "stroke-cream-100/30" : "stroke-forest-200"}
       />
       <circle cx={lastX} cy={lastY} r="3.5" className="fill-gold-400" />
     </svg>
@@ -121,7 +121,7 @@ export function StatTile({
       <div
         className={cn(
           "text-xs font-semibold uppercase tracking-[0.14em]",
-          light ? "text-cream-100/50" : "text-ink-400",
+          light ? "text-cream-100/50" : "text-forest-400",
         )}
       >
         {label}
@@ -132,7 +132,7 @@ export function StatTile({
       <div
         className={cn(
           "mt-2.5 font-sans text-[2.75rem] font-semibold leading-none tracking-[-0.04em]",
-          light ? "text-cream-100" : "text-ink-800",
+          light ? "text-cream-100" : "text-forest-800",
         )}
       >
         {prefix}

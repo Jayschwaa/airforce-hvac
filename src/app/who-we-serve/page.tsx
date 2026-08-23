@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 export default function WhoWeServePage() {
   return (
     <>
-      <section className="bg-ink-900 py-20 sm:py-24">
+      <section className="bg-forest-900 py-20 sm:py-24">
         <Container>
           <div className="max-w-3xl">
             <SectionHeading
@@ -32,7 +32,7 @@ export default function WhoWeServePage() {
 
       <ClientRoster heading="Portfolios we work across" />
 
-      <div className="divide-y divide-ink-800/8">
+      <div className="divide-y divide-forest-800/8">
         {SECTORS.map((sector, i) => {
           const Icon = sector.icon;
           return (
@@ -42,20 +42,20 @@ export default function WhoWeServePage() {
                   <div className="grid gap-10 lg:grid-cols-12 lg:gap-16">
                     <div className="lg:col-span-5">
                       <div className="flex items-center gap-3">
-                        <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-ink-800">
+                        <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-forest-800">
                           <Icon className="h-5 w-5 text-gold-400" aria-hidden="true" />
                         </span>
-                        <span className="tabular text-[0.8125rem] font-bold text-ink-300">
+                        <span className="tabular text-[0.8125rem] font-bold text-forest-300">
                           {String(i + 1).padStart(2, "0")}
                         </span>
                       </div>
-                      <h2 className="mt-5 font-display text-[1.75rem] font-black leading-tight tracking-[-0.03em] text-ink-800 sm:text-[2rem]">
+                      <h2 className="mt-5 font-display text-[1.75rem] font-black leading-tight tracking-[-0.03em] text-forest-800 sm:text-[2rem]">
                         {sector.title}
                       </h2>
                     </div>
 
                     <div className="lg:col-span-7">
-                      <p className="font-display text-xl font-semibold leading-snug tracking-tight text-ink-800">
+                      <p className="font-display text-xl font-semibold leading-snug tracking-tight text-forest-800">
                         {sector.thesis}
                       </p>
                       <ul className="mt-7 space-y-3.5">
@@ -65,7 +65,7 @@ export default function WhoWeServePage() {
                               className="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-gold-500"
                               aria-hidden="true"
                             />
-                            <span className="leading-relaxed text-ink-600">{p}</span>
+                            <span className="leading-relaxed text-forest-600">{p}</span>
                           </li>
                         ))}
                       </ul>

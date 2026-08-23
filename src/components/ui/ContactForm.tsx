@@ -35,7 +35,7 @@ function Field({
 }) {
   return (
     <label className="block">
-      <span className="text-[0.8125rem] font-semibold text-ink-800">
+      <span className="text-[0.8125rem] font-semibold text-forest-800">
         {label}
         {required && <span className="text-gold-700"> *</span>}
       </span>
@@ -45,8 +45,8 @@ function Field({
 }
 
 const inputClass =
-  "w-full rounded-xl border border-ink-800/15 bg-cream-50 px-4 py-3 text-[0.9375rem] text-ink-800 " +
-  "placeholder:text-ink-300 transition-colors focus:border-gold-500 focus:outline-none " +
+  "w-full rounded-xl border border-forest-800/15 bg-cream-50 px-4 py-3 text-[0.9375rem] text-forest-800 " +
+  "placeholder:text-forest-300 transition-colors focus:border-gold-500 focus:outline-none " +
   "focus:ring-2 focus:ring-gold-400/30";
 
 export function ContactForm() {
@@ -79,12 +79,12 @@ export function ContactForm() {
     return (
       <div className="rounded-2xl border border-gold-600/30 bg-gold-50 p-10 text-center">
         <span className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-gold-400">
-          <Check className="h-6 w-6 text-ink-900" aria-hidden="true" />
+          <Check className="h-6 w-6 text-forest-900" aria-hidden="true" />
         </span>
-        <h3 className="mt-5 font-display text-2xl font-bold tracking-tight text-ink-800">
+        <h3 className="mt-5 font-display text-2xl font-bold tracking-tight text-forest-800">
           Thank you — that&rsquo;s all we need to start.
         </h3>
-        <p className="mx-auto mt-3 max-w-md leading-relaxed text-ink-500">
+        <p className="mx-auto mt-3 max-w-md leading-relaxed text-forest-500">
           We will come back within one business day with the letter of
           authority and a short list of the accounts we would like to pull
           first. No preparation needed on your end.
@@ -181,13 +181,13 @@ export function ContactForm() {
       <button
         type="submit"
         disabled={status === "sending"}
-        className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-ink-800 px-8 py-4 font-semibold text-cream-100 transition-colors hover:bg-ink-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-ink-800 focus-visible:ring-offset-2 disabled:opacity-60 sm:w-auto"
+        className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-forest-800 px-8 py-4 font-semibold text-cream-100 transition-colors hover:bg-forest-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-forest-800 focus-visible:ring-offset-2 disabled:opacity-60 sm:w-auto"
       >
         {status === "sending" ? "Sending…" : "Request the free analysis"}
         {status !== "sending" && <ArrowRight className="h-4 w-4" aria-hidden="true" />}
       </button>
 
-      <p className="text-[0.8125rem] leading-relaxed text-ink-400">
+      <p className="text-[0.8125rem] leading-relaxed text-forest-400">
         No retainer, no obligation, and nothing is pulled until you sign the
         letter of authority. We do not sell or share your information.
       </p>

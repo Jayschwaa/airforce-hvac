@@ -3,7 +3,7 @@ import { PHONE, PHONE_HREF, COVERAGE, FEE_MODEL } from "@/lib/constants";
 
 export function TopBar() {
   return (
-    <div className="hidden bg-ink-900 text-cream-100/70 md:block">
+    <div className="hidden bg-forest-900 text-cream-100/70 md:block">
       <div className="mx-auto flex h-10 w-full max-w-6xl items-center justify-between px-5 text-[0.8125rem] sm:px-8">
         <span className="flex items-center gap-2">
           <span className="h-1.5 w-1.5 rounded-full bg-gold-400" aria-hidden="true" />

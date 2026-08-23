@@ -20,7 +20,7 @@ export function Accordion({
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <div className={cn("divide-y divide-ink-800/10 border-y border-ink-800/10", className)}>
+    <div className={cn("divide-y divide-forest-800/10 border-y border-forest-800/10", className)}>
       {items.map((item, index) => {
         const isOpen = openIndex === index;
         return (
@@ -31,7 +31,7 @@ export function Accordion({
               aria-expanded={isOpen}
               className="flex w-full items-start justify-between gap-6 py-5 text-left group"
             >
-              <span className="font-display text-lg font-bold tracking-tight text-ink-800">
+              <span className="font-display text-lg font-bold tracking-tight text-forest-800">
                 {item.question}
               </span>
               <Plus
@@ -53,7 +53,7 @@ export function Accordion({
                   transition={{ duration: 0.3, ease: "easeInOut" }}
                   className="overflow-hidden"
                 >
-                  <p className="max-w-3xl pb-6 leading-relaxed text-ink-500">
+                  <p className="max-w-3xl pb-6 leading-relaxed text-forest-500">
                     {item.answer}
                   </p>
                 </motion.div>
