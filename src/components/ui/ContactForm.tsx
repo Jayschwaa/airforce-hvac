@@ -1,215 +1,196 @@
 "use client";
 
 import { useState } from "react";
+import { ArrowRight, Check } from "lucide-react";
 import { cn } from "@/lib/utils";
-import { Button } from "./Button";
 
-const SERVICES = [
-  "AC Installation",
-  "AC Repair",
-  "AC Maintenance",
-  "Heating Services",
-  "Indoor Air Quality",
-  "Commercial HVAC",
+const PORTFOLIO_SIZES = [
+  "1 building (a pilot)",
+  "2–10 buildings",
+  "11–50 buildings",
+  "51–100 buildings",
+  "100+ buildings",
 ] as const;
 
-type FormData = {
-  name: string;
-  email: string;
-  phone: string;
-  serviceType: string;
-  serviceCategory: "commercial" | "residential";
-  message: string;
-};
+const ASSET_TYPES = [
+  "Affordable / workforce housing",
+  "Market-rate multifamily",
+  "Hotels & hospitality",
+  "Office & mixed-use",
+  "Retail",
+  "Venues & entertainment",
+  "Mixed portfolio",
+] as const;
 
-type ContactFormProps = {
-  className?: string;
-};
+type Status = "idle" | "sending" | "sent" | "error";
 
-const initialData: FormData = {
-  name: "",
-  email: "",
-  phone: "",
-  serviceType: "",
-  serviceCategory: "residential",
-  message: "",
-};
+function Field({
+  label,
+  children,
+  required,
+}: {
+  label: string;
+  children: React.ReactNode;
+  required?: boolean;
+}) {
+  return (
+    <label className="block">
+      <span className="text-[0.8125rem] font-semibold text-ink-800">
+        {label}
+        {required && <span className="text-gold-700"> *</span>}
+      </span>
+      <div className="mt-2">{children}</div>
+    </label>
+  );
+}
 
-export function ContactForm({ className }: ContactFormProps) {
-  const [data, setData] = useState<FormData>(initialData);
-  const [errors, setErrors] = useState<Partial<Record<keyof FormData, string>>>({});
-  const [submitted, setSubmitted] = useState(false);
+const inputClass =
+  "w-full rounded-xl border border-ink-800/15 bg-cream-50 px-4 py-3 text-[0.9375rem] text-ink-800 " +
+  "placeholder:text-ink-300 transition-colors focus:border-gold-500 focus:outline-none " +
+  "focus:ring-2 focus:ring-gold-400/30";
 
-  function validate(): boolean {
-    const next: typeof errors = {};
-    if (!data.name.trim()) next.name = "Name is required";
-    if (!data.email.trim()) {
-      next.email = "Email is required";
-    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email)) {
-      next.email = "Enter a valid email";
-    }
-    if (!data.phone.trim()) next.phone = "Phone is required";
-    if (!data.serviceType) next.serviceType = "Select a service";
-    if (!data.message.trim()) next.message = "Message is required";
-    setErrors(next);
-    return Object.keys(next).length === 0;
-  }
+export function ContactForm() {
+  const [status, setStatus] = useState<Status>("idle");
 
-  function handleSubmit(e: React.FormEvent) {
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    if (validate()) {
-      setSubmitted(true);
+    const form = e.currentTarget;
+    const data = new FormData(form);
+
+    // Honeypot: real people leave this empty.
+    if (data.get("company_website")) return;
+
+    setStatus("sending");
+
+    try {
+      // ⚠️ TODO: point this at the real handler before launch — a Next.js
+      // route handler at app/api/enquiry/route.ts, or a form service.
+      // Until then the submission is acknowledged locally so the flow can
+      // be reviewed end to end.
+      await new Promise((resolve) => setTimeout(resolve, 700));
+      setStatus("sent");
+      form.reset();
+    } catch {
+      setStatus("error");
     }
   }
 
-  function update(field: keyof FormData, value: string) {
-    setData((prev) => ({ ...prev, [field]: value }));
-    if (errors[field]) {
-      setErrors((prev) => {
-        const copy = { ...prev };
-        delete copy[field];
-        return copy;
-      });
-    }
-  }
-
-  if (submitted) {
+  if (status === "sent") {
     return (
-      <div className={cn("rounded-xl bg-white p-8 text-center shadow-md", className)}>
-        <div className="mb-4 text-4xl">&#10003;</div>
-        <h3 className="font-rubik text-2xl font-bold text-navy-500">
-          Thank You!
+      <div className="rounded-2xl border border-gold-600/30 bg-gold-50 p-10 text-center">
+        <span className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-gold-400">
+          <Check className="h-6 w-6 text-ink-900" aria-hidden="true" />
+        </span>
+        <h3 className="mt-5 font-display text-2xl font-bold tracking-tight text-ink-800">
+          Thank you — that&rsquo;s all we need to start.
         </h3>
-        <p className="mt-2 text-gray-600">
-          Your request has been received. We&apos;ll get back to you shortly.
+        <p className="mx-auto mt-3 max-w-md leading-relaxed text-ink-500">
+          We will come back within one business day with the letter of
+          authority and a short list of the accounts we would like to pull
+          first. No preparation needed on your end.
         </p>
+        <button
+          onClick={() => setStatus("idle")}
+          className="mt-6 text-[0.875rem] font-semibold text-gold-700 underline decoration-gold-400 decoration-2 underline-offset-4"
+        >
+          Send another enquiry
+        </button>
       </div>
     );
   }
 
-  const inputBase =
-    "w-full rounded-lg border border-gray-300 px-4 py-3 text-navy-900 transition-all duration-200 focus:border-cyan-500 focus:outline-none focus:ring-2 focus:ring-cyan-500/20";
-
   return (
-    <form
-      onSubmit={handleSubmit}
-      className={cn("space-y-6", className)}
-      noValidate
-    >
-      {/* Name */}
-      <div>
-        <label htmlFor="cf-name" className="mb-1 block text-sm font-semibold text-navy-500">
-          Name <span className="text-red-500">*</span>
-        </label>
-        <input
-          id="cf-name"
-          type="text"
-          value={data.name}
-          onChange={(e) => update("name", e.target.value)}
-          className={cn(inputBase, errors.name && "border-red-400")}
-          placeholder="Your full name"
-        />
-        {errors.name && <p className="mt-1 text-sm text-red-500">{errors.name}</p>}
+    <form onSubmit={handleSubmit} className="space-y-5">
+      {/* Honeypot */}
+      <input
+        type="text"
+        name="company_website"
+        tabIndex={-1}
+        autoComplete="off"
+        aria-hidden="true"
+        className="absolute h-0 w-0 overflow-hidden opacity-0"
+      />
+
+      <div className="grid gap-5 sm:grid-cols-2">
+        <Field label="Name" required>
+          <input name="name" required autoComplete="name" className={inputClass} />
+        </Field>
+        <Field label="Company" required>
+          <input name="company" required autoComplete="organization" className={inputClass} />
+        </Field>
       </div>
 
-      {/* Email & Phone */}
-      <div className="grid gap-6 sm:grid-cols-2">
-        <div>
-          <label htmlFor="cf-email" className="mb-1 block text-sm font-semibold text-navy-500">
-            Email <span className="text-red-500">*</span>
-          </label>
+      <div className="grid gap-5 sm:grid-cols-2">
+        <Field label="Email" required>
           <input
-            id="cf-email"
+            name="email"
             type="email"
-            value={data.email}
-            onChange={(e) => update("email", e.target.value)}
-            className={cn(inputBase, errors.email && "border-red-400")}
-            placeholder="you@email.com"
+            required
+            autoComplete="email"
+            className={inputClass}
           />
-          {errors.email && <p className="mt-1 text-sm text-red-500">{errors.email}</p>}
-        </div>
-        <div>
-          <label htmlFor="cf-phone" className="mb-1 block text-sm font-semibold text-navy-500">
-            Phone <span className="text-red-500">*</span>
-          </label>
-          <input
-            id="cf-phone"
-            type="tel"
-            value={data.phone}
-            onChange={(e) => update("phone", e.target.value)}
-            className={cn(inputBase, errors.phone && "border-red-400")}
-            placeholder="(555) 123-4567"
-          />
-          {errors.phone && <p className="mt-1 text-sm text-red-500">{errors.phone}</p>}
-        </div>
+        </Field>
+        <Field label="Phone">
+          <input name="phone" type="tel" autoComplete="tel" className={inputClass} />
+        </Field>
       </div>
 
-      {/* Service Type */}
-      <div>
-        <label htmlFor="cf-service" className="mb-1 block text-sm font-semibold text-navy-500">
-          Service Type <span className="text-red-500">*</span>
-        </label>
-        <select
-          id="cf-service"
-          value={data.serviceType}
-          onChange={(e) => update("serviceType", e.target.value)}
-          className={cn(inputBase, !data.serviceType && "text-gray-400", errors.serviceType && "border-red-400")}
-        >
-          <option value="" disabled>
-            Select a service
-          </option>
-          {SERVICES.map((s) => (
-            <option key={s} value={s}>
-              {s}
+      <div className="grid gap-5 sm:grid-cols-2">
+        <Field label="Portfolio size">
+          <select name="portfolio" defaultValue="" className={cn(inputClass, "cursor-pointer")}>
+            <option value="" disabled>
+              Select…
             </option>
-          ))}
-        </select>
-        {errors.serviceType && (
-          <p className="mt-1 text-sm text-red-500">{errors.serviceType}</p>
-        )}
+            {PORTFOLIO_SIZES.map((s) => (
+              <option key={s} value={s}>
+                {s}
+              </option>
+            ))}
+          </select>
+        </Field>
+        <Field label="Asset type">
+          <select name="assetType" defaultValue="" className={cn(inputClass, "cursor-pointer")}>
+            <option value="" disabled>
+              Select…
+            </option>
+            {ASSET_TYPES.map((s) => (
+              <option key={s} value={s}>
+                {s}
+              </option>
+            ))}
+          </select>
+        </Field>
       </div>
 
-      {/* Service Category */}
-      <div>
-        <span className="mb-2 block text-sm font-semibold text-navy-500">
-          Service Category
-        </span>
-        <div className="flex gap-6">
-          {(["residential", "commercial"] as const).map((cat) => (
-            <label key={cat} className="flex cursor-pointer items-center gap-2">
-              <input
-                type="radio"
-                name="serviceCategory"
-                value={cat}
-                checked={data.serviceCategory === cat}
-                onChange={(e) => update("serviceCategory", e.target.value)}
-                className="h-4 w-4 accent-cyan-500"
-              />
-              <span className="capitalize text-navy-700">{cat}</span>
-            </label>
-          ))}
-        </div>
-      </div>
-
-      {/* Message */}
-      <div>
-        <label htmlFor="cf-message" className="mb-1 block text-sm font-semibold text-navy-500">
-          Message <span className="text-red-500">*</span>
-        </label>
+      <Field label="Anything we should know?">
         <textarea
-          id="cf-message"
-          rows={5}
-          value={data.message}
-          onChange={(e) => update("message", e.target.value)}
-          className={cn(inputBase, "resize-none", errors.message && "border-red-400")}
-          placeholder="Tell us about your HVAC needs..."
+          name="message"
+          rows={4}
+          placeholder="A refinance timeline, a problem asset, a line item that has always looked wrong to you…"
+          className={cn(inputClass, "resize-y")}
         />
-        {errors.message && <p className="mt-1 text-sm text-red-500">{errors.message}</p>}
-      </div>
+      </Field>
 
-      <Button type="submit" variant="primary" size="lg" className="w-full">
-        Request Service
-      </Button>
+      {status === "error" && (
+        <p role="alert" className="text-[0.875rem] text-red-700">
+          Something went wrong sending that. Please email us directly and we
+          will pick it up straight away.
+        </p>
+      )}
+
+      <button
+        type="submit"
+        disabled={status === "sending"}
+        className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-ink-800 px-8 py-4 font-semibold text-cream-100 transition-colors hover:bg-ink-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-ink-800 focus-visible:ring-offset-2 disabled:opacity-60 sm:w-auto"
+      >
+        {status === "sending" ? "Sending…" : "Request the free analysis"}
+        {status !== "sending" && <ArrowRight className="h-4 w-4" aria-hidden="true" />}
+      </button>
+
+      <p className="text-[0.8125rem] leading-relaxed text-ink-400">
+        No retainer, no obligation, and nothing is pulled until you sign the
+        letter of authority. We do not sell or share your information.
+      </p>
     </form>
   );
 }

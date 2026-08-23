@@ -1,45 +1,63 @@
 @import "tailwindcss";
 
 @theme inline {
-  /* Brand Colors - Sky Blue (from logo #7dd3e8) */
-  --color-cyan-50: #eef9fc;
-  --color-cyan-100: #d4f0f7;
-  --color-cyan-200: #a8e4f0;
-  --color-cyan-300: #7dd3e8;
-  --color-cyan-400: #5ac4de;
-  --color-cyan-500: #3ab0d0;
-  --color-cyan-600: #2d93b0;
-  --color-cyan-700: #237490;
-  --color-cyan-800: #1a5670;
-  --color-cyan-900: #113a4d;
+  /* ── Brand: Ink ─────────────────────────────────────────────
+     The ground the brand stands on. Deep, blue-black, institutional. */
+  --color-ink-50: #f5f7f9;
+  --color-ink-100: #e6ebf0;
+  --color-ink-200: #c8d2dc;
+  --color-ink-300: #9aa9b8;
+  --color-ink-400: #64798c;
+  --color-ink-500: #3c5063;
+  --color-ink-600: #26374a;
+  --color-ink-700: #1a2836;
+  --color-ink-800: #101820;
+  --color-ink-900: #080c11;
 
-  /* Brand Colors - Navy */
-  --color-navy-50: #eef2f5;
-  --color-navy-100: #c9d5de;
-  --color-navy-200: #a4b8c7;
-  --color-navy-300: #6d8da3;
-  --color-navy-400: #3d6580;
-  --color-navy-500: #0c1f2e;
-  --color-navy-600: #0a1a27;
-  --color-navy-700: #081420;
-  --color-navy-800: #060f18;
-  --color-navy-900: #040a10;
+  /* ── Brand: Gold ────────────────────────────────────────────
+     The money colour. gold-400 is the mark colour and only ever sits on
+     ink; it measures 1.87:1 on cream, so it must never carry text or
+     meaning on a light surface. Use gold-700 for gold-coloured text on
+     light — that is the accessible step. */
+  --color-gold-50: #fdf8ec;
+  --color-gold-100: #faeecb;
+  --color-gold-200: #f5dc98;
+  --color-gold-300: #efc963;
+  --color-gold-400: #e8b33c;
+  --color-gold-500: #d69c22;
+  --color-gold-600: #b47c18;
+  --color-gold-700: #8c5e15;
+  --color-gold-800: #654316;
+  --color-gold-900: #422c10;
 
-  /* Font Families */
-  --font-rubik: var(--font-rubik), "Rubik", sans-serif;
-  --font-questrial: var(--font-questrial), "Questrial", sans-serif;
+  /* ── Brand: Cream ───────────────────────────────────────────
+     Paper. Warm off-white so the site never reads as a cold SaaS dashboard. */
+  --color-cream-50: #fefdfb;
+  --color-cream-100: #fbf8f2;
+  --color-cream-200: #f4efe3;
+  --color-cream-300: #e9e1d0;
+  --color-cream-400: #d8ccb4;
 
-  /* Animations */
-  --animate-marquee: marquee 30s linear infinite;
+  /* ── Type ───────────────────────────────────────────────────
+     Display = Fraunces (editorial serif, carries the personality).
+     Sans = Inter (everything else, including every figure — per the
+     dataviz rule that hero numbers never wear a display face). */
+  --font-display: var(--font-fraunces), Georgia, "Times New Roman", serif;
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+
+  /* ── Motion ─────────────────────────────────────────────────*/
+  --animate-marquee: marquee 40s linear infinite;
+  --animate-rise: rise 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
 @keyframes marquee {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes rise {
+  0% { opacity: 0; transform: translateY(14px); }
+  100% { opacity: 1; transform: translateY(0); }
 }
 
 html {
@@ -47,31 +65,53 @@ html {
 }
 
 body {
-  font-family: var(--font-questrial);
-  color: var(--color-navy-900);
-  background: #ffffff;
+  font-family: var(--font-sans);
+  color: var(--color-ink-800);
+  background: var(--color-cream-100);
+  -webkit-font-smoothing: antialiased;
 }
 
-/* Custom Scrollbar */
-::-webkit-scrollbar {
-  width: 8px;
+/* Figures in tables and axis ticks must align vertically; standalone
+   display numbers keep proportional figures so they don't read loose. */
+.tabular {
+  font-variant-numeric: tabular-nums;
 }
 
-::-webkit-scrollbar-track {
-  background: var(--color-navy-50);
+/* The ruled "ledger line" that sits under section labels. */
+.rule-gold {
+  background-image: linear-gradient(
+    to right,
+    var(--color-gold-400) 0,
+    var(--color-gold-400) 28px,
+    var(--color-cream-300) 28px,
+    var(--color-cream-300) 100%
+  );
 }
 
+::selection {
+  background: var(--color-gold-300);
+  color: var(--color-ink-900);
+}
+
+::-webkit-scrollbar { width: 10px; }
+::-webkit-scrollbar-track { background: var(--color-cream-200); }
 ::-webkit-scrollbar-thumb {
-  background: var(--color-cyan-500);
-  border-radius: 4px;
+  background: var(--color-ink-300);
+  border-radius: 5px;
+  border: 2px solid var(--color-cream-200);
 }
+::-webkit-scrollbar-thumb:hover { background: var(--color-ink-400); }
 
-::-webkit-scrollbar-thumb:hover {
-  background: var(--color-cyan-600);
-}
-
-/* Firefox scrollbar */
 * {
   scrollbar-width: thin;
-  scrollbar-color: var(--color-cyan-500) var(--color-navy-50);
+  scrollbar-color: var(--color-ink-300) var(--color-cream-200);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }

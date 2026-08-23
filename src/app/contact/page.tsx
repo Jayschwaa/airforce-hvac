@@ -1,178 +1,139 @@
 import type { Metadata } from "next";
-import Link from "next/link";
-import {
-  Phone,
-  Mail,
-  Clock,
-  MapPin,
-  AlertTriangle,
-} from "lucide-react";
+import { Phone, Mail, MapPin, Clock } from "lucide-react";
 import { Container } from "@/components/ui/Container";
+import { SectionHeading } from "@/components/ui/SectionHeading";
 import { ContactForm } from "@/components/ui/ContactForm";
-import { Button } from "@/components/ui/Button";
-import { Card } from "@/components/ui/Card";
-import { PHONE, PHONE_HREF, EMAIL, ADMIN_EMAIL } from "@/lib/constants";
+import { PROCESS } from "@/data/process";
+import {
+  PHONE,
+  PHONE_HREF,
+  EMAIL,
+  ADDRESS,
+  HOURS,
+  COVERAGE,
+} from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: "Contact Us | Air Force HVAC",
+  title: "Contact",
   description:
-    "Get in touch with Air Force HVAC for a free estimate, schedule service, or learn more about our commercial capabilities. Serving Palm Beach & Broward Counties.",
+    "Start with one building. We audit it end to end at our cost and show you what is in it. No retainer, no capital outlay, no fee unless we find money.",
+  alternates: { canonical: "/contact" },
 };
 
 export default function ContactPage() {
   return (
     <>
-      {/* ── Hero ────────────────────────────────────────────── */}
-      <section className="bg-gradient-to-br from-white via-cyan-50/50 to-white py-20 md:py-28 border-b border-gray-100">
-        <Container className="text-center">
-          <nav className="mb-6 text-sm text-gray-400">
-            <Link href="/" className="hover:text-cyan-500 transition-colors">
-              Home
-            </Link>
-            <span className="mx-2">&gt;</span>
-            <span className="text-navy-500">Contact</span>
-          </nav>
-          <h1 className="font-rubik text-4xl font-bold text-navy-500 md:text-5xl lg:text-6xl">
-            Contact Us
-          </h1>
-          <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-gray-600 md:text-xl">
-            Get in touch for a free estimate, schedule service, or learn more
-            about our commercial capabilities.
-          </p>
+      <section className="bg-ink-900 py-20 sm:py-24">
+        <Container>
+          <div className="max-w-3xl">
+            <SectionHeading
+              as="h1"
+              tone="light"
+              label="Contact"
+              heading="Start with one building."
+              subtitle="Pick the asset you like least — the one where the numbers have never quite made sense. We will audit it end to end at our cost. You will know inside thirty days whether there is anything there."
+            />
+          </div>
         </Container>
       </section>
 
-      {/* ── Main Content ───────────────────────────────────── */}
-      <section className="py-20">
+      <section className="py-16 sm:py-20">
         <Container>
-          <div className="grid gap-12 lg:grid-cols-5">
-            {/* Contact Form */}
-            <div className="lg:col-span-3">
-              <h2 className="mb-6 font-rubik text-2xl font-bold text-navy-500">
-                Send Us a Message
-              </h2>
+          <div className="grid gap-14 lg:grid-cols-12 lg:gap-16">
+            <div className="lg:col-span-7">
               <ContactForm />
             </div>
 
-            {/* Contact Info */}
-            <div className="lg:col-span-2">
-              <Card className="p-8">
-                <h3 className="font-rubik text-xl font-bold text-navy-500">
-                  Contact Information
-                </h3>
+            <div className="lg:col-span-5">
+              <div className="rounded-2xl border border-ink-800/10 bg-cream-50 p-8">
+                <h2 className="font-display text-xl font-bold tracking-tight text-ink-800">
+                  Or reach us directly
+                </h2>
 
-                <div className="mt-6 space-y-5">
-                  {/* Phone */}
-                  <div className="flex items-start gap-3">
-                    <Phone className="mt-0.5 h-5 w-5 shrink-0 text-cyan-500" />
-                    <div>
-                      <div className="text-sm font-semibold text-navy-400">
+                <div className="mt-6 space-y-5 text-[0.9375rem]">
+                  <a
+                    href={PHONE_HREF}
+                    className="flex items-start gap-3.5 transition-colors hover:text-gold-700"
+                  >
+                    <Phone className="mt-0.5 h-4.5 w-4.5 shrink-0 text-gold-600" aria-hidden="true" />
+                    <span>
+                      <span className="block text-[0.75rem] font-bold uppercase tracking-wider text-ink-400">
                         Phone
-                      </div>
-                      <a
-                        href={PHONE_HREF}
-                        className="text-lg font-semibold text-navy-500 transition-colors hover:text-cyan-500"
-                      >
-                        {PHONE}
-                      </a>
-                    </div>
-                  </div>
-
-                  {/* Email */}
-                  <div className="flex items-start gap-3">
-                    <Mail className="mt-0.5 h-5 w-5 shrink-0 text-cyan-500" />
-                    <div>
-                      <div className="text-sm font-semibold text-navy-400">
-                        Email
-                      </div>
-                      <a
-                        href={`mailto:${EMAIL}`}
-                        className="text-navy-500 transition-colors hover:text-cyan-500"
-                      >
-                        {EMAIL}
-                      </a>
-                      <br />
-                      <a
-                        href={`mailto:${ADMIN_EMAIL}`}
-                        className="text-sm text-gray-500 transition-colors hover:text-cyan-500"
-                      >
-                        {ADMIN_EMAIL}
-                      </a>
-                    </div>
-                  </div>
-
-                  {/* Hours */}
-                  <div className="flex items-start gap-3">
-                    <Clock className="mt-0.5 h-5 w-5 shrink-0 text-cyan-500" />
-                    <div>
-                      <div className="text-sm font-semibold text-navy-400">
-                        Business Hours
-                      </div>
-                      <div className="space-y-0.5 text-sm text-gray-600">
-                        <p>Mon - Fri: 7AM - 6PM</p>
-                        <p>Saturday: 8AM - 4PM</p>
-                        <p>Sunday: Emergency Only</p>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Service Area */}
-                  <div className="flex items-start gap-3">
-                    <MapPin className="mt-0.5 h-5 w-5 shrink-0 text-cyan-500" />
-                    <div>
-                      <div className="text-sm font-semibold text-navy-400">
-                        Service Area
-                      </div>
-                      <p className="text-sm text-gray-600">
-                        Palm Beach &amp; Broward Counties
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
-                {/* 24/7 Emergency Badge */}
-                <div className="mt-8 rounded-xl bg-gradient-to-r from-cyan-50 to-cyan-100 p-4">
-                  <div className="flex items-center gap-2">
-                    <AlertTriangle className="h-5 w-5 text-cyan-600" />
-                    <span className="font-rubik text-sm font-bold text-navy-500">
-                      24/7 Emergency Service
+                      </span>
+                      <span className="tabular text-ink-800">{PHONE}</span>
                     </span>
-                  </div>
-                  <p className="mt-1 text-sm text-gray-600">
-                    For emergencies, call us anytime day or night.
+                  </a>
+
+                  <a
+                    href={`mailto:${EMAIL}`}
+                    className="flex items-start gap-3.5 transition-colors hover:text-gold-700"
+                  >
+                    <Mail className="mt-0.5 h-4.5 w-4.5 shrink-0 text-gold-600" aria-hidden="true" />
+                    <span>
+                      <span className="block text-[0.75rem] font-bold uppercase tracking-wider text-ink-400">
+                        Email
+                      </span>
+                      <span className="text-ink-800">{EMAIL}</span>
+                    </span>
+                  </a>
+
+                  <p className="flex items-start gap-3.5">
+                    <MapPin className="mt-0.5 h-4.5 w-4.5 shrink-0 text-gold-600" aria-hidden="true" />
+                    <span>
+                      <span className="block text-[0.75rem] font-bold uppercase tracking-wider text-ink-400">
+                        Office
+                      </span>
+                      <span className="text-ink-800">
+                        {ADDRESS.street}, {ADDRESS.unit}
+                        <br />
+                        {ADDRESS.city}, {ADDRESS.state} {ADDRESS.zip}
+                      </span>
+                    </span>
+                  </p>
+
+                  <p className="flex items-start gap-3.5">
+                    <Clock className="mt-0.5 h-4.5 w-4.5 shrink-0 text-gold-600" aria-hidden="true" />
+                    <span>
+                      <span className="block text-[0.75rem] font-bold uppercase tracking-wider text-ink-400">
+                        Hours
+                      </span>
+                      <span className="text-ink-800">{HOURS.display}</span>
+                      <span className="mt-0.5 block text-[0.8125rem] text-ink-400">
+                        {HOURS.description}
+                      </span>
+                    </span>
                   </p>
                 </div>
-              </Card>
-            </div>
-          </div>
-        </Container>
-      </section>
 
-      {/* ── Emergency Banner ───────────────────────────────── */}
-      <section className="bg-gradient-to-r from-cyan-500 to-cyan-600 py-16 md:py-20">
-        <Container className="text-center">
-          <h2 className="font-rubik text-3xl font-bold text-white md:text-4xl">
-            Need Emergency Service?
-          </h2>
-          <p className="mx-auto mt-4 max-w-xl text-lg text-white/80">
-            Our team is available 24/7 for HVAC emergencies.
-          </p>
-          <div className="mt-6">
-            <a
-              href={PHONE_HREF}
-              className="font-rubik text-4xl font-bold text-white transition-colors hover:text-white/80 md:text-5xl"
-            >
-              {PHONE}
-            </a>
-          </div>
-          <div className="mt-6">
-            <Button
-              href={PHONE_HREF}
-              size="lg"
-              variant="white"
-            >
-              Call Now
-            </Button>
+                <p className="mt-7 border-t border-ink-800/10 pt-5 text-[0.8125rem] text-ink-400">
+                  {COVERAGE}
+                </p>
+              </div>
+
+              {/* What happens next */}
+              <div className="mt-6 rounded-2xl bg-ink-800 p-8">
+                <h2 className="font-display text-xl font-bold tracking-tight text-cream-100">
+                  What happens next
+                </h2>
+                <ol className="mt-6 space-y-5">
+                  {PROCESS.slice(0, 3).map((step) => (
+                    <li key={step.n} className="flex gap-4">
+                      <span className="tabular shrink-0 font-sans text-[0.8125rem] font-bold text-gold-400">
+                        {step.n}
+                      </span>
+                      <span>
+                        <span className="block font-medium leading-snug text-cream-100">
+                          {step.title}
+                        </span>
+                        <span className="mt-1 block text-[0.8125rem] text-cream-100/50">
+                          {step.duration}
+                        </span>
+                      </span>
+                    </li>
+                  ))}
+                </ol>
+              </div>
+            </div>
           </div>
         </Container>
       </section>

@@ -1,202 +1,78 @@
 "use client";
 
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
-import {
-  Menu,
-  Phone,
-  ChevronDown,
-} from "lucide-react";
+import { usePathname } from "next/navigation";
+import { Menu } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { Logo } from "@/components/ui/Logo";
 import { Button } from "@/components/ui/Button";
-import { LogoSvg } from "@/components/ui/Logo";
 import { MobileMenu } from "./MobileMenu";
-import {
-  NAV_ITEMS,
-  PHONE,
-  PHONE_HREF,
-} from "@/lib/constants";
-
-/** Check if a nav child label is a section header (e.g. "── End Markets ──") */
-function isSectionHeader(label: string) {
-  return label.startsWith("──");
-}
-
-/** Extract section header text without the dashes */
-function sectionHeaderText(label: string) {
-  return label.replace(/──\s*/g, "").replace(/\s*──/g, "").trim();
-}
-
-/**
- * Split children into groups based on section-header items.
- * Returns an array of { heading: string; items: NavChild[] }.
- */
-function splitIntoColumns(children: { label: string; href: string }[]) {
-  const columns: { heading: string; items: { label: string; href: string }[] }[] = [];
-  let current: { heading: string; items: { label: string; href: string }[] } | null = null;
-
-  for (const child of children) {
-    if (isSectionHeader(child.label)) {
-      current = { heading: sectionHeaderText(child.label), items: [] };
-      columns.push(current);
-    } else {
-      if (!current) {
-        current = { heading: "", items: [] };
-        columns.push(current);
-      }
-      current.items.push(child);
-    }
-  }
-
-  return columns;
-}
+import { NAV_ITEMS } from "@/lib/constants";
 
 export function Header() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const pathname = usePathname();
 
   useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 20);
-    };
-    handleScroll();
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
-  const openDropdown = useCallback((label: string) => {
-    setActiveDropdown(label);
-  }, []);
-
-  const closeDropdown = useCallback(() => {
-    setActiveDropdown(null);
+    const onScroll = () => setScrolled(window.scrollY > 16);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
   return (
     <>
       <header
         className={cn(
-          "sticky top-0 z-50 bg-white shadow-sm transition-all duration-300",
-          scrolled ? "h-16" : "h-20"
+          "sticky top-0 z-50 border-b transition-all duration-300",
+          scrolled
+            ? "border-ink-800/10 bg-cream-100/85 backdrop-blur-md"
+            : "border-transparent bg-cream-100",
         )}
       >
-        <div className="mx-auto max-w-7xl h-full px-4 sm:px-6 lg:px-8 flex items-center justify-between">
-          {/* Logo */}
-          <Link href="/" className="flex items-center shrink-0">
-            <LogoSvg
-              className={cn(
-                "transition-all duration-300",
-                scrolled ? "h-12" : "h-14"
-              )}
-            />
+        <div className="mx-auto flex h-[4.5rem] w-full max-w-6xl items-center justify-between px-5 sm:px-8">
+          <Link href="/" aria-label="Upside — home" className="shrink-0">
+            <Logo />
           </Link>
 
-          {/* Desktop Nav */}
-          <nav className="hidden lg:flex items-center gap-1">
+          <nav className="hidden items-center gap-1 lg:flex">
             {NAV_ITEMS.map((item) => {
-              const hasChildren = item.children && item.children.length > 0;
-              const isCommercial = item.label === "Commercial";
-              const columns = hasChildren ? splitIntoColumns(item.children!) : [];
-              const isMegaMenu = columns.length > 1;
-
+              const active = pathname === item.href;
               return (
-                <div
+                <Link
                   key={item.href}
-                  className="relative"
-                  onMouseEnter={() =>
-                    hasChildren ? openDropdown(item.label) : undefined
-                  }
-                  onMouseLeave={closeDropdown}
+                  href={item.href}
+                  aria-current={active ? "page" : undefined}
+                  className={cn(
+                    "relative rounded-full px-4 py-2 text-[0.9375rem] font-medium transition-colors",
+                    active
+                      ? "text-ink-800"
+                      : "text-ink-500 hover:text-ink-800",
+                  )}
                 >
-                  <Link
-                    href={item.href}
-                    className={cn(
-                      "flex items-center gap-1 px-3 py-2 text-sm font-medium font-rubik text-navy-700 rounded-lg hover:text-cyan-500 hover:bg-cyan-50 transition-colors",
-                      activeDropdown === item.label && "text-cyan-500 bg-cyan-50"
-                    )}
-                  >
-                    {item.label}
-                    {hasChildren && (
-                      <ChevronDown
-                        className={cn(
-                          "h-3.5 w-3.5 transition-transform duration-200",
-                          activeDropdown === item.label && "rotate-180"
-                        )}
-                      />
-                    )}
-                  </Link>
-
-                  {/* Mega-menu dropdown for Commercial (two columns) */}
-                  {hasChildren && isMegaMenu && activeDropdown === item.label && (
-                    <div className="absolute top-full left-1/2 -translate-x-1/2 pt-2">
-                      <div className="bg-white rounded-xl shadow-xl border border-gray-100 p-6 min-w-[600px] grid grid-cols-2 gap-8">
-                        {columns.map((col) => (
-                          <div key={col.heading}>
-                            <h4 className="mb-3 text-xs font-semibold uppercase tracking-wider text-gray-400">
-                              {col.heading}
-                            </h4>
-                            <div className="space-y-0.5">
-                              {col.items.map((child) => (
-                                <Link
-                                  key={child.href}
-                                  href={child.href}
-                                  prefetch={false}
-                                  onClick={closeDropdown}
-                                  className="block px-3 py-2 rounded-lg text-sm font-medium font-rubik text-navy-700 hover:text-cyan-600 hover:bg-cyan-50 transition-colors"
-                                >
-                                  {child.label}
-                                </Link>
-                              ))}
-                            </div>
-                          </div>
-                        ))}
-                      </div>
-                    </div>
+                  {item.label}
+                  {active && (
+                    <span
+                      className="absolute inset-x-4 -bottom-0.5 h-0.5 rounded-full bg-gold-400"
+                      aria-hidden="true"
+                    />
                   )}
-
-                  {/* Simple single-column dropdown (Residential) */}
-                  {hasChildren && !isMegaMenu && activeDropdown === item.label && (
-                    <div className="absolute top-full left-1/2 -translate-x-1/2 pt-2">
-                      <div className="bg-white rounded-xl shadow-xl border border-gray-100 p-2 min-w-[220px]">
-                        {item.children!.map((child) => (
-                          <Link
-                            key={child.href}
-                            href={child.href}
-                            onClick={closeDropdown}
-                            className="block px-4 py-2.5 rounded-lg text-sm font-medium font-rubik text-navy-700 hover:text-cyan-600 hover:bg-cyan-50 transition-colors"
-                          >
-                            {child.label}
-                          </Link>
-                        ))}
-                      </div>
-                    </div>
-                  )}
-                </div>
+                </Link>
               );
             })}
           </nav>
 
-          {/* Right side: Emergency badge, phone, CTA */}
-          <div className="hidden lg:flex items-center gap-3">
-            <span className="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-semibold font-rubik bg-red-500/10 text-red-600 border border-red-200">
-              24/7 Emergency
-            </span>
-            <a
-              href={PHONE_HREF}
-              className="text-sm font-medium font-rubik text-navy-700 hover:text-cyan-500 transition-colors"
-            >
-              {PHONE}
-            </a>
-            <Button href="tel:+18552917007" variant="primary" size="sm">
-              Get a Quote
+          <div className="hidden shrink-0 lg:block">
+            <Button href="/contact" variant="ink" size="sm">
+              Get your free analysis
             </Button>
           </div>
 
-          {/* Mobile: hamburger */}
           <button
-            className="lg:hidden p-2 rounded-lg text-navy-500 hover:bg-gray-100 transition-colors"
-            onClick={() => setMobileMenuOpen(true)}
+            className="rounded-full p-2 text-ink-800 transition-colors hover:bg-ink-800/5 lg:hidden"
+            onClick={() => setMenuOpen(true)}
             aria-label="Open menu"
           >
             <Menu className="h-6 w-6" />
@@ -204,11 +80,7 @@ export function Header() {
         </div>
       </header>
 
-      {/* Mobile menu overlay */}
-      <MobileMenu
-        isOpen={mobileMenuOpen}
-        onClose={() => setMobileMenuOpen(false)}
-      />
+      <MobileMenu isOpen={menuOpen} onClose={() => setMenuOpen(false)} />
     </>
   );
 }

@@ -1,40 +1,68 @@
 import { cn } from "@/lib/utils";
 
-type SectionHeadingProps = {
-  label?: string;
-  heading: string;
-  subtitle?: string;
-  centered?: boolean;
-  className?: string;
-};
-
 export function SectionHeading({
   label,
   heading,
   subtitle,
   centered = false,
+  tone = "dark",
   className,
-}: SectionHeadingProps) {
+  as: Tag = "h2",
+}: {
+  label?: string;
+  heading: React.ReactNode;
+  subtitle?: React.ReactNode;
+  centered?: boolean;
+  /** "dark" = ink type on light surfaces. "light" = cream type on ink surfaces. */
+  tone?: "dark" | "light";
+  className?: string;
+  as?: "h1" | "h2" | "h3";
+}) {
+  const light = tone === "light";
+
   return (
     <div className={cn(centered && "text-center", className)}>
       {label && (
-        <>
-          <span className="text-sm font-semibold uppercase tracking-wider text-cyan-500">
-            {label}
-          </span>
-          <div
+        <span
+          className={cn(
+            "inline-flex items-center gap-2.5 text-[0.6875rem] font-bold uppercase tracking-[0.18em]",
+            light ? "text-gold-400" : "text-gold-700",
+          )}
+        >
+          <span
             className={cn(
-              "mt-2 mb-4 h-1 w-12 rounded bg-cyan-500",
-              centered && "mx-auto",
+              "h-px w-7",
+              light ? "bg-gold-400" : "bg-gold-600",
             )}
+            aria-hidden="true"
           />
-        </>
+          {label}
+        </span>
       )}
-      <h2 className="font-rubik text-3xl font-bold text-navy-500 md:text-4xl">
+
+      <Tag
+        className={cn(
+          "font-display font-black tracking-[-0.03em]",
+          label && "mt-4",
+          Tag === "h1"
+            ? "text-[2.5rem] leading-[1.04] sm:text-6xl lg:text-[4.25rem]"
+            : "text-[2rem] leading-[1.08] sm:text-[2.75rem]",
+          light ? "text-cream-100" : "text-ink-800",
+        )}
+      >
         {heading}
-      </h2>
+      </Tag>
+
       {subtitle && (
-        <p className="mt-4 text-lg text-gray-600">{subtitle}</p>
+        <p
+          className={cn(
+            "mt-5 text-lg leading-relaxed",
+            centered && "mx-auto max-w-2xl",
+            light ? "text-cream-100/70" : "text-ink-500",
+          )}
+        >
+          {subtitle}
+        </p>
       )}
     </div>
   );

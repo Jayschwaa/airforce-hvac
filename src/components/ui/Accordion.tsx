@@ -2,45 +2,44 @@
 
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { ChevronDown } from "lucide-react";
+import { Plus } from "lucide-react";
 import { cn } from "@/lib/utils";
 
-type AccordionItem = {
+export type AccordionItem = {
   question: string;
   answer: string;
 };
 
-type AccordionProps = {
-  items: AccordionItem[];
+export function Accordion({
+  items,
+  className,
+}: {
+  items: readonly AccordionItem[];
   className?: string;
-};
-
-export function Accordion({ items, className }: AccordionProps) {
-  const [openIndex, setOpenIndex] = useState<number | null>(null);
-
-  function toggle(index: number) {
-    setOpenIndex((prev) => (prev === index ? null : index));
-  }
+}) {
+  const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <div className={cn("divide-y divide-gray-200", className)}>
+    <div className={cn("divide-y divide-ink-800/10 border-y border-ink-800/10", className)}>
       {items.map((item, index) => {
         const isOpen = openIndex === index;
         return (
-          <div key={index} className="py-4">
+          <div key={item.question}>
             <button
               type="button"
-              onClick={() => toggle(index)}
-              className="flex w-full items-center justify-between text-left"
+              onClick={() => setOpenIndex(isOpen ? null : index)}
+              aria-expanded={isOpen}
+              className="flex w-full items-start justify-between gap-6 py-5 text-left group"
             >
-              <span className="font-rubik text-lg font-semibold text-navy-500">
+              <span className="font-display text-lg font-bold tracking-tight text-ink-800">
                 {item.question}
               </span>
-              <ChevronDown
+              <Plus
                 className={cn(
-                  "h-5 w-5 shrink-0 text-cyan-500 transition-transform duration-300",
-                  isOpen && "rotate-180",
+                  "mt-1 h-5 w-5 shrink-0 text-gold-600 transition-transform duration-300",
+                  isOpen && "rotate-45",
                 )}
+                aria-hidden="true"
               />
             </button>
 
@@ -54,7 +53,7 @@ export function Accordion({ items, className }: AccordionProps) {
                   transition={{ duration: 0.3, ease: "easeInOut" }}
                   className="overflow-hidden"
                 >
-                  <p className="pt-3 leading-relaxed text-gray-600">
+                  <p className="max-w-3xl pb-6 leading-relaxed text-ink-500">
                     {item.answer}
                   </p>
                 </motion.div>

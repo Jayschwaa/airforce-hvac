@@ -1,141 +1,70 @@
-import Image from "next/image";
+import { ArrowRight } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
-import {
-  Star,
-  Clock,
-  ShieldCheck,
-  Heart,
-  Truck,
-  Phone,
-  MessageSquare,
-} from "lucide-react";
-
-const trustBadges = [
-  { icon: Clock, text: "24/7 Emergency" },
-  { icon: ShieldCheck, text: "Licensed & Insured" },
-  { icon: Heart, text: "Family Owned" },
-];
+import { FoundLineItem } from "./FoundLineItem";
+import { PHONE, PHONE_HREF, FEE_MODEL } from "@/lib/constants";
 
 export function HeroSection() {
   return (
-    <>
-      <section className="relative overflow-hidden bg-gradient-to-br from-white via-cyan-50/40 to-white">
-        {/* Subtle geometric pattern */}
-        <div
-          className="absolute inset-0 opacity-[0.04]"
-          style={{
-            backgroundImage: `
-              linear-gradient(30deg, #3ab0d0 12%, transparent 12.5%, transparent 87%, #3ab0d0 87.5%, #3ab0d0),
-              linear-gradient(150deg, #3ab0d0 12%, transparent 12.5%, transparent 87%, #3ab0d0 87.5%, #3ab0d0),
-              linear-gradient(30deg, #3ab0d0 12%, transparent 12.5%, transparent 87%, #3ab0d0 87.5%, #3ab0d0),
-              linear-gradient(150deg, #3ab0d0 12%, transparent 12.5%, transparent 87%, #3ab0d0 87.5%, #3ab0d0),
-              linear-gradient(60deg, rgba(58,176,208,0.5) 25%, transparent 25.5%, transparent 75%, rgba(58,176,208,0.5) 75%, rgba(58,176,208,0.5)),
-              linear-gradient(60deg, rgba(58,176,208,0.5) 25%, transparent 25.5%, transparent 75%, rgba(58,176,208,0.5) 75%, rgba(58,176,208,0.5))
-            `,
-            backgroundSize: "80px 140px",
-            backgroundPosition:
-              "0 0, 0 0, 40px 70px, 40px 70px, 0 0, 40px 70px",
-          }}
-        />
+    <section className="relative overflow-hidden bg-ink-900">
+      {/* Warm bloom behind the artwork, kept well under the text. */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute right-[-10%] top-[-20%] h-[36rem] w-[36rem] rounded-full bg-gold-400/[0.07] blur-3xl"
+      />
 
-        {/* Two-column content */}
-        <Container className="relative z-10 py-16 md:py-20 lg:py-24">
-          <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-16">
-            {/* Left side: team photo */}
-            <div className="order-1 lg:order-1">
-              <div className="relative w-full overflow-hidden rounded-2xl shadow-lg">
-                <Image
-                  src="/images/hero-team.png"
-                  alt="Air Force HVAC team in front of branded service vehicles"
-                  width={800}
-                  height={600}
-                  className="w-full h-auto object-cover"
-                  priority
-                />
-              </div>
+      <Container className="relative">
+        <div className="grid items-center gap-16 py-20 sm:py-24 lg:grid-cols-12 lg:gap-12 lg:py-28">
+          <div className="min-w-0 lg:col-span-6">
+            <p className="inline-flex items-center gap-2.5 rounded-full border border-cream-100/15 px-4 py-1.5 text-[0.75rem] font-semibold uppercase tracking-[0.14em] text-cream-100/70">
+              <span className="h-1.5 w-1.5 rounded-full bg-gold-400" aria-hidden="true" />
+              Operating expense recovery
+            </p>
+
+            <h1 className="mt-7 font-display text-[2.75rem] font-black leading-[1.02] tracking-[-0.035em] text-cream-100 sm:text-6xl lg:text-[4.25rem]">
+              Same buildings.
+              <span className="block text-gold-400">Better returns.</span>
+            </h1>
+
+            <p className="mt-7 max-w-lg text-lg leading-relaxed text-cream-100/70">
+              Your portfolio is overpaying on lines nobody has opened in years —
+              tariffs, sewer credits, dead circuits, escalating vendor
+              contracts. We find it, we recover it, and we hand the difference
+              back to NOI.
+            </p>
+
+            <p className="mt-4 max-w-lg font-display text-xl font-bold italic tracking-tight text-cream-100">
+              Found money for your bottom line.
+            </p>
+
+            <div className="mt-9 flex flex-col gap-3 sm:flex-row">
+              <Button href="/contact" variant="primary" size="lg">
+                Get your free analysis
+                <ArrowRight className="h-4 w-4" aria-hidden="true" />
+              </Button>
+              <Button href={PHONE_HREF} variant="outlineLight" size="lg">
+                <span className="tabular">{PHONE}</span>
+              </Button>
             </div>
 
-            {/* Right side: content */}
-            <div className="order-2 lg:order-2">
-              {/* Badge */}
-              <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-cyan-300/50 bg-cyan-50 px-4 py-2">
-                <Star className="h-4 w-4 text-cyan-500" />
-                <span className="text-sm font-semibold tracking-wider text-cyan-600">
-                  COMMERCIAL &amp; RESIDENTIAL EXCELLENCE
-                </span>
-              </div>
-
-              {/* Headline */}
-              <h1 className="font-rubik text-4xl font-bold leading-tight text-navy-500 md:text-5xl lg:text-6xl">
-                Your Space,
-                <br />
-                Our Mission
-              </h1>
-
-              {/* Subheadline */}
-              <p className="mt-6 max-w-xl text-lg text-gray-600 md:text-xl">
-                South Florida&apos;s trusted partner for commercial HVAC,
-                ductwork, plumbing, roofing, and electrical services. $40M+ in
-                national sales. Family owned since 2010.
-              </p>
-
-              {/* CTAs */}
-              <div className="mt-8 flex flex-col gap-4 sm:flex-row">
-                <Button variant="primary" size="lg" href="tel:+18552917007">
-                  <Phone className="h-5 w-5 mr-2" />
-                  Call Now
-                </Button>
-                <Button variant="outline" size="lg" href="sms:+18552917007">
-                  <MessageSquare className="h-5 w-5 mr-2" />
-                  Text Us
-                </Button>
-              </div>
-
-              {/* Trust badges */}
-              <div className="mt-10 flex flex-wrap gap-6">
-                {trustBadges.map((badge) => (
-                  <div
-                    key={badge.text}
-                    className="flex items-center gap-2 text-gray-500"
-                  >
-                    <badge.icon className="h-5 w-5 text-cyan-500" />
-                    <span className="text-sm font-medium">{badge.text}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
+            <ul className="mt-9 flex flex-wrap gap-x-7 gap-y-2.5 text-[0.875rem] text-cream-100/55">
+              {FEE_MODEL.bullets.slice(0, 3).map((b) => (
+                <li key={b} className="flex items-center gap-2">
+                  <span className="h-1 w-1 rounded-full bg-gold-400" aria-hidden="true" />
+                  {b}
+                </li>
+              ))}
+            </ul>
           </div>
-        </Container>
-      </section>
 
-      {/* Stats strip */}
-      <div className="border-y border-gray-200 bg-gray-50 py-4">
-        <Container>
-          <div className="flex flex-col items-center justify-center gap-4 sm:flex-row sm:gap-12">
-            <div className="flex items-center gap-2 text-gray-700">
-              <Truck className="h-5 w-5 text-cyan-500" />
-              <span className="text-sm font-semibold font-rubik">
-                5,000+ Homes Visited Annually
-              </span>
-            </div>
-            <div className="hidden h-4 w-px bg-gray-300 sm:block" />
-            <div className="flex items-center gap-2 text-gray-700">
-              <div className="flex gap-0.5">
-                {[...Array(5)].map((_, i) => (
-                  <Star
-                    key={i}
-                    className="h-4 w-4 fill-yellow-400 text-yellow-400"
-                  />
-                ))}
-              </div>
-              <span className="text-sm font-semibold font-rubik">
-                600+ Five-Star Reviews
-              </span>
-            </div>
+          {/* min-w-0: without it the grid track inherits min-width:auto and
+              the statement card forces the column to its own 448px, which the
+              section then clips on narrow viewports. */}
+          <div className="min-w-0 lg:col-span-6">
+            <FoundLineItem />
           </div>
-        </Container>
-      </div>
-    </>
+        </div>
+      </Container>
+    </section>
   );
 }

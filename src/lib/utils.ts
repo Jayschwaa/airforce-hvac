@@ -1,32 +1,21 @@
-import { clsx, type ClassValue } from "clsx";
+import clsx, { type ClassValue } from "clsx";
 
-/**
- * Merge Tailwind class names, resolving conflicts with clsx.
- */
-export function cn(...args: ClassValue[]): string {
-  return clsx(args);
+export function cn(...inputs: ClassValue[]) {
+  return clsx(inputs);
 }
 
-/**
- * Format a raw phone string (e.g. "+18552917007") into a readable format.
- * If the string already looks formatted it is returned as-is.
- */
-export function formatPhone(phone: string): string {
-  const digits = phone.replace(/\D/g, "");
-
-  if (digits.length === 11 && digits.startsWith("1")) {
-    const area = digits.slice(1, 4);
-    const prefix = digits.slice(4, 7);
-    const line = digits.slice(7);
-    return `(${area}) ${prefix}-${line}`;
+/** Compact currency for stat tiles: 1284 -> $1.3K, 2_400_000 -> $2.4M */
+export function compactCurrency(value: number): string {
+  if (Math.abs(value) >= 1_000_000) {
+    return `$${(value / 1_000_000).toFixed(1).replace(/\.0$/, "")}M`;
   }
-
-  if (digits.length === 10) {
-    const area = digits.slice(0, 3);
-    const prefix = digits.slice(3, 6);
-    const line = digits.slice(6);
-    return `(${area}) ${prefix}-${line}`;
+  if (Math.abs(value) >= 1_000) {
+    return `$${(value / 1_000).toFixed(0)}K`;
   }
+  return `$${value.toLocaleString()}`;
+}
 
-  return phone;
+/** Full currency, no cents: 1284 -> $1,284 */
+export function currency(value: number): string {
+  return `$${Math.round(value).toLocaleString()}`;
 }

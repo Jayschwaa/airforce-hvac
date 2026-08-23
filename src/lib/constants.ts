@@ -1,117 +1,66 @@
-// ── Company Info ──────────────────────────────────────────────
+// ─────────────────────────────────────────────────────────────
+//  ⚠️  REPLACE BEFORE LAUNCH
+//  Phone, email and domain below are placeholders. The phone uses the
+//  555-01xx range reserved for fiction so nothing dials a real person.
+// ─────────────────────────────────────────────────────────────
 
-export const COMPANY_NAME = "Air Force HVAC" as const;
-export const PHONE = "1-855-291-7007" as const;
-export const PHONE_HREF = "tel:+18552917007" as const;
-export const EMAIL = "Jason@airforceteam.com" as const;
-export const ADMIN_EMAIL = "admin@airforceteam.com" as const;
-export const TAGLINE = "Your Space, Our Mission" as const;
-export const EST_YEAR = 2010 as const;
-export const SERVICE_AREA = "Miami-Dade, Broward & Palm Beach Counties, FL" as const;
+export const COMPANY_NAME = "Upside" as const;
+export const LEGAL_NAME = "Upside Recovery Partners, LLC" as const;
+export const TAGLINE = "Same Buildings. Better Returns." as const;
+export const SUBLINE = "Found money for your bottom line." as const;
 
-// ── Address ─────────────────────────────────────────────────
+export const PHONE = "(212) 555-0148" as const;
+export const PHONE_HREF = "tel:+12125550148" as const;
+export const SMS_HREF = "sms:+12125550148" as const;
+export const EMAIL = "hello@upsidenoi.com" as const;
+export const SITE_URL = "https://upsidenoi.com" as const;
+
+export const EST_YEAR = 2009 as const;
+export const COVERAGE = "New York City & the Northeast · Portfolios nationwide" as const;
 
 export const ADDRESS = {
-  street: "4350 NW 19th Avenue",
-  unit: "Unit E",
-  city: "Deerfield Beach",
-  state: "FL",
-  zip: "33064",
-  full: "4350 NW 19th Avenue, Unit E, Deerfield Beach, FL 33064",
+  street: "61 Broadway",
+  unit: "Suite 1400",
+  city: "New York",
+  state: "NY",
+  zip: "10006",
+  full: "61 Broadway, Suite 1400, New York, NY 10006",
 } as const;
 
-// ── Business Hours ───────────────────────────────────────────
-
 export const HOURS = {
-  display: "24/7",
-  description: "Available 24 hours a day, 7 days a week",
+  display: "Mon–Fri, 8:30–6:00 ET",
+  description: "Findings memos land within 30 days of the data pull.",
+} as const;
+
+// ── The commercial model, stated once and reused everywhere ──
+export const FEE_MODEL = {
+  headline: "We only get paid from money you weren't going to get.",
+  detail:
+    "No retainer, no capital outlay, no software to buy. We take an agreed share of the savings and refunds we actually land — for a defined term, then it is all yours.",
+  bullets: [
+    "No fee unless we find money",
+    "No capital expenditure, ever",
+    "No equipment, no construction, no tenant disruption",
+    "You approve every claim before it is filed",
+  ],
 } as const;
 
 // ── Navigation ───────────────────────────────────────────────
 
-export interface NavChild {
-  label: string;
-  href: string;
-}
-
 export interface NavItem {
   label: string;
   href: string;
-  children?: NavChild[];
+  description?: string;
 }
 
 export const NAV_ITEMS: NavItem[] = [
-  { label: "Home", href: "/" },
-  {
-    label: "Residential",
-    href: "/residential",
-    children: [
-      { label: "── Services ──", href: "/residential" },
-      { label: "HVAC", href: "/residential/hvac" },
-      { label: "Plumbing", href: "/residential/plumbing" },
-      { label: "Leak Detection", href: "/residential/leak-detection" },
-      { label: "Slab Leaks", href: "/residential/slab-leaks" },
-      { label: "Video Camera Inspection", href: "/residential/video-camera-inspection" },
-      { label: "Emergency Plumbing", href: "/residential/emergency-plumbing" },
-      { label: "Electrical", href: "/residential/electrical" },
-      { label: "Roofing", href: "/residential/roofing" },
-      { label: "Indoor Air Quality", href: "/residential/indoor-air-quality" },
-      { label: "Ductwork", href: "/residential/ductwork" },
-      { label: "Duct Cleaning", href: "/residential/duct-cleaning" },
-      { label: "── Programs ──", href: "/residential" },
-      { label: "Summer 2026 Pricing", href: "/residential/pricing" },
-      { label: "Biennial Service Program", href: "/residential/biennial-service" },
-      { label: "Flight Club — $30/mo", href: "/comfort-club" },
-    ],
-  },
-  {
-    label: "Commercial",
-    href: "/commercial",
-    children: [
-      { label: "── End Markets ──", href: "/commercial#sectors" },
-      { label: "Affordable Housing", href: "/commercial/affordable-housing" },
-      { label: "Multifamily", href: "/commercial/multifamily" },
-      { label: "New Build Homes", href: "/commercial/new-build-homes" },
-      { label: "New Build Apartments", href: "/commercial/new-build-apartments" },
-      { label: "Retail Buildouts", href: "/commercial/retail-buildouts" },
-      { label: "Office Buildings", href: "/commercial/office-buildings" },
-      { label: "Warehouses", href: "/commercial/warehouses" },
-      { label: "Hospitals", href: "/commercial/hospitals" },
-      { label: "Data Centers", href: "/commercial/data-centers" },
-      { label: "── Services ──", href: "/commercial#capabilities" },
-      { label: "Mechanical Systems", href: "/commercial/mechanical-systems" },
-      { label: "RTUs & Split Systems", href: "/commercial/rtus-split-systems" },
-      { label: "Ductwork Buildout", href: "/commercial/ductwork-buildout" },
-      { label: "Ductwork Cleaning & Repair", href: "/commercial/ductwork-cleaning" },
-      { label: "Value Engineering", href: "/commercial/value-engineering" },
-      { label: "Electrical", href: "/commercial/electrical" },
-      { label: "Plumbing", href: "/commercial/plumbing" },
-      { label: "Roofing", href: "/commercial/roofing" },
-    ],
-  },
-  { label: "Pricing", href: "/residential/pricing" },
-  { label: "Blog", href: "/blog" },
-  { label: "Reviews", href: "/reviews" },
+  { label: "What We Recover", href: "/what-we-recover" },
+  { label: "How It Works", href: "/how-it-works" },
+  { label: "Who We Serve", href: "/who-we-serve" },
+  { label: "Results", href: "/results" },
   { label: "Contact", href: "/contact" },
-  {
-    label: "About",
-    href: "/about",
-    children: [
-      { label: "About Us", href: "/about" },
-      { label: "Photos", href: "/photos" },
-    ],
-  },
 ];
 
-// ── Social Links ─────────────────────────────────────────────
-
-export interface SocialLink {
-  platform: string;
-  url: string;
-}
-
-export const SOCIAL_LINKS: SocialLink[] = [
-  { platform: "Facebook", url: "https://www.facebook.com/airforcehvac" },
-  { platform: "Instagram", url: "https://www.instagram.com/airforcehvac" },
-  { platform: "Google", url: "https://g.page/airforcehvac" },
-];
+export const SOCIAL_LINKS = [
+  { platform: "LinkedIn", url: "https://www.linkedin.com/company/upsidenoi" },
+] as const;

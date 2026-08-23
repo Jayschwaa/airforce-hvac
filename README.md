@@ -1,36 +1,75 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Upside — *Same Buildings. Better Returns.*
 
-## Getting Started
+Marketing site for **Upside**, an operating-expense recovery firm for
+real-estate portfolios. Built with Next.js 16 (App Router), React 19 and
+Tailwind CSS v4.
 
-First, run the development server:
+## Positioning
+
+Upside audits what a portfolio already spends — electric and gas, water and
+sewer, waste, telecom, vendor service contracts, insurance, processing fees
+and unclaimed incentives — recovers what was overbilled, and reduces the
+go-forward run rate. Work is contingency-based: no retainer, no capital
+outlay, no fee unless savings are realised.
+
+The site argues in owner terms rather than vendor terms: a recovered dollar
+of recurring opex is a permanent dollar of NOI, and it capitalises into
+asset value at the owner's own cap rate.
+
+## Getting started
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+npm run dev     # http://localhost:3000
+npm run build   # production build
+npm run lint
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Structure
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```
+src/app/                  6 routes: /, /what-we-recover, /how-it-works,
+                          /who-we-serve, /results, /contact
+src/components/ui/        Primitives — Button, Card, Logo, StatTile, Accordion…
+src/components/layout/    TopBar, Header, MobileMenu, Footer, StickyMobileCTA
+src/components/home/      Homepage-only sections
+src/components/sections/  Sections reused across pages
+src/data/                 All copy and figures live here, not in components
+src/lib/constants.ts      Brand, contact details, navigation
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Design system
 
-## Learn More
+Tokens are defined in `src/app/globals.css` under `@theme inline`.
 
-To learn more about Next.js, take a look at the following resources:
+| Token | Value | Notes |
+|---|---|---|
+| `ink-800` | `#101820` | Primary dark surface |
+| `ink-900` | `#080C11` | Deepest surface (hero, chart) |
+| `gold-400` | `#E8B33C` | The mark colour — **ink surfaces only** |
+| `gold-700` | `#8C5E15` | Gold *text* on light surfaces |
+| `cream-100` | `#FBF8F2` | Page background |
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+**Contrast rule:** `gold-400` measures 1.87:1 against cream and fails
+contrast on light surfaces. It may carry meaning only on ink. Use
+`gold-700` for gold-coloured text on light backgrounds. The compounding
+chart is rendered on `ink-900` for exactly this reason — its two-shade gold
+ramp clears 3:1 there and separates by 16.9 ΔE under CVD simulation.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Type: **Fraunces** for display, **Inter** for everything else — including
+every figure, since a display face on a number reads as decoration.
 
-## Deploy on Vercel
+## ⚠️ Before launch
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+These are deliberately flagged in code:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- `src/lib/constants.ts` — phone, email and domain are placeholders. The
+  phone uses the `555-01xx` range reserved for fiction.
+- `src/data/results.ts` — every figure is illustrative. The
+  `FIGURES_ARE_ILLUSTRATIVE` flag renders a disclosure banner site-wide;
+  replace the data, then set it to `false`.
+- `src/data/clients.ts` — named clients need written permission to be
+  referenced publicly. Set `SHOW_NAMED_CLIENTS = false` to fall back to
+  unnamed descriptors until each is confirmed.
+- `src/components/ui/ContactForm.tsx` — the submit handler is a local stub.
+  Point it at a route handler or form service.
