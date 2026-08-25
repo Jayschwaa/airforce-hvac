@@ -38,7 +38,7 @@ interface ServicePrice {
 }
 
 const maintenanceServices: ServicePrice[] = [
-  { service: "Service Call", regular: "$150", member: "$0" },
+  { service: "Diagnostic Visit", regular: "$150", member: "$0" },
   { service: "After Hours Service Call", regular: "$300", member: "$150" },
   { service: "Air Handler Coil Cleaning", regular: "$500", member: "$450" },
   { service: "Air Handler Blower Cleaning", regular: "$400", member: "$360" },
