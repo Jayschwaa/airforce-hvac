@@ -46,10 +46,10 @@ export function HeroSection() {
             <div className="order-1 lg:order-1">
               <div className="relative w-full overflow-hidden rounded-2xl shadow-lg">
                 <Image
-                  src="/images/hero-team.png"
-                  alt="Air Force HVAC team in front of branded service vehicles"
-                  width={800}
-                  height={600}
+                  src="/images/unnamed (1).jpg"
+                  alt="Air Force HVAC team on a water restoration and mold remediation job"
+                  width={768}
+                  height={1024}
                   className="w-full h-auto object-cover"
                   priority
                 />
