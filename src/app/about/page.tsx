@@ -71,7 +71,7 @@ export default function AboutPage() {
             About Air Force HVAC
           </h1>
           <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-gray-600 md:text-xl">
-            Two families. One mission. Exceptional service.
+            Two families. One mission. Excellent Service.
           </p>
         </Container>
       </section>
