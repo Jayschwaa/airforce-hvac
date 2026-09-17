@@ -9,6 +9,17 @@ export const TAGLINE = "Your Space, Our Mission" as const;
 export const EST_YEAR = 2010 as const;
 export const SERVICE_AREA = "Miami-Dade, Broward & Palm Beach Counties, FL" as const;
 
+// ── Licensing ─────────────────────────────────────────────────
+
+export interface LicenseNumber {
+  label: string;
+  number: string;
+}
+
+export const LICENSE_NUMBERS: LicenseNumber[] = [
+  { label: "Plumbing", number: "CFC1433992" },
+  { label: "HVAC", number: "CAC1820262" },
+];
 // ── Address ─────────────────────────────────────────────────
 
 export const ADDRESS = {
