@@ -13,6 +13,7 @@ import {
   ADDRESS,
   SERVICE_AREA,
   SOCIAL_LINKS,
+  LICENSE_NUMBERS,
 } from "@/lib/constants";
 import { SERVICES } from "@/data/services";
 
@@ -177,14 +178,22 @@ export function Footer() {
         </div>
       </Container>
 
-      {/* Bottom bar */}
+            {/* Bottom bar */}
       <div className="border-t border-white/10">
-        <Container className="py-5 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-white/50">
-          <p>
+        <Container className="py-5 flex flex-col sm:grid sm:grid-cols-3 items-center gap-2 text-xs text-white/50">
+          <p className="sm:justify-self-start">
             &copy; {new Date().getFullYear()} {COMPANY_NAME}. All rights reserved. Est.{" "}
             {EST_YEAR}.
           </p>
-          <p>
+          <p className="sm:justify-self-center text-center">
+            {LICENSE_NUMBERS.map((license, i) => (
+              <span key={license.label}>
+                {i > 0 && <span className="mx-2">&middot;</span>}
+                {license.label} Lic. #{license.number}
+              </span>
+            ))}
+          </p>
+          <p className="sm:justify-self-end">
             South Florida&apos;s Trusted HVAC &amp; Home Services Company
           </p>
         </Container>
