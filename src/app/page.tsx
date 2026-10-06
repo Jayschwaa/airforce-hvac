@@ -12,7 +12,7 @@ import { EndMarketsSection } from "@/components/home/EndMarketsSection";
 
 export const metadata: Metadata = {
   title:
-    "Air Force HVAC | Your Space, Our Mission | South Florida HVAC, Plumbing & Electrical",
+    "Air Force HVAC | Your Home, Our Mission | South Florida HVAC, Plumbing & Electrical",
   description:
     "South Florida's trusted partner for commercial & residential HVAC, ductwork, plumbing, roofing, and electrical services. $40M+ in national sales. Family owned since 2010. Serving Broward & Palm Beach Counties.",
   keywords: [
