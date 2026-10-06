@@ -29,7 +29,7 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  title: "Air Force HVAC | Your Space, Our Mission | South Florida HVAC",
+  title: "Air Force HVAC | Your Home, Our Mission | South Florida HVAC",
   description:
     "Commercial & residential HVAC, ductwork, plumbing, roofing, electrical, and indoor air quality services in Miami-Dade, Broward & Palm Beach Counties. Family owned since 2010 with $40M+ in national sales. 24/7 service. 1-855-291-7007.",
   metadataBase: new URL("https://airforceteam.com"),
@@ -41,13 +41,13 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://airforceteam.com",
     siteName: "Air Force HVAC",
-    title: "Air Force HVAC | Your Space, Our Mission",
+    title: "Air Force HVAC | Your Home, Our Mission",
     description:
       "South Florida's trusted HVAC, plumbing, electrical & roofing company. $40M+ in national sales. 24/7 emergency service. 1-855-291-7007.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Air Force HVAC | Your Space, Our Mission",
+    title: "Air Force HVAC | Your Home, Our Mission",
     description:
       "South Florida's trusted HVAC, plumbing, electrical & roofing company. 24/7 service. 1-855-291-7007.",
   },
@@ -75,7 +75,7 @@ const jsonLd = {
   foundingDate: "2010",
   description:
     "South Florida's trusted partner for commercial and residential HVAC, ductwork, plumbing, roofing, and electrical services. Family owned with $40M+ in national sales.",
-  slogan: "Your Space, Our Mission",
+  slogan: "Your Home, Our Mission",
   address: {
     "@type": "PostalAddress",
     streetAddress: "4350 NW 19th Avenue, Unit E",
