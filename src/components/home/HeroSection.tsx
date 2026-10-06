@@ -68,7 +68,7 @@ export function HeroSection() {
 
               {/* Headline */}
               <h1 className="font-rubik text-4xl font-bold leading-tight text-navy-500 md:text-5xl lg:text-6xl">
-                Your Space,
+                Your Home,
                 <br />
                 Our Mission
               </h1>
