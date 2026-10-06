@@ -5,7 +5,7 @@ export const PHONE = "1-855-291-7007" as const;
 export const PHONE_HREF = "tel:+18552917007" as const;
 export const EMAIL = "Jason@airforceteam.com" as const;
 export const ADMIN_EMAIL = "admin@airforceteam.com" as const;
-export const TAGLINE = "Your Space, Our Mission" as const;
+export const TAGLINE = "Your Home, Our Mission" as const;
 export const EST_YEAR = 2010 as const;
 export const SERVICE_AREA = "Miami-Dade, Broward & Palm Beach Counties, FL" as const;
 
