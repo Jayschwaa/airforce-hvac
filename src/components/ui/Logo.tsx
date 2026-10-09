@@ -2,17 +2,17 @@
 
 interface LogoSvgProps {
   className?: string;
-  /** Use lighter palette suitable for dark backgrounds */
+  /** Use the transparent logo suitable for dark backgrounds */
   variant?: "default" | "light";
 }
 
 /**
  * Air Force HVAC brand logo — uses the real logo images.
- * "default" variant uses the light-background logo (for header).
- * "light" variant uses the dark-background logo (for footer).
+ * "default" variant uses the white-background logo, /images/logo.jpg (for header).
+ * "light" variant uses the transparent logo, /images/logo.png (for footer / dark backgrounds).
  */
 export function LogoSvg({ className, variant = "default" }: LogoSvgProps) {
-  const src = variant === "light" ? "/images/logo-dark.png" : "/images/logo-alt.png";
+  const src = variant === "light" ? "/images/logo.png" : "/images/logo.jpg";
 
   return (
     <img
