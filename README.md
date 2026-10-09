@@ -20,6 +20,17 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
+## Brand Logos
+
+Logo files live in `public/images/` and are rendered by `src/components/ui/Logo.tsx` (`LogoSvg`):
+
+| File | Background | Used in |
+| --- | --- | --- |
+| `public/images/logo.jpg` | White | Header (`LogoSvg` default variant) |
+| `public/images/logo.png` | Transparent | Footer and dark backgrounds (`LogoSvg variant="light"`) |
+
+To update the logo, replace these two files (keep the same names) — no code changes needed.
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:
