@@ -112,6 +112,7 @@ export const NAV_ITEMS: NavItem[] = [
       { label: "Photos", href: "/photos" },
     ],
   },
+  { label: "Careers", href: "https://air-force-team.careerplug.com/" },
 ];
 
 // ── Social Links ─────────────────────────────────────────────
