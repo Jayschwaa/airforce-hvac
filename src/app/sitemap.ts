@@ -12,6 +12,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/contact`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
     { url: `${baseUrl}/comfort-club`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
     { url: `${baseUrl}/service-areas`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
+    { url: `${baseUrl}/privacy-policy`, lastModified: now, changeFrequency: "yearly", priority: 0.3 },
 
     // Residential
     { url: `${baseUrl}/residential`, lastModified: now, changeFrequency: "weekly", priority: 0.9 },

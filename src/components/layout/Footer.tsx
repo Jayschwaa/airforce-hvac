@@ -55,6 +55,7 @@ const companyLinks = [
   { label: "Service Areas", href: "/service-areas" },
   { label: "Financing", href: "/financing" },
   { label: "Contact", href: "/contact" },
+  { label: "Privacy Policy", href: "/privacy-policy" },
 ];
 
 export function Footer() {
