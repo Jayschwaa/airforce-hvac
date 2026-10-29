@@ -1,7 +1,9 @@
 "use client";
 
 import { useState } from "react";
+import { sendGAEvent } from "@next/third-parties/google";
 import { cn } from "@/lib/utils";
+import { PHONE, PHONE_HREF } from "@/lib/constants";
 import { Button } from "./Button";
 
 const SERVICES = [
@@ -39,6 +41,8 @@ export function ContactForm({ className }: ContactFormProps) {
   const [data, setData] = useState<FormData>(initialData);
   const [errors, setErrors] = useState<Partial<Record<keyof FormData, string>>>({});
   const [submitted, setSubmitted] = useState(false);
+  const [sending, setSending] = useState(false);
+  const [sendError, setSendError] = useState(false);
 
   function validate(): boolean {
     const next: typeof errors = {};
@@ -55,10 +59,28 @@ export function ContactForm({ className }: ContactFormProps) {
     return Object.keys(next).length === 0;
   }
 
-  function handleSubmit(e: React.FormEvent) {
+  async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
-    if (validate()) {
+    if (!validate()) return;
+    setSending(true);
+    setSendError(false);
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
+      if (!res.ok) throw new Error(`Status ${res.status}`);
+      sendGAEvent("event", "generate_lead", {
+        form: "contact",
+        service_type: data.serviceType,
+        service_category: data.serviceCategory,
+      });
       setSubmitted(true);
+    } catch {
+      setSendError(true);
+    } finally {
+      setSending(false);
     }
   }
 
@@ -207,8 +229,18 @@ export function ContactForm({ className }: ContactFormProps) {
         {errors.message && <p className="mt-1 text-sm text-red-500">{errors.message}</p>}
       </div>
 
-      <Button type="submit" variant="primary" size="lg" className="w-full">
-        Request Service
+      {sendError && (
+        <p className="text-sm text-red-500">
+          Sorry, we couldn&apos;t send your message. Please try again or call us at{" "}
+          <a href={PHONE_HREF} className="font-semibold underline">
+            {PHONE}
+          </a>
+          .
+        </p>
+      )}
+
+      <Button type="submit" variant="primary" size="lg" className="w-full" disabled={sending}>
+        {sending ? "Sending..." : "Request Service"}
       </Button>
     </form>
   );

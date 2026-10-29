@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { GoogleTagManager } from "@next/third-parties/google";
+import { GoogleAnalytics, GoogleTagManager } from "@next/third-parties/google";
 import { Rubik, Questrial } from "next/font/google";
 import { TopBar } from "@/components/layout/TopBar";
 import { Header } from "@/components/layout/Header";
@@ -159,6 +159,7 @@ export default function RootLayout({
       </head>
       <body className="min-h-full flex flex-col">
         <GoogleTagManager gtmId="GTM-TFCDCHCN" />
+        <GoogleAnalytics gaId="G-6D8FLTDV5L" />
         <MetaPixel />
         <TopBar />
         <Header />
