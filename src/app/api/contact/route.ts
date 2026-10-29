@@ -51,7 +51,8 @@ export async function POST(request: Request) {
     host: process.env.SMTP_HOST ?? "smtp.gmail.com",
     port: Number(process.env.SMTP_PORT ?? 465),
     secure: (process.env.SMTP_PORT ?? "465") === "465",
-    auth: { user: SMTP_USER, pass: SMTP_PASS },
+    // Google shows app passwords in groups of four; tolerate pasted spaces.
+    auth: { user: SMTP_USER.trim(), pass: SMTP_PASS.replace(/\s+/g, "") },
   });
 
   const rows: [string, string][] = [
@@ -65,7 +66,7 @@ export async function POST(request: Request) {
 
   try {
     await transporter.sendMail({
-      from: `"Air Force HVAC Website" <${SMTP_USER}>`,
+      from: `"Air Force HVAC Website" <${SMTP_USER.trim()}>`,
       to: [...CONTACT_FORM_RECIPIENTS],
       replyTo: `"${name.replace(/"/g, "")}" <${email}>`,
       subject: `New website inquiry from ${name} (${serviceType || "General"})`,
@@ -79,7 +80,12 @@ export async function POST(request: Request) {
     });
   } catch (err) {
     console.error("Contact form: failed to send email", err);
-    return Response.json({ error: "Failed to send" }, { status: 502 });
+    // Expose only the SMTP error code (e.g. EAUTH) so delivery problems can be diagnosed.
+    const code = (err as { code?: string; responseCode?: number }) ?? {};
+    return Response.json(
+      { error: "Failed to send", code: code.code, responseCode: code.responseCode },
+      { status: 502 },
+    );
   }
 
   return Response.json({ ok: true });

@@ -86,7 +86,7 @@ export function HeroSection() {
                   <Phone className="h-5 w-5 mr-2" />
                   Call Now
                 </Button>
-                <Button variant="outline" size="lg" href="sms:+18552917007">
+                <Button variant="outline" size="lg" href="sms:+17543499247">
                   <MessageSquare className="h-5 w-5 mr-2" />
                   Text Us
                 </Button>

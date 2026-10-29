@@ -6,6 +6,7 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { StickyMobileCTA } from "@/components/layout/StickyMobileCTA";
 import { MetaPixel } from "@/components/layout/MetaPixel";
+import { DesktopPhoneDialog } from "@/components/layout/DesktopPhoneDialog";
 import "./globals.css";
 
 const rubik = Rubik({
@@ -166,6 +167,7 @@ export default function RootLayout({
         <main className="flex-1">{children}</main>
         <Footer />
         <StickyMobileCTA />
+        <DesktopPhoneDialog />
       </body>
     </html>
   );

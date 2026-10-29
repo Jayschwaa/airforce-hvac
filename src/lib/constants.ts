@@ -3,6 +3,8 @@
 export const COMPANY_NAME = "Air Force HVAC" as const;
 export const PHONE = "1-855-291-7007" as const;
 export const PHONE_HREF = "tel:+18552917007" as const;
+export const TEXT_PHONE = "754-349-9247" as const;
+export const TEXT_PHONE_HREF = "sms:+17543499247" as const;
 export const EMAIL = "Jason@airforceteam.com" as const;
 export const ADMIN_EMAIL = "admin@airforceteam.com" as const;
 export const CONTACT_FORM_RECIPIENTS = [

@@ -110,7 +110,7 @@ export function EndMarketsSection() {
 
         <div className="mt-10 text-center">
           <a
-            href="tel:+18552917007"
+            href="/contact"
             className="inline-flex items-center gap-2 rounded-lg bg-cyan-500 px-8 py-4 font-rubik font-semibold text-white transition-all hover:bg-cyan-600"
           >
             Request a Commercial Bid — 1-855-291-7007

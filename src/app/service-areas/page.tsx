@@ -139,7 +139,7 @@ export default function ServiceAreasPage() {
           </div>
           <div className="mt-8">
             <Button
-              href={PHONE_HREF}
+              href="/contact"
               size="lg"
               variant="primary"
             >

@@ -18,7 +18,7 @@ export function ServiceCTA() {
             Call {PHONE}
           </Button>
           <Button
-            href="sms:+18552917007"
+            href="sms:+17543499247"
             variant="outline"
             size="lg"
             className="border-white text-white hover:bg-white hover:text-cyan-600"

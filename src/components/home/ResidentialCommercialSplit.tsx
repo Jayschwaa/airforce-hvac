@@ -81,7 +81,7 @@ export function ResidentialCommercialSplit() {
                 <Phone className="h-4 w-4 mr-2" />
                 Call Now
               </Button>
-              <Button href="sms:+18552917007" variant="outline" size="md">
+              <Button href="sms:+17543499247" variant="outline" size="md">
                 <MessageSquare className="h-4 w-4 mr-2" />
                 Text Us
               </Button>
@@ -127,7 +127,7 @@ export function ResidentialCommercialSplit() {
                 <Phone className="h-4 w-4 mr-2" />
                 Call Now
               </Button>
-              <Button href="sms:+18552917007" variant="outline" size="md">
+              <Button href="sms:+17543499247" variant="outline" size="md">
                 <MessageSquare className="h-4 w-4 mr-2" />
                 Text Us
               </Button>

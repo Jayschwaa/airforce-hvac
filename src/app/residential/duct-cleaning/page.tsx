@@ -191,7 +191,7 @@ export default function DuctCleaningPage() {
                 Call 1-855-291-7007
               </a>
               <a
-                href="sms:+18552917007"
+                href="sms:+17543499247"
                 className="inline-flex items-center gap-2 rounded-lg border-2 border-cyan-500 px-8 py-4 font-rubik font-semibold text-cyan-500 transition-all hover:bg-cyan-500 hover:text-white"
               >
                 <MessageSquare className="h-5 w-5" />
@@ -463,7 +463,7 @@ export default function DuctCleaningPage() {
                 1-855-291-7007
               </a>
               <a
-                href="sms:+18552917007"
+                href="sms:+17543499247"
                 className="inline-flex items-center gap-2 rounded-lg border-2 border-white px-8 py-4 font-rubik font-semibold text-white transition-all hover:bg-white hover:text-cyan-600"
               >
                 <MessageSquare className="h-5 w-5" />
