@@ -1,4 +1,3 @@
-import nodemailer from "nodemailer";
 import { CONTACT_FORM_RECIPIENTS } from "@/lib/constants";
 
 type ContactPayload = {
@@ -41,19 +40,11 @@ export async function POST(request: Request) {
     return Response.json({ error: "Missing required fields" }, { status: 400 });
   }
 
-  const { SMTP_USER, SMTP_PASS } = process.env;
-  if (!SMTP_USER || !SMTP_PASS) {
-    console.error("Contact form: SMTP_USER / SMTP_PASS are not set");
+  const apiKey = process.env.RESEND_API_KEY?.trim();
+  if (!apiKey) {
+    console.error("Contact form: RESEND_API_KEY is not set");
     return Response.json({ error: "Email is not configured" }, { status: 500 });
   }
-
-  const transporter = nodemailer.createTransport({
-    host: process.env.SMTP_HOST ?? "smtp.gmail.com",
-    port: Number(process.env.SMTP_PORT ?? 465),
-    secure: (process.env.SMTP_PORT ?? "465") === "465",
-    // Google shows app passwords in groups of four; tolerate pasted spaces.
-    auth: { user: SMTP_USER.trim(), pass: SMTP_PASS.replace(/\s+/g, "") },
-  });
 
   const rows: [string, string][] = [
     ["Name", name],
@@ -64,11 +55,16 @@ export async function POST(request: Request) {
     ["Message", message],
   ];
 
-  try {
-    await transporter.sendMail({
-      from: `"Air Force HVAC Website" <${SMTP_USER.trim()}>`,
+  const res = await fetch("https://api.resend.com/emails", {
+    method: "POST",
+    headers: {
+      Authorization: `Bearer ${apiKey}`,
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      from: process.env.CONTACT_FROM_EMAIL ?? "Air Force HVAC Website <website@airforceteam.com>",
       to: [...CONTACT_FORM_RECIPIENTS],
-      replyTo: `"${name.replace(/"/g, "")}" <${email}>`,
+      reply_to: `${name.replace(/[<>"]/g, "")} <${email}>`,
       subject: `New website inquiry from ${name} (${serviceType || "General"})`,
       text: rows.map(([k, v]) => `${k}: ${v}`).join("\n"),
       html: `<h2>New Contact Form Submission</h2><table cellpadding="6">${rows
@@ -77,15 +73,18 @@ export async function POST(request: Request) {
             `<tr><td valign="top"><strong>${k}</strong></td><td style="white-space:pre-wrap">${escapeHtml(v)}</td></tr>`,
         )
         .join("")}</table>`,
-    });
-  } catch (err) {
-    console.error("Contact form: failed to send email", err);
-    // Expose only the SMTP error code (e.g. EAUTH) so delivery problems can be diagnosed.
-    const code = (err as { code?: string; responseCode?: number }) ?? {};
-    return Response.json(
-      { error: "Failed to send", code: code.code, responseCode: code.responseCode },
-      { status: 502 },
-    );
+    }),
+  });
+
+  if (!res.ok) {
+    const detail = await res.text();
+    console.error("Contact form: Resend rejected the email", res.status, detail);
+    // Resend's error names (e.g. validation_error) carry no secrets and help diagnose setup issues.
+    let reason: string | undefined;
+    try {
+      reason = (JSON.parse(detail) as { name?: string; message?: string }).message;
+    } catch {}
+    return Response.json({ error: "Failed to send", status: res.status, reason }, { status: 502 });
   }
 
   return Response.json({ ok: true });
