@@ -5,6 +5,7 @@ import { TopBar } from "@/components/layout/TopBar";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { StickyMobileCTA } from "@/components/layout/StickyMobileCTA";
+import { MetaPixel } from "@/components/layout/MetaPixel";
 import "./globals.css";
 
 const rubik = Rubik({
@@ -158,6 +159,7 @@ export default function RootLayout({
       </head>
       <body className="min-h-full flex flex-col">
         <GoogleTagManager gtmId="GTM-TFCDCHCN" />
+        <MetaPixel />
         <TopBar />
         <Header />
         <main className="flex-1">{children}</main>
