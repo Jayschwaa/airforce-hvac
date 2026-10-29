@@ -28,6 +28,8 @@ type ContactFormProps = {
   className?: string;
 };
 
+const NEED_CONTACT = "Enter a phone number or email so we can reach you";
+
 const initialData: FormData = {
   name: "",
   email: "",
@@ -47,14 +49,12 @@ export function ContactForm({ className }: ContactFormProps) {
   function validate(): boolean {
     const next: typeof errors = {};
     if (!data.name.trim()) next.name = "Name is required";
-    if (!data.email.trim()) {
-      next.email = "Email is required";
-    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email)) {
+    // Only a phone number or an email is needed so we can reach them.
+    if (!data.email.trim() && !data.phone.trim()) {
+      next.phone = NEED_CONTACT;
+    } else if (data.email.trim() && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email.trim())) {
       next.email = "Enter a valid email";
     }
-    if (!data.phone.trim()) next.phone = "Phone is required";
-    if (!data.serviceType) next.serviceType = "Select a service";
-    if (!data.message.trim()) next.message = "Message is required";
     setErrors(next);
     return Object.keys(next).length === 0;
   }
@@ -86,10 +86,13 @@ export function ContactForm({ className }: ContactFormProps) {
 
   function update(field: keyof FormData, value: string) {
     setData((prev) => ({ ...prev, [field]: value }));
-    if (errors[field]) {
+    // Filling in either email or phone satisfies the shared "phone or email" error.
+    const cleared = field === "email" && errors.phone === NEED_CONTACT ? "phone" : null;
+    if (errors[field] || cleared) {
       setErrors((prev) => {
         const copy = { ...prev };
         delete copy[field];
+        if (cleared) delete copy[cleared];
         return copy;
       });
     }
@@ -136,23 +139,26 @@ export function ContactForm({ className }: ContactFormProps) {
 
       {/* Email & Phone */}
       <div className="grid gap-6 sm:grid-cols-2">
+        <p className="-mb-4 text-sm text-gray-500 sm:col-span-2">
+          Phone or email <span className="text-red-500">*</span> &mdash; whichever you prefer.
+        </p>
         <div>
           <label htmlFor="cf-email" className="mb-1 block text-sm font-semibold text-navy-500">
-            Email <span className="text-red-500">*</span>
+            Email
           </label>
           <input
             id="cf-email"
             type="email"
             value={data.email}
             onChange={(e) => update("email", e.target.value)}
-            className={cn(inputBase, errors.email && "border-red-400")}
+            className={cn(inputBase, (errors.email || errors.phone === NEED_CONTACT) && "border-red-400")}
             placeholder="you@email.com"
           />
           {errors.email && <p className="mt-1 text-sm text-red-500">{errors.email}</p>}
         </div>
         <div>
           <label htmlFor="cf-phone" className="mb-1 block text-sm font-semibold text-navy-500">
-            Phone <span className="text-red-500">*</span>
+            Phone
           </label>
           <input
             id="cf-phone"
@@ -169,7 +175,7 @@ export function ContactForm({ className }: ContactFormProps) {
       {/* Service Type */}
       <div>
         <label htmlFor="cf-service" className="mb-1 block text-sm font-semibold text-navy-500">
-          Service Type <span className="text-red-500">*</span>
+          Service Type <span className="font-normal text-gray-400">(optional)</span>
         </label>
         <select
           id="cf-service"
@@ -178,7 +184,7 @@ export function ContactForm({ className }: ContactFormProps) {
           className={cn(inputBase, !data.serviceType && "text-gray-400", errors.serviceType && "border-red-400")}
         >
           <option value="" disabled>
-            Select a service
+            Select a service (optional)
           </option>
           {SERVICES.map((s) => (
             <option key={s} value={s}>
@@ -216,7 +222,7 @@ export function ContactForm({ className }: ContactFormProps) {
       {/* Message */}
       <div>
         <label htmlFor="cf-message" className="mb-1 block text-sm font-semibold text-navy-500">
-          Message <span className="text-red-500">*</span>
+          Message <span className="font-normal text-gray-400">(optional)</span>
         </label>
         <textarea
           id="cf-message"

@@ -36,7 +36,9 @@ export async function POST(request: Request) {
   const serviceCategory = clean(body.serviceCategory, 50);
   const message = clean(body.message, 5000);
 
-  if (!name || !phone || !message || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+  const emailValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  // Name plus at least one way to reach them; everything else is optional.
+  if (!name || (!phone && !email) || (email && !emailValid)) {
     return Response.json({ error: "Missing required fields" }, { status: 400 });
   }
 
@@ -48,11 +50,11 @@ export async function POST(request: Request) {
 
   const rows: [string, string][] = [
     ["Name", name],
-    ["Email", email],
-    ["Phone", phone],
+    ["Email", email || "—"],
+    ["Phone", phone || "—"],
     ["Service Type", serviceType || "—"],
     ["Category", serviceCategory || "—"],
-    ["Message", message],
+    ["Message", message || "—"],
   ];
 
   const res = await fetch("https://api.resend.com/emails", {
@@ -64,7 +66,7 @@ export async function POST(request: Request) {
     body: JSON.stringify({
       from: process.env.CONTACT_FROM_EMAIL ?? "Air Force HVAC Website <website@airforceteam.com>",
       to: [...CONTACT_FORM_RECIPIENTS],
-      reply_to: `${name.replace(/[<>"]/g, "")} <${email}>`,
+      ...(email && { reply_to: `${name.replace(/[<>"]/g, "")} <${email}>` }),
       subject: `New website inquiry from ${name} (${serviceType || "General"})`,
       text: rows.map(([k, v]) => `${k}: ${v}`).join("\n"),
       html: `<h2>New Contact Form Submission</h2><table cellpadding="6">${rows
