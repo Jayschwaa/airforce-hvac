@@ -11,7 +11,7 @@ import { Container } from "@/components/ui/Container";
 import { ContactForm } from "@/components/ui/ContactForm";
 import { Button } from "@/components/ui/Button";
 import { Card } from "@/components/ui/Card";
-import { PHONE, PHONE_HREF, EMAIL, ADMIN_EMAIL } from "@/lib/constants";
+import { PHONE, PHONE_HREF, EMAIL } from "@/lib/constants";
 
 export const metadata: Metadata = {
   title: "Contact Us | Air Force HVAC",
@@ -90,13 +90,6 @@ export default function ContactPage() {
                         className="text-navy-500 transition-colors hover:text-cyan-500"
                       >
                         {EMAIL}
-                      </a>
-                      <br />
-                      <a
-                        href={`mailto:${ADMIN_EMAIL}`}
-                        className="text-sm text-gray-500 transition-colors hover:text-cyan-500"
-                      >
-                        {ADMIN_EMAIL}
                       </a>
                     </div>
                   </div>
