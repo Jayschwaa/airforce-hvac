@@ -34,6 +34,7 @@ export function FreeMembershipForm({ className }: { className?: string }) {
   function validate(): boolean {
     const next: typeof errors = {};
     if (!data.name.trim()) next.name = "Name is required";
+    if (!data.address.trim()) next.address = "Service address is required";
     if (!data.email.trim() && !data.phone.trim()) {
       next.phone = NEED_CONTACT;
     } else if (data.email.trim() && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email.trim())) {
@@ -61,7 +62,7 @@ export function FreeMembershipForm({ className }: { className?: string }) {
           serviceCategory: "residential",
           message: [
             "Free Flight Club membership sign-up via QR code landing page.",
-            `Service address: ${data.address.trim() || "—"}`,
+            `Service address: ${data.address.trim()}`,
             `Notes: ${data.notes.trim() || "—"}`,
           ].join("\n"),
         }),
@@ -169,7 +170,7 @@ export function FreeMembershipForm({ className }: { className?: string }) {
       {/* Address */}
       <div>
         <label htmlFor="fc-address" className="mb-1 block text-sm font-semibold text-navy-500">
-          Service Address <span className="font-normal text-gray-400">(optional)</span>
+          Service Address <span className="text-red-500">*</span>
         </label>
         <input
           id="fc-address"
@@ -177,9 +178,10 @@ export function FreeMembershipForm({ className }: { className?: string }) {
           autoComplete="street-address"
           value={data.address}
           onChange={(e) => update("address", e.target.value)}
-          className={inputBase}
+          className={cn(inputBase, errors.address && "border-red-400")}
           placeholder="Street, city, ZIP"
         />
+        {errors.address && <p className="mt-1 text-sm text-red-500">{errors.address}</p>}
       </div>
 
       {/* Notes */}
