@@ -74,7 +74,7 @@ const jsonLd = {
   alternateName: "Air Force Team",
   url: "https://airforceteam.com",
   telephone: "+18552917007",
-  email: "Jason@airforceteam.com",
+  email: "service@airforceteam.com",
   foundingDate: "2010",
   description:
     "South Florida's trusted partner for commercial and residential HVAC, ductwork, plumbing, roofing, and electrical services. Family owned with $40M+ in national sales.",
