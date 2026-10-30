@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { GoogleAnalytics, GoogleTagManager } from "@next/third-parties/google";
+import Script from "next/script";
 import { Rubik, Questrial } from "next/font/google";
 import { TopBar } from "@/components/layout/TopBar";
 import { Header } from "@/components/layout/Header";
@@ -161,6 +162,12 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col">
         <GoogleTagManager gtmId="GTM-TFCDCHCN" />
         <GoogleAnalytics gaId="G-6D8FLTDV5L" />
+        {/* Google Ads tag: reuses the gtag.js loaded by GoogleAnalytics above. */}
+        <Script id="google-ads-config">
+          {`window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('config', 'AW-18546862414');`}
+        </Script>
         <MetaPixel />
         <TopBar />
         <Header />
