@@ -3,7 +3,6 @@ import { Check, Gift } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { Card } from "@/components/ui/Card";
 import { FreeMembershipForm } from "@/components/flight-club/FreeMembershipForm";
-import { COMFORT_CLUB_PLANS } from "@/data/comfortClub";
 import { PHONE, PHONE_HREF } from "@/lib/constants";
 
 // Unlisted QR-code landing page: kept out of the nav and sitemap, and
@@ -11,7 +10,7 @@ import { PHONE, PHONE_HREF } from "@/lib/constants";
 export const metadata: Metadata = {
   title: "Your Free Flight Club Membership | Air Force HVAC",
   description:
-    "Claim your complimentary Air Force HVAC Flight Club membership — priority service, seasonal tune-ups, and member-only pricing.",
+    "Claim your complimentary Air Force HVAC Flight Club membership — two professional AC tune-ups a year and priority scheduling, valued at $279.",
   alternates: { canonical: null },
   robots: {
     index: false,
@@ -20,7 +19,13 @@ export const metadata: Metadata = {
   },
 };
 
-const BENEFITS = COMFORT_CLUB_PLANS[0].benefits;
+const BENEFITS = [
+  "2 professional AC tune-ups (once every 6 months)",
+  "Priority scheduling",
+  "Improved efficiency and performance",
+  "Helps prevent costly repairs",
+  "A more comfortable home",
+];
 
 export default function WelcomeAboardPage() {
   return (
@@ -30,7 +35,7 @@ export default function WelcomeAboardPage() {
         <Container className="text-center">
           <span className="inline-flex items-center gap-2 rounded-full bg-cyan-500 px-4 py-1.5 text-xs font-bold uppercase tracking-wider text-white">
             <Gift className="h-4 w-4" />
-            Exclusive QR Code Offer
+            Exclusive for United Restoration Customers Only
           </span>
           <h1 className="mt-6 font-rubik text-4xl font-bold text-navy-500 md:text-5xl lg:text-6xl">
             Your Flight Club Membership Is On Us
@@ -38,9 +43,8 @@ export default function WelcomeAboardPage() {
           <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-gray-600 md:text-xl">
             Thanks for scanning! Claim a{" "}
             <strong className="text-navy-500">FREE</strong> Flight Club
-            membership — normally{" "}
-            <span className="line-through">{COMFORT_CLUB_PLANS[0].price}/mo</span>
-            . Priority service, seasonal tune-ups, and member-only pricing.
+            membership —{" "}
+            <strong className="text-navy-500">valued at $279</strong>.
           </p>
         </Container>
       </section>
