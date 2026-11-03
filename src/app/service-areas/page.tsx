@@ -16,7 +16,7 @@ const PILL_COLORS = [
 export const metadata: Metadata = {
   title: "Service Areas | Air Force HVAC",
   description:
-    "Air Force HVAC proudly serves Miami-Dade County, Broward County, Palm Beach County, and clients nationwide. $40M+ in national sales across all facilities services platforms.",
+    "Air Force HVAC proudly serves Miami-Dade County, Broward County, Palm Beach County, St. Lucie County, and clients nationwide. $40M+ in national sales across all facilities services platforms.",
 };
 
 export default function ServiceAreasPage() {
@@ -36,7 +36,7 @@ export default function ServiceAreasPage() {
             Service Areas
           </h1>
           <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-gray-600 md:text-xl">
-            Proudly serving Miami-Dade, Broward, and Palm Beach Counties, plus
+            Proudly serving Miami-Dade, Broward, Palm Beach, and St. Lucie Counties, plus
             clients nationwide.
           </p>
         </Container>
@@ -50,7 +50,7 @@ export default function ServiceAreasPage() {
             heading="South Florida Service Areas"
             centered
           />
-          <div className="mt-12 grid gap-12 lg:grid-cols-3">
+          <div className="mt-12 grid gap-12 md:grid-cols-2 lg:grid-cols-4">
             {SERVICE_AREAS.counties.map((county, idx) => (
               <div key={county.name}>
                 <div className="mb-6 flex items-center gap-2">
