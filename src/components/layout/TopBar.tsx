@@ -16,7 +16,7 @@ export function TopBar() {
 
         {/* Center: Service area */}
         <span className="text-white/90">
-          Serving Miami-Dade, Broward &amp; Palm Beach Counties, as well as Commercial Clients Nationwide
+          Serving Miami-Dade, Broward, Palm Beach &amp; St. Lucie Counties, as well as Commercial Clients Nationwide
         </span>
 
         {/* Right: Email */}
