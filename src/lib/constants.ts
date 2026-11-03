@@ -14,7 +14,7 @@ export const CONTACT_FORM_RECIPIENTS = [
 ] as const;
 export const TAGLINE = "Your Home, Our Mission" as const;
 export const EST_YEAR = 2010 as const;
-export const SERVICE_AREA = "Miami-Dade, Broward & Palm Beach Counties, FL" as const;
+export const SERVICE_AREA = "Miami-Dade, Broward, Palm Beach & St. Lucie Counties, FL" as const;
 
 // ── Licensing ─────────────────────────────────────────────────
 
