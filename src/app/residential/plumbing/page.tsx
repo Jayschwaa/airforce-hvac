@@ -126,7 +126,7 @@ const faqs = [
   {
     question: "How do I know if my South Florida home needs repiping?",
     answer:
-      "Warning signs include discolored water, low water pressure, frequent pinhole leaks, and visible corrosion on exposed pipes. Homes built before 1990 in Palm Beach and Broward Counties often have polybutylene or galvanized pipes that are past their lifespan. We offer free repiping assessments to determine if your home is a candidate.",
+      "Warning signs include discolored water, low water pressure, frequent pinhole leaks, and visible corrosion on exposed pipes. Homes built before 1990 in Palm Beach, Broward, and St. Lucie Counties often have polybutylene or galvanized pipes that are past their lifespan. We offer free repiping assessments to determine if your home is a candidate.",
   },
   {
     question: "Should I choose a tank or tankless water heater for my Florida home?",
