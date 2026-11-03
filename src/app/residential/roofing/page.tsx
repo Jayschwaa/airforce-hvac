@@ -19,7 +19,7 @@ import { PHONE, PHONE_HREF } from "@/lib/constants";
 export const metadata: Metadata = {
   title: "Residential Roofing Services | Roof Repair & Replacement | Air Force HVAC",
   description:
-    "Expert residential roofing in South Florida. Roof inspections, repairs, replacements, storm damage repair, and gutter installation. Hurricane-rated materials for Palm Beach, Broward & St. Lucie Counties.",
+    "Expert residential roofing in South Florida. Roof inspections, repairs, replacements, storm damage repair, and gutter installation. Hurricane-rated materials for Miami-Dade, Broward, Palm Beach & St. Lucie Counties.",
 };
 
 const services = [
