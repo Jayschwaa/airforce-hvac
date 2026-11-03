@@ -19,7 +19,7 @@ import { PHONE, PHONE_HREF } from "@/lib/constants";
 export const metadata: Metadata = {
   title: "Residential HVAC Services | AC Repair & Installation | Air Force HVAC",
   description:
-    "Expert residential HVAC services in South Florida. AC repair, installation, maintenance, ductless mini-splits, and 24/7 emergency service. Serving Palm Beach & Broward Counties.",
+    "Expert residential HVAC services in South Florida. AC repair, installation, maintenance, ductless mini-splits, and 24/7 emergency service. Serving Palm Beach, Broward & St. Lucie Counties.",
 };
 
 const services = [
@@ -109,7 +109,7 @@ export default function ResidentialHvacPage() {
           <p className="mt-6 max-w-2xl text-lg text-gray-600">
             Keep your South Florida home cool and comfortable year-round with
             expert AC repair, installation, and maintenance from Air Force HVAC.
-            Our licensed technicians serve Palm Beach and Broward Counties with
+            Our licensed technicians serve Palm Beach, Broward, and St. Lucie Counties with
             24/7 emergency availability and upfront pricing.
           </p>
           <div className="mt-8 flex flex-col gap-4 sm:flex-row">
