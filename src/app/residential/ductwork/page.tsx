@@ -18,7 +18,7 @@ import { PHONE, PHONE_HREF } from "@/lib/constants";
 export const metadata: Metadata = {
   title: "Residential Ductwork Services | Duct Repair & Installation | Air Force HVAC",
   description:
-    "Professional residential ductwork in South Florida. Duct installation, repair, sealing, cleaning, insulation, and air balancing. Serving Palm Beach, Broward & St. Lucie Counties.",
+    "Professional residential ductwork in South Florida. Duct installation, repair, sealing, cleaning, insulation, and air balancing. Serving Miami-Dade, Broward, Palm Beach & St. Lucie Counties.",
 };
 
 const services = [
