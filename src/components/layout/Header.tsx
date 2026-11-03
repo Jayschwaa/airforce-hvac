@@ -184,7 +184,7 @@ export function Header() {
             </span>
             <a
               href={PHONE_HREF}
-              className="text-sm font-medium font-rubik text-navy-700 hover:text-cyan-500 transition-colors"
+              className="whitespace-nowrap text-sm font-medium font-rubik text-navy-700 hover:text-cyan-500 transition-colors"
             >
               {PHONE}
             </a>
