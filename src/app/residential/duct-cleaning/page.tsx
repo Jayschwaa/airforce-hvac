@@ -26,6 +26,7 @@ export const metadata: Metadata = {
     "Professional duct cleaning in South Florida. Full supply & return duct cleaning, air handler coil & blower cleaning, HEPA-filtered equipment. $95 per vent. Serving Miami-Dade, Broward, Palm Beach & St. Lucie Counties.",
   keywords: [
     "duct cleaning South Florida",
+    "duct cleaning Miami-Dade",
     "duct cleaning Broward",
     "duct cleaning St. Lucie",
     "air duct cleaning near me",
