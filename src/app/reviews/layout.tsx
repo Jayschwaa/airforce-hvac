@@ -10,6 +10,7 @@ export const metadata: Metadata = {
     "AC repair reviews",
     "duct cleaning reviews",
     "plumbing reviews Broward",
+    "plumbing reviews St. Lucie",
     "HVAC company reviews",
   ],
 };
