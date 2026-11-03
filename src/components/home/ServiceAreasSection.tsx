@@ -20,7 +20,7 @@ export function ServiceAreasSection() {
           centered
         />
 
-        <div className="mt-12 grid gap-8 md:grid-cols-3">
+        <div className="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
           {SERVICE_AREAS.counties.map((county, idx) => (
             <div
               key={county.name}
@@ -47,7 +47,7 @@ export function ServiceAreasSection() {
         </div>
 
         <p className="mt-10 text-center text-gray-600">
-          Serving all of Miami-Dade, Broward, and Palm Beach Counties.{" "}
+          Serving all of Miami-Dade, Broward, Palm Beach, and St. Lucie Counties.{" "}
           <Link
             href="/service-areas"
             className="font-medium text-cyan-500 hover:text-cyan-600 transition-colors underline underline-offset-2"
