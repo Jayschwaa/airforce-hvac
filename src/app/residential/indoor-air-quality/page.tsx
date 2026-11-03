@@ -18,7 +18,7 @@ import { PHONE, PHONE_HREF } from "@/lib/constants";
 export const metadata: Metadata = {
   title: "Indoor Air Quality Services | Air Purification & Humidity Control | Air Force HVAC",
   description:
-    "Improve your South Florida home’s indoor air quality. Air purification, UV light treatment, humidity control, duct cleaning, and allergen reduction. Serving Palm Beach, Broward & St. Lucie Counties.",
+    "Improve your South Florida home’s indoor air quality. Air purification, UV light treatment, humidity control, duct cleaning, and allergen reduction. Serving Miami-Dade, Broward, Palm Beach & St. Lucie Counties.",
 };
 
 const services = [
