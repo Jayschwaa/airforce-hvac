@@ -188,6 +188,9 @@ export function Header() {
             >
               {PHONE}
             </a>
+            <Button href="/contact" variant="outline" size="sm">
+              Service Request
+            </Button>
             <Button href="/contact" variant="primary" size="sm">
               Get a Quote
             </Button>
