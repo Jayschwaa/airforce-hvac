@@ -19,7 +19,7 @@ import { PHONE, PHONE_HREF } from "@/lib/constants";
 export const metadata: Metadata = {
   title: "Residential HVAC Services | AC Repair & Installation | Air Force HVAC",
   description:
-    "Expert residential HVAC services in South Florida. AC repair, installation, maintenance, ductless mini-splits, and 24/7 emergency service. Serving Palm Beach, Broward & St. Lucie Counties.",
+    "Expert residential HVAC services in South Florida. AC repair, installation, maintenance, ductless mini-splits, and 24/7 emergency service. Serving Miami-Dade, Broward, Palm Beach & St. Lucie Counties.",
 };
 
 const services = [
@@ -65,7 +65,7 @@ const faqs = [
   {
     question: "How much does a typical AC repair cost in South Florida?",
     answer:
-      "Most residential AC repairs in Palm Beach, Broward, and St. Lucie Counties range from $150 to $600, depending on the issue. Common repairs like capacitor or contactor replacement fall on the lower end, while compressor or evaporator coil repairs cost more. We provide upfront pricing before any work begins so there are no surprises.",
+      "Most residential AC repairs in Miami-Dade, Broward, Palm Beach, and St. Lucie Counties range from $150 to $600, depending on the issue. Common repairs like capacitor or contactor replacement fall on the lower end, while compressor or evaporator coil repairs cost more. We provide upfront pricing before any work begins so there are no surprises.",
   },
   {
     question: "How often should I have my AC serviced in South Florida?",
@@ -80,7 +80,7 @@ const faqs = [
   {
     question: "How quickly can you respond to an AC emergency?",
     answer:
-      "For emergency calls within our Palm Beach, Broward, and St. Lucie County service area, we typically have a technician on-site within 2–4 hours. Flight Club members receive priority scheduling and are often seen within 1–2 hours. We understand that in South Florida, a failed AC system is an urgent situation.",
+      "For emergency calls within our Miami-Dade, Broward, Palm Beach, and St. Lucie County service area, we typically have a technician on-site within 2–4 hours. Flight Club members receive priority scheduling and are often seen within 1–2 hours. We understand that in South Florida, a failed AC system is an urgent situation.",
   },
 ];
 
@@ -109,7 +109,7 @@ export default function ResidentialHvacPage() {
           <p className="mt-6 max-w-2xl text-lg text-gray-600">
             Keep your South Florida home cool and comfortable year-round with
             expert AC repair, installation, and maintenance from Air Force HVAC.
-            Our licensed technicians serve Palm Beach, Broward, and St. Lucie Counties with
+            Our licensed technicians serve Miami-Dade, Broward, Palm Beach, and St. Lucie Counties with
             24/7 emergency availability and upfront pricing.
           </p>
           <div className="mt-8 flex flex-col gap-4 sm:flex-row">
