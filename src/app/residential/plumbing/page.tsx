@@ -26,7 +26,7 @@ import { PHONE, PHONE_HREF } from "@/lib/constants";
 export const metadata: Metadata = {
   title: "Residential Plumbing Services | Pipe Repair & Water Heaters | Air Force HVAC",
   description:
-    "Licensed residential plumbing in South Florida. Pipe repair, repiping, water heater installation, leak detection, and drain cleaning. Same-day emergency service in Palm Beach & Broward Counties.",
+    "Licensed residential plumbing in South Florida. Pipe repair, repiping, water heater installation, leak detection, and drain cleaning. Same-day emergency service in Palm Beach, Broward & St. Lucie Counties.",
 };
 
 const services = [
@@ -141,7 +141,7 @@ const faqs = [
   {
     question: "Do you offer same-day emergency plumbing service?",
     answer:
-      "Yes, we offer same-day emergency plumbing service throughout Palm Beach and Broward Counties. Burst pipes, sewer backups, and major leaks cannot wait — call us anytime and we will dispatch a licensed plumber to your home as quickly as possible. Flight Club members receive priority scheduling with no overtime charges.",
+      "Yes, we offer same-day emergency plumbing service throughout Palm Beach, Broward, and St. Lucie Counties. Burst pipes, sewer backups, and major leaks cannot wait — call us anytime and we will dispatch a licensed plumber to your home as quickly as possible. Flight Club members receive priority scheduling with no overtime charges.",
   },
 ];
 
