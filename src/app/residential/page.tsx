@@ -22,7 +22,7 @@ import { PHONE, PHONE_HREF } from "@/lib/constants";
 export const metadata: Metadata = {
   title: "Residential Services | Air Force HVAC",
   description:
-    "Your home comfort experts in South Florida. HVAC, plumbing, electrical, and roofing services for homeowners in Palm Beach & Broward Counties. Schedule service today.",
+    "Your home comfort experts in South Florida. HVAC, plumbing, electrical, and roofing services for homeowners in Palm Beach, Broward & St. Lucie Counties. Schedule service today.",
 };
 
 const TRUST_BADGES = [
@@ -109,7 +109,7 @@ export default function ResidentialPage() {
       <section className="bg-gradient-to-br from-white via-cyan-50/50 to-white py-24 md:py-32 border-b border-gray-100">
         <Container>
           <span className="inline-block rounded-full bg-cyan-50 px-4 py-1.5 text-sm font-semibold text-cyan-600">
-            Serving Palm Beach &amp; Broward Counties
+            Serving Palm Beach, Broward &amp; St. Lucie Counties
           </span>
           <h1 className="mt-6 font-rubik text-4xl font-bold text-navy-500 md:text-5xl lg:text-6xl">
             Your Home Comfort Experts
