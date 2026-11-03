@@ -26,7 +26,7 @@ import { PHONE, PHONE_HREF } from "@/lib/constants";
 export const metadata: Metadata = {
   title: "Residential Plumbing Services | Pipe Repair & Water Heaters | Air Force HVAC",
   description:
-    "Licensed residential plumbing in South Florida. Pipe repair, repiping, water heater installation, leak detection, and drain cleaning. Same-day emergency service in Palm Beach, Broward & St. Lucie Counties.",
+    "Licensed residential plumbing in South Florida. Pipe repair, repiping, water heater installation, leak detection, and drain cleaning. Same-day emergency service in Miami-Dade, Broward, Palm Beach & St. Lucie Counties.",
 };
 
 const services = [
@@ -126,7 +126,7 @@ const faqs = [
   {
     question: "How do I know if my South Florida home needs repiping?",
     answer:
-      "Warning signs include discolored water, low water pressure, frequent pinhole leaks, and visible corrosion on exposed pipes. Homes built before 1990 in Palm Beach, Broward, and St. Lucie Counties often have polybutylene or galvanized pipes that are past their lifespan. We offer free repiping assessments to determine if your home is a candidate.",
+      "Warning signs include discolored water, low water pressure, frequent pinhole leaks, and visible corrosion on exposed pipes. Homes built before 1990 in Miami-Dade, Broward, Palm Beach, and St. Lucie Counties often have polybutylene or galvanized pipes that are past their lifespan. We offer free repiping assessments to determine if your home is a candidate.",
   },
   {
     question: "Should I choose a tank or tankless water heater for my Florida home?",
@@ -141,7 +141,7 @@ const faqs = [
   {
     question: "Do you offer same-day emergency plumbing service?",
     answer:
-      "Yes, we offer same-day emergency plumbing service throughout Palm Beach, Broward, and St. Lucie Counties. Burst pipes, sewer backups, and major leaks cannot wait — call us anytime and we will dispatch a licensed plumber to your home as quickly as possible. Flight Club members receive priority scheduling with no overtime charges.",
+      "Yes, we offer same-day emergency plumbing service throughout Miami-Dade, Broward, Palm Beach, and St. Lucie Counties. Burst pipes, sewer backups, and major leaks cannot wait — call us anytime and we will dispatch a licensed plumber to your home as quickly as possible. Flight Club members receive priority scheduling with no overtime charges.",
   },
 ];
 
