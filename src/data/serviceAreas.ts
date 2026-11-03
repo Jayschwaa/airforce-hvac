@@ -84,5 +84,20 @@ export const SERVICE_AREAS: ServiceAreas = {
         "Gulf Stream",
       ],
     },
+    {
+      name: "St. Lucie County",
+      cities: [
+        "Port St. Lucie",
+        "Fort Pierce",
+        "Tradition",
+        "St. Lucie West",
+        "Hutchinson Island",
+        "Lakewood Park",
+        "River Park",
+        "White City",
+        "Indian River Estates",
+        "St. Lucie Village",
+      ],
+    },
   ],
 };
