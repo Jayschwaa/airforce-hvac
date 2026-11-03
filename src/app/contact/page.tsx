@@ -16,7 +16,7 @@ import { PHONE, PHONE_HREF, EMAIL } from "@/lib/constants";
 export const metadata: Metadata = {
   title: "Contact Us | Air Force HVAC",
   description:
-    "Get in touch with Air Force HVAC for a free estimate, schedule service, or learn more about our commercial capabilities. Serving Palm Beach & Broward Counties.",
+    "Get in touch with Air Force HVAC for a free estimate, schedule service, or learn more about our commercial capabilities. Serving Palm Beach, Broward & St. Lucie Counties.",
 };
 
 export default function ContactPage() {
@@ -117,7 +117,7 @@ export default function ContactPage() {
                         Service Area
                       </div>
                       <p className="text-sm text-gray-600">
-                        Palm Beach &amp; Broward Counties
+                        Palm Beach, Broward &amp; St. Lucie Counties
                       </p>
                     </div>
                   </div>
