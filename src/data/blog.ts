@@ -41,7 +41,7 @@ export const BLOG_POSTS: BlogPost[] = [
       "## Beware of $199 Duct Cleaning Deals",
       "Discount duct cleaning services advertise low prices but often add hidden charges on-site — like per-foot trunk line fees. They typically use lower-grade equipment and don't include air handler cleaning. Air Force HVAC offers transparent pricing at $95 per vent with free trunk line cleaning and full air handler service included.",
       "## Take the First Step",
-      "If you can't remember the last time your ducts were cleaned — or if you're experiencing any of the signs above — it's time. Call Air Force HVAC at 1-855-291-7007 for a duct cleaning consultation. We serve all of Miami-Dade, Broward, and Palm Beach Counties, 24/7.",
+      "If you can't remember the last time your ducts were cleaned — or if you're experiencing any of the signs above — it's time. Call Air Force HVAC at 1-855-291-7007 for a duct cleaning consultation. We serve all of Miami-Dade, Broward, Palm Beach, and St. Lucie Counties, 24/7.",
     ],
   },
   {
@@ -114,7 +114,7 @@ export const BLOG_POSTS: BlogPost[] = [
     date: "2025-03-01",
     readTime: "5 min read",
     content: [
-      "South Florida's unique combination of hard water, limestone soil, and tropical climate creates plumbing challenges you won't find anywhere else. At Air Force HVAC, our licensed plumbers handle these issues daily across Broward, Miami-Dade, and Palm Beach Counties.",
+      "South Florida's unique combination of hard water, limestone soil, and tropical climate creates plumbing challenges you won't find anywhere else. At Air Force HVAC, our licensed plumbers handle these issues daily across Broward, Miami-Dade, Palm Beach, and St. Lucie Counties.",
       "## 1. Hard Water Damage & Mineral Buildup",
       "South Florida has some of the hardest water in the nation. Over time, calcium and magnesium deposits build up inside pipes, faucets, and water heaters, reducing water pressure and shortening appliance life. Signs include white crusty buildup on faucets, spotty dishes after washing, and reduced water flow. A whole-home water softener can extend your plumbing system's life by years.",
       "## 2. Corroded or Deteriorating Pipes",
@@ -152,7 +152,7 @@ export const BLOG_POSTS: BlogPost[] = [
       "Flickering lights, buzzing outlets, warm switch plates, frequently tripping breakers, or a burning smell near outlets all indicate electrical problems that need immediate professional attention. These aren't DIY projects — electrical work requires a licensed electrician for safety and code compliance.",
       "## LED Lighting Upgrades",
       "Switching to LED lighting throughout your home can reduce lighting energy use by 75%. In South Florida, where lights are on for extended hours, this adds up fast. Plus, LEDs generate less heat, reducing the load on your AC system.",
-      "Need an electrical inspection or upgrade? Air Force HVAC's licensed electricians serve all of Broward, Miami-Dade, and Palm Beach Counties. Call 1-855-291-7007 for a free estimate.",
+      "Need an electrical inspection or upgrade? Air Force HVAC's licensed electricians serve all of Broward, Miami-Dade, Palm Beach, and St. Lucie Counties. Call 1-855-291-7007 for a free estimate.",
     ],
   },
   {
