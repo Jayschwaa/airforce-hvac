@@ -86,7 +86,7 @@ export const BLOG_POSTS: BlogPost[] = [
     readTime: "6 min read",
     content: [
       "South Florida's subtropical climate means your HVAC system works harder than almost anywhere else in the country. With temperatures regularly exceeding 90°F and humidity levels that can make 85°F feel like 100°F, your air conditioning isn't a luxury — it's a lifeline.",
-      "At Air Force HVAC, we've serviced over 5,000 homes annually across Miami-Dade, Broward, and Palm Beach Counties. Here are the maintenance tips our technicians recommend to keep your system running at peak efficiency.",
+      "At Air Force HVAC, we've serviced over 5,000 homes annually across Miami-Dade, Broward, Palm Beach, and St. Lucie Counties. Here are the maintenance tips our technicians recommend to keep your system running at peak efficiency.",
       "## Change Your Air Filter Every 30-60 Days",
       "In South Florida, the combination of humidity, pollen, and dust means your air filter gets dirty faster than in drier climates. A clogged filter forces your system to work harder, increasing energy bills by up to 15%. We recommend checking your filter monthly and replacing it every 30-60 days during peak cooling season (March through November).",
       "## Schedule Bi-Annual Tune-Ups",
