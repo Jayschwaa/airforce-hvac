@@ -27,6 +27,7 @@ export const metadata: Metadata = {
   keywords: [
     "duct cleaning South Florida",
     "duct cleaning Broward",
+    "duct cleaning St. Lucie",
     "air duct cleaning near me",
     "HVAC duct cleaning",
     "vent cleaning",
