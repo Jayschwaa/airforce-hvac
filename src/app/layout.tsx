@@ -35,7 +35,7 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   title: "Air Force HVAC | Your Home, Our Mission | South Florida HVAC",
   description:
-    "Commercial & residential HVAC, ductwork, plumbing, roofing, electrical, and indoor air quality services in Miami-Dade, Broward & Palm Beach Counties. Family owned since 2010 with $40M+ in national sales. 24/7 service. 1-855-291-7007.",
+    "Commercial & residential HVAC, ductwork, plumbing, roofing, electrical, and indoor air quality services in Miami-Dade, Broward, Palm Beach & St. Lucie Counties. Family owned since 2010 with $40M+ in national sales. 24/7 service. 1-855-291-7007.",
   metadataBase: new URL("https://airforceteam.com"),
   alternates: {
     canonical: "/",
@@ -92,6 +92,7 @@ const jsonLd = {
     { "@type": "AdministrativeArea", name: "Miami-Dade County, FL" },
     { "@type": "AdministrativeArea", name: "Palm Beach County, FL" },
     { "@type": "AdministrativeArea", name: "Broward County, FL" },
+    { "@type": "AdministrativeArea", name: "St. Lucie County, FL" },
   ],
   openingHoursSpecification: [
     {
