@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   title:
     "Duct Cleaning Services | Air Force HVAC | South Florida Duct & System Cleaning",
   description:
-    "Professional duct cleaning in South Florida. Full supply & return duct cleaning, air handler coil & blower cleaning, HEPA-filtered equipment. $95 per vent. Serving Miami-Dade, Broward & Palm Beach Counties.",
+    "Professional duct cleaning in South Florida. Full supply & return duct cleaning, air handler coil & blower cleaning, HEPA-filtered equipment. $95 per vent. Serving Miami-Dade, Broward, Palm Beach & St. Lucie Counties.",
   keywords: [
     "duct cleaning South Florida",
     "duct cleaning Broward",
