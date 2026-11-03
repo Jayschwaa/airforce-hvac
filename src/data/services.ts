@@ -192,7 +192,7 @@ export const SERVICES: Service[] = [
     shortDescription:
       "Reliable pipe repair, water heater service, leak detection, drain cleaning, and backflow prevention.",
     longDescription:
-      "Air Force HVAC's licensed plumbing division handles everything from routine drain cleaning to complex pipe repairs and water heater installations. Our technicians use advanced leak detection technology to find hidden problems without tearing up your walls or floors. We service both residential and commercial properties across Broward and Palm Beach counties, offering upfront pricing and same-day emergency service. As a Flight Club member, you receive priority plumbing service with no overtime charges.",
+      "Air Force HVAC's licensed plumbing division handles everything from routine drain cleaning to complex pipe repairs and water heater installations. Our technicians use advanced leak detection technology to find hidden problems without tearing up your walls or floors. We service both residential and commercial properties across Broward, Palm Beach, and St. Lucie counties, offering upfront pricing and same-day emergency service. As a Flight Club member, you receive priority plumbing service with no overtime charges.",
     icon: "Droplets",
     features: [
       {
@@ -302,7 +302,7 @@ export const SERVICES: Service[] = [
     shortDescription:
       "Panel upgrades, wiring, outlet installation, lighting, and generator service for homes and businesses.",
     longDescription:
-      "Air Force HVAC's electrical division provides safe, code-compliant electrical services for residential and commercial properties throughout Broward and Palm Beach counties. From panel upgrades that support modern AC systems to whole-home generator installations that keep you powered through hurricane season, our licensed electricians handle projects of every scale. We also coordinate electrical work with HVAC installations to ensure your system has the proper circuits, disconnects, and wiring it needs to run efficiently.",
+      "Air Force HVAC's electrical division provides safe, code-compliant electrical services for residential and commercial properties throughout Broward, Palm Beach, and St. Lucie counties. From panel upgrades that support modern AC systems to whole-home generator installations that keep you powered through hurricane season, our licensed electricians handle projects of every scale. We also coordinate electrical work with HVAC installations to ensure your system has the proper circuits, disconnects, and wiring it needs to run efficiently.",
     icon: "Zap",
     features: [
       {
