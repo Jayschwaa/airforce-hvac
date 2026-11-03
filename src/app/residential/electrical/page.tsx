@@ -19,7 +19,7 @@ import { PHONE, PHONE_HREF } from "@/lib/constants";
 export const metadata: Metadata = {
   title: "Residential Electrical Services | Panel Upgrades & Wiring | Air Force HVAC",
   description:
-    "Licensed residential electricians in South Florida. Panel upgrades, wiring, generator installation, surge protection, and more. Serving Palm Beach, Broward & St. Lucie Counties.",
+    "Licensed residential electricians in South Florida. Panel upgrades, wiring, generator installation, surge protection, and more. Serving Miami-Dade, Broward, Palm Beach & St. Lucie Counties.",
 };
 
 const services = [
@@ -76,7 +76,7 @@ const faqs = [
   {
     question: "Do I need a permit for electrical work in South Florida?",
     answer:
-      "Yes, virtually all electrical work beyond simple fixture swaps requires a permit in Palm Beach, Broward, and St. Lucie Counties. This includes panel upgrades, new circuit installation, rewiring, and generator hookups. Air Force HVAC pulls all necessary permits and schedules inspections as part of our service — you never have to visit a permitting office.",
+      "Yes, virtually all electrical work beyond simple fixture swaps requires a permit in Miami-Dade, Broward, Palm Beach, and St. Lucie Counties. This includes panel upgrades, new circuit installation, rewiring, and generator hookups. Air Force HVAC pulls all necessary permits and schedules inspections as part of our service — you never have to visit a permitting office.",
   },
   {
     question: "What size whole-home generator do I need for hurricane season?",
