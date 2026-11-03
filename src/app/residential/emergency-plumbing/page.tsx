@@ -18,7 +18,7 @@ import { PHONE, PHONE_HREF } from "@/lib/constants";
 export const metadata: Metadata = {
   title: "24/7 Emergency Plumbing | South Florida | Air Force HVAC",
   description:
-    "Burst pipe, sewage backup, or no hot water? Air Force HVAC provides true 24/7 emergency plumbing across Miami-Dade, Broward & Palm Beach Counties with no overtime charges for Flight Club members.",
+    "Burst pipe, sewage backup, or no hot water? Air Force HVAC provides true 24/7 emergency plumbing across Miami-Dade, Broward, Palm Beach & St. Lucie Counties with no overtime charges for Flight Club members.",
 };
 
 const emergencies = [
@@ -107,7 +107,7 @@ export default function EmergencyPlumbingPage() {
           <p className="mt-6 max-w-2xl text-lg text-gray-600">
             Burst pipes and sewage backups don&apos;t keep business hours, and
             neither do we. Our licensed plumbers are available around the
-            clock across Miami-Dade, Broward, and Palm Beach Counties.
+            clock across Miami-Dade, Broward, Palm Beach, and St. Lucie Counties.
           </p>
           <div className="mt-8 flex flex-col gap-4 sm:flex-row">
             <Button href={PHONE_HREF} size="lg">
