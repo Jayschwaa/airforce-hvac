@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   title:
     "Air Force HVAC | Your Home, Our Mission | South Florida HVAC, Plumbing & Electrical",
   description:
-    "South Florida's trusted partner for commercial & residential HVAC, ductwork, plumbing, roofing, and electrical services. $40M+ in national sales. Family owned since 2010. Serving Broward, Palm Beach & St. Lucie Counties.",
+    "South Florida's trusted partner for commercial & residential HVAC, ductwork, plumbing, roofing, and electrical services. $40M+ in national sales. Family owned since 2010. Serving Miami-Dade, Broward, Palm Beach & St. Lucie Counties.",
   keywords: [
     "HVAC South Florida",
     "commercial HVAC",
@@ -23,6 +23,7 @@ export const metadata: Metadata = {
     "plumbing services",
     "roofing repair",
     "electrical services",
+    "Miami-Dade County HVAC",
     "Broward County HVAC",
     "Palm Beach HVAC",
     "St. Lucie County HVAC",
