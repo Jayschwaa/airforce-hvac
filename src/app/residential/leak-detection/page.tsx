@@ -18,7 +18,7 @@ import { PHONE, PHONE_HREF } from "@/lib/constants";
 export const metadata: Metadata = {
   title: "Leak Detection Services | South Florida | Air Force HVAC",
   description:
-    "Pinpoint hidden leaks without tearing up walls or floors. Air Force HVAC uses thermal imaging, acoustic sensors, and camera diagnostics across Miami-Dade, Broward & Palm Beach Counties.",
+    "Pinpoint hidden leaks without tearing up walls or floors. Air Force HVAC uses thermal imaging, acoustic sensors, and camera diagnostics across Miami-Dade, Broward, Palm Beach & St. Lucie Counties.",
 };
 
 const tools = [
