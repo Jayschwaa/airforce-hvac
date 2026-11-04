@@ -12,6 +12,11 @@ export const CONTACT_FORM_RECIPIENTS = [
   "summer-rae@airforceteam.com",
   "milinda@airforceteam.com",
 ] as const;
+// Careers applications are routed by position type.
+export const CAREERS_RECIPIENTS = {
+  commercial: "summer-rae@airforceteam.com",
+  residential: "milinda@airforceteam.com",
+} as const;
 export const TAGLINE = "Your Home, Our Mission" as const;
 export const EST_YEAR = 2010 as const;
 export const SERVICE_AREA = "Miami-Dade, Broward, Palm Beach & St. Lucie Counties, FL" as const;
@@ -119,7 +124,7 @@ export const NAV_ITEMS: NavItem[] = [
       { label: "Photos", href: "/photos" },
     ],
   },
-  { label: "Careers", href: "https://air-force-team.careerplug.com/" },
+  { label: "Careers", href: "/careers" },
 ];
 
 // ── Social Links ─────────────────────────────────────────────
