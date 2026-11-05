@@ -35,7 +35,7 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   title: "Air Force HVAC | Your Home, Our Mission | South Florida HVAC",
   description:
-    "Commercial & residential HVAC, ductwork, plumbing, roofing, electrical, and indoor air quality services in Miami-Dade, Broward, Palm Beach & St. Lucie Counties. Family owned since 2010 with $40M+ in national sales. 24/7 service. 1-855-291-7007.",
+    "Commercial & residential HVAC, ductwork, plumbing, roofing, electrical, and indoor air quality services in Miami-Dade, Broward, Palm Beach & St. Lucie Counties. Family owned since 2010 with $40M+ in national sales. 24/7 service. 1-754-225-9220.",
   metadataBase: new URL("https://airforceteam.com"),
   alternates: {
     canonical: "/",
@@ -47,13 +47,13 @@ export const metadata: Metadata = {
     siteName: "Air Force HVAC",
     title: "Air Force HVAC | Your Home, Our Mission",
     description:
-      "South Florida's trusted HVAC, plumbing, electrical & roofing company. $40M+ in national sales. 24/7 emergency service. 1-855-291-7007.",
+      "South Florida's trusted HVAC, plumbing, electrical & roofing company. $40M+ in national sales. 24/7 emergency service. 1-754-225-9220.",
   },
   twitter: {
     card: "summary_large_image",
     title: "Air Force HVAC | Your Home, Our Mission",
     description:
-      "South Florida's trusted HVAC, plumbing, electrical & roofing company. 24/7 service. 1-855-291-7007.",
+      "South Florida's trusted HVAC, plumbing, electrical & roofing company. 24/7 service. 1-754-225-9220.",
   },
   robots: {
     index: true,
@@ -74,7 +74,7 @@ const jsonLd = {
   name: "Air Force HVAC",
   alternateName: "Air Force Team",
   url: "https://airforceteam.com",
-  telephone: "+18552917007",
+  telephone: "+17542259220",
   email: "service@airforceteam.com",
   foundingDate: "2010",
   description:
