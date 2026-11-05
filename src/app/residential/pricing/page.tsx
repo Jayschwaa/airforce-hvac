@@ -94,7 +94,7 @@ const pricingSchema = {
   provider: {
     "@type": "HVACBusiness",
     name: "Air Force HVAC",
-    telephone: "+18552917007",
+    telephone: "+17542259220",
   },
   areaServed: "South Florida",
   hasOfferCatalog: {
@@ -174,7 +174,7 @@ export default function PricingPage() {
               </div>
             </div>
             <a
-              href="tel:+18552917007"
+              href="tel:+17542259220"
               className="inline-flex items-center gap-2 rounded-lg bg-cyan-500 px-6 py-3 font-rubik font-semibold text-white transition-all hover:bg-cyan-600 shrink-0"
             >
               <Phone className="h-4 w-4" />
@@ -342,11 +342,11 @@ export default function PricingPage() {
 
               <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-3">
                 <a
-                  href="tel:+18552917007"
+                  href="tel:+17542259220"
                   className="inline-flex items-center gap-2 rounded-lg bg-cyan-500 px-8 py-4 font-rubik font-semibold text-white transition-all hover:bg-cyan-600"
                 >
                   <Phone className="h-5 w-5" />
-                  Call to Book — 1-855-291-7007
+                  Call to Book — 1-754-225-9220
                 </a>
                 <a
                   href="sms:+17543499247"
@@ -426,11 +426,11 @@ export default function PricingPage() {
             </p>
             <div className="mt-6 flex flex-col sm:flex-row items-center justify-center gap-3">
               <a
-                href="tel:+18552917007"
+                href="tel:+17542259220"
                 className="inline-flex items-center gap-2 rounded-lg bg-white px-8 py-4 font-rubik font-bold text-cyan-600 transition-all hover:bg-white/90"
               >
                 <Phone className="h-5 w-5" />
-                1-855-291-7007
+                1-754-225-9220
               </a>
               <a
                 href="sms:+17543499247"
