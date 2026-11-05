@@ -207,9 +207,9 @@ export default async function BlogPostPage({
                     ? "Residential Services"
                     : "Commercial Services"}
                 </Button>
-                <Button href="tel:+18552917007" variant="outline" size="md">
+                <Button href="tel:+17542259220" variant="outline" size="md">
                   <Phone className="h-4 w-4 mr-1" />
-                  1-855-291-7007
+                  1-754-225-9220
                 </Button>
               </div>
             </div>
