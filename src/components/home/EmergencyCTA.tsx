@@ -23,10 +23,10 @@ export function EmergencyCTA() {
           <div className="mt-6 flex items-center justify-center gap-3">
             <Phone className="h-6 w-6 text-white" />
             <a
-              href="tel:+18552917007"
+              href="tel:+17542259220"
               className="font-rubik text-3xl font-bold text-white hover:text-white/80 transition-colors md:text-4xl"
             >
-              1-855-291-7007
+              1-754-225-9220
             </a>
           </div>
 
@@ -34,7 +34,7 @@ export function EmergencyCTA() {
             <Button
               variant="secondary"
               size="lg"
-              href="tel:+18552917007"
+              href="tel:+17542259220"
             >
               Call Now
             </Button>
