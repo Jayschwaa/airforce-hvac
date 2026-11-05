@@ -82,7 +82,7 @@ export function HeroSection() {
 
               {/* CTAs */}
               <div className="mt-8 flex flex-col gap-4 sm:flex-row">
-                <Button variant="primary" size="lg" href="tel:+18552917007">
+                <Button variant="primary" size="lg" href="tel:+17542259220">
                   <Phone className="h-5 w-5 mr-2" />
                   Call Now
                 </Button>
