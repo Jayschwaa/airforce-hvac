@@ -114,7 +114,7 @@ const serviceSchema = {
   provider: {
     "@type": "HVACBusiness",
     name: "Air Force HVAC",
-    telephone: "+18552917007",
+    telephone: "+17542259220",
     address: {
       "@type": "PostalAddress",
       streetAddress: "4350 NW 19th Avenue, Unit E",
@@ -186,11 +186,11 @@ export default function DuctCleaningPage() {
             </p>
             <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-3">
               <a
-                href="tel:+18552917007"
+                href="tel:+17542259220"
                 className="inline-flex items-center gap-2 rounded-lg bg-cyan-500 px-8 py-4 font-rubik font-semibold text-white transition-all hover:bg-cyan-600"
               >
                 <Phone className="h-5 w-5" />
-                Call 1-855-291-7007
+                Call 1-754-225-9220
               </a>
               <a
                 href="sms:+17543499247"
@@ -458,11 +458,11 @@ export default function DuctCleaningPage() {
             </p>
             <div className="mt-6 flex flex-col sm:flex-row items-center justify-center gap-3">
               <a
-                href="tel:+18552917007"
+                href="tel:+17542259220"
                 className="inline-flex items-center gap-2 rounded-lg bg-white px-8 py-4 font-rubik font-bold text-cyan-600 transition-all hover:bg-white/90"
               >
                 <Phone className="h-5 w-5" />
-                1-855-291-7007
+                1-754-225-9220
               </a>
               <a
                 href="sms:+17543499247"
