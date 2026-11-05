@@ -102,11 +102,11 @@ export default function PhotosPage() {
 
           <div className="mt-12 text-center">
             <a
-              href="tel:+18552917007"
+              href="tel:+17542259220"
               className="inline-flex items-center gap-2 rounded-lg bg-cyan-500 px-8 py-4 font-rubik font-semibold text-white transition-all hover:bg-cyan-600"
             >
               <Phone className="h-5 w-5" />
-              Call 1-855-291-7007
+              Call 1-754-225-9220
             </a>
           </div>
         </Container>
