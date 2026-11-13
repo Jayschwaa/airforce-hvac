@@ -35,7 +35,7 @@ export default function WelcomeAboardPage() {
         <Container className="text-center">
           <span className="inline-flex items-center gap-2 rounded-full bg-cyan-500 px-4 py-1.5 text-xs font-bold uppercase tracking-wider text-white">
             <Gift className="h-4 w-4" />
-            Exclusive for United Restoration Customers Only
+            A Special Thank You, Just for You!
           </span>
           <h1 className="mt-6 font-rubik text-4xl font-bold text-navy-500 md:text-5xl lg:text-6xl">
             Your Flight Club Membership Is On Us
