@@ -11,6 +11,7 @@ export const CONTACT_FORM_RECIPIENTS = [
   "barbara@airforceteam.com",
   "summer-rae@airforceteam.com",
   "milinda@airforceteam.com",
+  "service@airforceteam.com",
 ] as const;
 // Careers applications are routed by position type.
 export const CAREERS_RECIPIENTS = {
