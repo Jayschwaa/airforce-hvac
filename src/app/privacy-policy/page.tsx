@@ -15,14 +15,16 @@ const POLICY_PHONE = "305-335-6991";
 const POLICY_PHONE_HREF = "tel:+13053356991";
 
 function PolicySection({
+  id,
   title,
   children,
 }: {
+  id?: string;
   title: string;
   children: React.ReactNode;
 }) {
   return (
-    <section className="space-y-4">
+    <section id={id} className="scroll-mt-32 space-y-4">
       <h2 className="font-rubik text-2xl font-bold text-navy-500">{title}</h2>
       {children}
     </section>
@@ -141,7 +143,7 @@ export default function PrivacyPolicyPage() {
               <p>Submitting an inquiry does not automatically confirm an appointment.</p>
             </PolicySection>
 
-            <PolicySection title="Text Messaging (SMS)">
+            <PolicySection id="sms" title="Text Messaging (SMS)">
               <p>
                 If you provide your mobile number and agree to receive text
                 messages, Air Force Team HVAC &amp; Plumbing may send you texts

@@ -141,7 +141,7 @@ export default function BiennialServicePage() {
                 Book Now — 1-754-225-9220
               </a>
               <a
-                href="sms:+17543499247"
+                href="sms:+17542259220"
                 className="inline-flex items-center gap-2 rounded-lg border-2 border-white/30 px-8 py-4 font-rubik font-semibold text-white transition-all hover:bg-white/10"
               >
                 <MessageSquare className="h-5 w-5" />
@@ -272,7 +272,7 @@ export default function BiennialServicePage() {
                 1-754-225-9220
               </a>
               <a
-                href="sms:+17543499247"
+                href="sms:+17542259220"
                 className="inline-flex items-center gap-2 rounded-lg border-2 border-white px-8 py-4 font-rubik font-semibold text-white transition-all hover:bg-white hover:text-cyan-600"
               >
                 <MessageSquare className="h-5 w-5" />

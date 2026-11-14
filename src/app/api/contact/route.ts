@@ -7,6 +7,7 @@ type ContactPayload = {
   serviceType?: unknown;
   serviceCategory?: unknown;
   message?: unknown;
+  smsConsent?: unknown;
 };
 
 function clean(value: unknown, max = 2000): string {
@@ -35,6 +36,8 @@ export async function POST(request: Request) {
   const serviceType = clean(body.serviceType, 100);
   const serviceCategory = clean(body.serviceCategory, 50);
   const message = clean(body.message, 5000);
+  // Only an explicit `true` counts as consent; anything else is treated as no.
+  const smsConsent = body.smsConsent === true;
 
   const emailValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
   // Name plus at least one way to reach them; everything else is optional.
@@ -55,6 +58,12 @@ export async function POST(request: Request) {
     ["Service Type", serviceType || "—"],
     ["Category", serviceCategory || "—"],
     ["Message", message || "—"],
+    [
+      "SMS consent",
+      smsConsent
+        ? `YES - customer-care texts only, checked on website contact form ${new Date().toISOString()}`
+        : "No - do not text this customer",
+    ],
   ];
 
   const res = await fetch("https://api.resend.com/emails", {

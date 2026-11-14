@@ -1,9 +1,10 @@
 "use client";
 
+import Link from "next/link";
 import { useState } from "react";
 import { sendGAEvent } from "@next/third-parties/google";
 import { cn } from "@/lib/utils";
-import { PHONE, PHONE_HREF } from "@/lib/constants";
+import { COMPANY_NAME, PHONE, PHONE_HREF } from "@/lib/constants";
 import { Button } from "./Button";
 
 const SERVICES = [
@@ -22,6 +23,8 @@ type FormData = {
   serviceType: string;
   serviceCategory: "commercial" | "residential";
   message: string;
+  /** Optional, unchecked by default. Customer-care texts only, never marketing. */
+  smsConsent: boolean;
 };
 
 type ContactFormProps = {
@@ -37,6 +40,7 @@ const initialData: FormData = {
   serviceType: "",
   serviceCategory: "residential",
   message: "",
+  smsConsent: false,
 };
 
 export function ContactForm({ className }: ContactFormProps) {
@@ -84,7 +88,7 @@ export function ContactForm({ className }: ContactFormProps) {
     }
   }
 
-  function update(field: keyof FormData, value: string) {
+  function update(field: Exclude<keyof FormData, "smsConsent">, value: string) {
     setData((prev) => ({ ...prev, [field]: value }));
     // Filling in either email or phone satisfies the shared "phone or email" error.
     const cleared = field === "email" && errors.phone === NEED_CONTACT ? "phone" : null;
@@ -233,6 +237,40 @@ export function ContactForm({ className }: ContactFormProps) {
           placeholder="Tell us about your HVAC needs..."
         />
         {errors.message && <p className="mt-1 text-sm text-red-500">{errors.message}</p>}
+      </div>
+
+      {/* Optional SMS consent: unchecked by default, never required to submit. */}
+      <div className="rounded-lg border border-gray-200 bg-gray-50 p-4">
+        <label htmlFor="cf-sms-consent" className="flex cursor-pointer items-start gap-3">
+          <input
+            id="cf-sms-consent"
+            type="checkbox"
+            checked={data.smsConsent}
+            onChange={(e) => setData((prev) => ({ ...prev, smsConsent: e.target.checked }))}
+            className="mt-1 h-4 w-4 shrink-0 accent-cyan-500"
+          />
+          <span className="text-sm text-gray-600">
+            <span className="font-semibold text-navy-500">
+              Text me about my service request{" "}
+              <span className="font-normal text-gray-400">(optional)</span>
+            </span>
+            <br />
+            I agree to receive customer-care text messages from {COMPANY_NAME} (Air Force
+            Team HVAC &amp; Plumbing) at the phone number above, such as appointment
+            confirmations and reminders, technician updates, job status, billing notices
+            and feedback requests. Message frequency varies. Message and data rates may
+            apply. Reply STOP to opt out or HELP for help. Consent is not a condition of
+            purchase, and you can submit this form without checking this box. See our{" "}
+            <Link href="/privacy-policy" className="font-semibold text-cyan-600 underline">
+              Privacy Policy
+            </Link>{" "}
+            and{" "}
+            <Link href="/privacy-policy#sms" className="font-semibold text-cyan-600 underline">
+              SMS Terms
+            </Link>
+            .
+          </span>
+        </label>
       </div>
 
       {sendError && (
