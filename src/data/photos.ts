@@ -23,19 +23,20 @@ const P = "/images/photos";
 export const PHOTOS: Photo[] = [
   // ── Meet the Team ──────────────────────────────────────────
   {
+    src: `${P}/team-duo-front-door.jpg`,
+    width: 1125,
+    height: 2000,
+    title: "Meet the owners, Jason and Daniela",
+    caption:
+      "Jason and Daniela run Air Force HVAC with one simple promise: treat every home like it's our own. When you call us, you get a local team that shows up on time, explains everything and stands behind the work.",
+    category: "team",
+  },
+  {
     src: `${P}/team-arms-crossed.jpg`,
     width: 1125,
     height: 2000,
     title: "Ready for the mission",
     caption: "Our crew, suited up and ready to keep South Florida cool.",
-    category: "team",
-  },
-  {
-    src: `${P}/team-duo-front-door.jpg`,
-    width: 1125,
-    height: 2000,
-    title: "Service with a smile",
-    caption: "Friendly faces at your front door. That's the Air Force way.",
     category: "team",
   },
   {
