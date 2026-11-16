@@ -99,8 +99,14 @@ export function PhotoGallery() {
         </p>
       )}
 
-      {/* Snapshot grid */}
-      <div className="columns-1 gap-6 sm:columns-2 lg:columns-3">
+      {/* Snapshot grid: masonry columns, except Install Day, which uses rows so steps read left to right */}
+      <div
+        className={
+          filter === "install"
+            ? "grid items-start gap-x-6 sm:grid-cols-2 lg:grid-cols-3"
+            : "columns-1 gap-6 sm:columns-2 lg:columns-3"
+        }
+      >
         {photos.map((photo, i) => (
           <motion.div
             key={`${filter}-${photo.src}`}
