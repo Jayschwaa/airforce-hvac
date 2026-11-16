@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import { Container } from "@/components/ui/Container";
+import { PhotoGallery } from "@/components/photos/PhotoGallery";
 import { Phone } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -9,101 +9,48 @@ export const metadata: Metadata = {
     "See photos of Air Force HVAC's work across South Florida — installations, repairs, before & after transformations, and our team in action.",
 };
 
-const photos = [
-  {
-    src: "/images/photos/rooftop-rtu-service.jpg",
-    alt: "Air Force HVAC technician servicing a rooftop RTU unit",
-  },
-  {
-    src: "/images/photos/commercial-ductwork.jpg",
-    alt: "Commercial spiral ductwork installation by Air Force HVAC",
-  },
-  {
-    src: "/images/photos/duct-cleaning-equipment.jpg",
-    alt: "Professional HEPA-filtered duct cleaning equipment in a residential home",
-  },
-  {
-    src: "/images/photos/copper-brazing.jpg",
-    alt: "Air Force HVAC technician brazing copper refrigerant lines on an evaporator coil",
-  },
-  {
-    src: "/images/photos/coil-cleaning-outdoor.jpg",
-    alt: "Evaporator coil pulled for deep acid wash cleaning",
-  },
-  {
-    src: "/images/photos/office-storefront.jpg",
-    alt: "Air Force HVAC office and storefront in Deerfield Beach, Florida",
-  },
-  {
-    src: "/images/photos/tech-duct-cleaning.jpg",
-    alt: "Air Force HVAC technician with HEPA backpack vacuum performing duct cleaning",
-  },
-  {
-    src: "/images/photos/team-service-van.jpg",
-    alt: "Air Force HVAC team with fully stocked service van ready for a job",
-  },
-  {
-    src: "/images/photos/tech-at-door.jpg",
-    alt: "Air Force HVAC technician arriving at customer front door with shoe covers",
-  },
-  {
-    src: "/images/photos/warehouse-project.jpg",
-    alt: "Large commercial warehouse HVAC project by Air Force HVAC",
-  },
-  {
-    src: "/images/photos/rooftop-ocean-view.jpg",
-    alt: "Air Force HVAC technician on rooftop catwalk with ocean view servicing commercial HVAC units",
-  },
-  {
-    src: "/images/photos/blower-inspection.jpg",
-    alt: "Air Force HVAC team inspecting inside a large commercial blower unit",
-  },
-  {
-    src: "/images/photos/hvac-unit-service.jpg",
-    alt: "Air Force HVAC technicians servicing a residential outdoor condenser unit",
-  },
-];
-
 export default function PhotosPage() {
   return (
     <>
       {/* Hero */}
-      <section className="bg-gradient-to-br from-white via-cyan-50/40 to-white py-16">
+      <section className="relative overflow-hidden bg-gradient-to-br from-white via-cyan-50/60 to-white py-16 md:py-20">
+        <div
+          aria-hidden
+          className="pointer-events-none absolute -right-24 -top-24 h-72 w-72 rounded-full bg-cyan-200/40 blur-3xl"
+        />
+        <div
+          aria-hidden
+          className="pointer-events-none absolute -bottom-24 -left-24 h-72 w-72 rounded-full bg-cyan-100/60 blur-3xl"
+        />
         <Container>
-          <div className="text-center">
-            <h1 className="font-rubik text-4xl font-bold text-navy-500 md:text-5xl">
+          <div className="relative text-center">
+            <span className="inline-block rounded-full bg-cyan-100 px-4 py-1.5 font-rubik text-sm font-semibold text-cyan-700">
+              📸 Behind the scenes
+            </span>
+            <h1 className="mt-4 font-rubik text-4xl font-bold text-navy-500 md:text-5xl">
               Photo Gallery
             </h1>
+            <p className="mx-auto mt-4 max-w-2xl text-lg text-gray-600">
+              Meet the crew, follow a real install from start to finish, and see the work we do
+              in homes and businesses across South Florida. Tap any photo to see it up close.
+            </p>
           </div>
         </Container>
       </section>
 
-      {/* Photo Grid */}
-      <section className="py-16 bg-white">
+      {/* Gallery */}
+      <section className="bg-white py-16">
         <Container>
-          <div className="columns-1 gap-4 sm:columns-2 lg:columns-3">
-            {photos.map((photo) => (
-              <div
-                key={photo.src}
-                className="mb-4 break-inside-avoid overflow-hidden rounded-xl shadow-sm transition-all hover:shadow-lg"
-              >
-                <div className="relative aspect-[3/4]">
-                  <Image
-                    src={photo.src}
-                    alt={photo.alt}
-                    fill
-                    className="object-cover"
-                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                  />
-                </div>
-              </div>
-            ))}
-          </div>
+          <PhotoGallery />
 
-          <div className="mt-12 text-center">
+          <div className="mt-16 rounded-3xl bg-navy-500 px-6 py-10 text-center">
+            <h2 className="font-rubik text-2xl font-bold text-white md:text-3xl">
+              Want to be our next success story?
+            </h2>
+            <p className="mt-2 text-white/80">Our team is ready when you are.</p>
             <a
               href="tel:+17542259220"
-              className="inline-flex items-center gap-2 rounded-lg bg-cyan-500 px-8 py-4 font-rubik font-semibold text-white transition-all hover:bg-cyan-600"
+              className="mt-6 inline-flex items-center gap-2 rounded-lg bg-cyan-500 px-8 py-4 font-rubik font-semibold text-white transition-all hover:bg-cyan-600"
             >
               <Phone className="h-5 w-5" />
               Call 1-754-225-9220
