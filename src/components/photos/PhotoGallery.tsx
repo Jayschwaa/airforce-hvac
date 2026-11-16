@@ -161,7 +161,6 @@ export function PhotoGallery() {
               <figcaption className="mt-4 max-w-2xl text-center text-white">
                 <span className="text-xs font-semibold uppercase tracking-wider text-cyan-300">
                   {categoryLabel[open.category]}
-                  {open.step !== undefined && ` · Step ${open.step}`}
                   {` · ${openIndex + 1} of ${photos.length}`}
                 </span>
                 <span className="mt-1 block font-rubik text-2xl font-bold">{open.title}</span>
