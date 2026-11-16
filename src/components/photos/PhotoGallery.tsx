@@ -9,17 +9,6 @@ import { PHOTO_CATEGORIES, PHOTOS, type PhotoCategory } from "@/data/photos";
 
 type Filter = PhotoCategory | "all";
 
-// A slight, repeating tilt gives the grid a scattered-snapshot feel; cards straighten on hover.
-// Full class names are spelled out so Tailwind can find them.
-const TILTS = [
-  "motion-safe:-rotate-1",
-  "motion-safe:rotate-1",
-  "motion-safe:rotate-0",
-  "motion-safe:rotate-2",
-  "motion-safe:-rotate-2",
-  "motion-safe:rotate-1",
-];
-
 const categoryLabel = Object.fromEntries(
   PHOTO_CATEGORIES.map((c) => [c.id, `${c.emoji} ${c.label}`]),
 ) as Record<PhotoCategory, string>;
@@ -95,7 +84,7 @@ export function PhotoGallery() {
 
       {filter === "install" && (
         <p className="mx-auto -mt-4 mb-10 max-w-xl text-center text-gray-600">
-          Follow a real system replacement from delivery to done. The numbers show the order.
+          Follow a real system replacement from delivery to done, in order.
         </p>
       )}
 
@@ -119,12 +108,7 @@ export function PhotoGallery() {
             <button
               type="button"
               onClick={() => setOpenIndex(i)}
-              className={cn(
-                "group block w-full rounded-2xl bg-white p-3 pb-4 text-left shadow-md ring-1 ring-gray-100 transition-all duration-300",
-                "hover:-translate-y-1 hover:shadow-xl focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-cyan-300",
-                "motion-safe:hover:rotate-0 motion-safe:focus-visible:rotate-0",
-                TILTS[i % TILTS.length],
-              )}
+              className="block w-full rounded-2xl bg-white p-3 pb-4 text-left shadow-md ring-1 ring-gray-100 transition-shadow duration-300 hover:shadow-xl focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-cyan-300"
             >
               <div className="relative overflow-hidden rounded-xl">
                 <Image
@@ -133,16 +117,11 @@ export function PhotoGallery() {
                   width={photo.width}
                   height={photo.height}
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                  className="h-auto w-full transition-transform duration-500 group-hover:scale-105"
+                  className="h-auto w-full"
                 />
                 <span className="absolute left-3 top-3 rounded-full bg-white/90 px-3 py-1 font-rubik text-xs font-semibold text-navy-500 shadow-sm backdrop-blur">
                   {categoryLabel[photo.category]}
                 </span>
-                {photo.step !== undefined && (
-                  <span className="absolute right-3 top-3 flex h-10 w-10 items-center justify-center rounded-full bg-cyan-500 font-rubik text-sm font-bold text-white shadow-md ring-4 ring-white/70">
-                    {photo.step}
-                  </span>
-                )}
               </div>
               <h2 className="mt-4 px-1 font-rubik text-lg font-bold text-navy-500">
                 {photo.title}
