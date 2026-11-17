@@ -142,16 +142,7 @@ export default function FlightClubTermsPage() {
               </p>
             </TermsSection>
 
-            <TermsSection title="7. Gifted memberships">
-              <p>
-                Gifted first-year membership: $0 due; $279 value. Listed benefits apply during the
-                stated term. If canceled, no refund, cash payment, or monetary compensation is due
-                for the gift or its unused portion. Renewal is $279 annually after the gifted year.
-                Your authorization is required before any renewal charge.
-              </p>
-            </TermsSection>
-
-            <TermsSection title="8. Your right to cancel within 3 business days">
+            <TermsSection title="7. Your right to cancel within 3 business days">
               <p>
                 You may cancel this agreement within 3 business days of the date you accepted it.
                 If you cancel, your payment will be refunded within 14 business days of our receipt
