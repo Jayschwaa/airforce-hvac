@@ -56,6 +56,7 @@ const companyLinks = [
   { label: "Financing", href: "/financing" },
   { label: "Contact", href: "/contact" },
   { label: "Privacy Policy", href: "/privacy-policy" },
+  { label: "Flight Club Terms", href: "/flight-club-terms" },
 ];
 
 export function Footer() {

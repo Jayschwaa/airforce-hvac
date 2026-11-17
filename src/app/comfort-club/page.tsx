@@ -189,6 +189,14 @@ export default function ComfortClubPage() {
               );
             })}
           </div>
+          <p className="mt-8 text-center text-sm">
+            <Link
+              href="/flight-club-terms"
+              className="font-semibold text-cyan-600 underline hover:text-cyan-500 transition-colors"
+            >
+              View Flight Club terms &amp; conditions
+            </Link>
+          </p>
         </Container>
       </section>
 
