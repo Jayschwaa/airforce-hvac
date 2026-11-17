@@ -21,7 +21,7 @@ import { PHONE, PHONE_HREF } from "@/lib/constants";
 export const metadata: Metadata = {
   title: "Flight Club Membership | Air Force HVAC",
   description:
-    "Join the Air Force HVAC Flight Club for priority service, seasonal tune-ups, and exclusive discounts starting at just $30/month.",
+    "Join the Air Force HVAC Flight Club for priority service, seasonal tune-ups, and exclusive discounts for just $279 a year.",
 };
 
 const TUNE_UP_ITEMS = [
@@ -116,7 +116,7 @@ export default function ComfortClubPage() {
           </h1>
           <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-gray-600 md:text-xl">
             Priority service, seasonal tune-ups, and exclusive discounts —
-            starting at just $30/month.
+            for just $279 a year.
           </p>
         </Container>
       </section>
@@ -129,23 +129,13 @@ export default function ComfortClubPage() {
             heading="Simple, Transparent Pricing"
             centered
           />
-          <div className="mx-auto mt-12 grid max-w-3xl gap-8 md:grid-cols-2">
+          <div className="mx-auto mt-12 grid max-w-md gap-8">
             {COMFORT_CLUB_PLANS.map((plan) => {
-              const isAnnual = plan.interval === "year";
               return (
                 <Card
                   key={plan.name}
-                  className={
-                    isAnnual
-                      ? "relative border-2 border-cyan-500 shadow-lg shadow-cyan-500/10"
-                      : ""
-                  }
+                  className="relative border-2 border-cyan-500 shadow-lg shadow-cyan-500/10"
                 >
-                  {isAnnual && (
-                    <div className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-cyan-500 px-4 py-1 text-xs font-bold uppercase tracking-wider text-white">
-                      Best Value
-                    </div>
-                  )}
                   <div className="p-8">
                     <h3 className="font-rubik text-xl font-bold text-navy-500">
                       {plan.name} Plan

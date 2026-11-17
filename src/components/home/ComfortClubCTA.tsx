@@ -2,11 +2,12 @@ import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
 import { CheckCircle2, Phone } from "lucide-react";
 
+// Keep in sync with the Flight Club terms at /flight-club-terms.
 const benefits = [
-  "Member-only pricing on all services",
-  "Priority scheduling — skip the line",
-  "Annual AC tune-up included",
-  "Discounted pricing on all services",
+  "Two 29-point tune-ups per year",
+  "Priority scheduling ahead of non-members",
+  "15% off all repairs",
+  "$500 off equipment replacement",
 ];
 
 export function ComfortClubCTA() {
@@ -20,7 +21,7 @@ export function ComfortClubCTA() {
               Join the Flight Club
             </h2>
             <p className="mt-2 text-lg text-gray-600">
-              $30/month or $300/year
+              Just $279 a year
             </p>
 
             <ul className="mt-6 space-y-3">
@@ -44,34 +45,18 @@ export function ComfortClubCTA() {
             </div>
           </div>
 
-          {/* Right badges */}
-          <div className="flex shrink-0 items-center gap-6">
-            {/* Monthly */}
+          {/* Right badge */}
+          <div className="flex shrink-0 items-center">
             <div className="relative flex h-40 w-40 items-center justify-center rounded-full border-4 border-cyan-300/40 bg-white shadow-lg">
               <div className="text-center">
                 <span className="block font-rubik text-4xl font-bold text-cyan-500">
-                  $30
-                </span>
-                <span className="text-sm font-semibold text-gray-500">
-                  /month
-                </span>
-              </div>
-              <div className="absolute -inset-3 rounded-full border-2 border-dashed border-cyan-200" />
-            </div>
-            {/* Annual */}
-            <div className="relative flex h-40 w-40 items-center justify-center rounded-full border-4 border-emerald-300/40 bg-white shadow-lg">
-              <div className="text-center">
-                <span className="block font-rubik text-4xl font-bold text-emerald-500">
-                  $300
+                  $279
                 </span>
                 <span className="text-sm font-semibold text-gray-500">
                   /year
                 </span>
-                <span className="block text-xs font-bold text-emerald-600 mt-1">
-                  Save $60!
-                </span>
               </div>
-              <div className="absolute -inset-3 rounded-full border-2 border-dashed border-emerald-200" />
+              <div className="absolute -inset-3 rounded-full border-2 border-dashed border-cyan-200" />
             </div>
           </div>
         </div>

@@ -215,7 +215,7 @@ export default function ResidentialPage() {
             Join the Flight Club
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-lg text-white/80">
-            Starting at just $30/mo, get priority scheduling, annual tune-ups,
+            For just $279 a year, get priority scheduling, two tune-ups a year,
             and exclusive discounts on repairs.
           </p>
           <div className="mt-8">

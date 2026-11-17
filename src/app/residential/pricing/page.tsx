@@ -168,7 +168,7 @@ export default function PricingPage() {
                   Flight Club Members Save on Every Service
                 </p>
                 <p className="text-white/70 text-sm">
-                  Starting at just $30/month — member pricing shown in green
+                  Just $279 a year — member pricing shown in green
                   below
                 </p>
               </div>

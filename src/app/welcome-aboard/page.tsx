@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { Check, Gift } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { Card } from "@/components/ui/Card";
@@ -87,6 +88,14 @@ export default function WelcomeAboardPage() {
                 membership and book your first tune-up.
               </p>
               <FreeMembershipForm />
+              <p className="mt-4 text-center text-sm">
+                <Link
+                  href="/flight-club-terms"
+                  className="font-semibold text-cyan-600 underline hover:text-cyan-500 transition-colors"
+                >
+                  View Flight Club terms &amp; conditions
+                </Link>
+              </p>
             </Card>
           </div>
         </Container>
