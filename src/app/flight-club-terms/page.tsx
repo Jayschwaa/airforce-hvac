@@ -114,7 +114,7 @@ export default function FlightClubTermsPage() {
             <TermsSection title="4. Price & payment">
               <TermsList
                 items={[
-                  "$279 per year is the cash price. A 3% surcharge applies to credit card payments.",
+                  "$279 per year is the cash price. A 3% surcharge applies to credit card payments. No surcharge for debit cards, cash, check, ACH or Zelle.",
                   "Service is not provided on past-due accounts.",
                 ]}
               />
@@ -142,13 +142,22 @@ export default function FlightClubTermsPage() {
               </p>
             </TermsSection>
 
-            <TermsSection title="7. Your right to cancel within 3 business days">
+            <TermsSection title="7. Gifted memberships">
+              <p>
+                Gifted first-year membership: $0 due; $279 value. Listed benefits apply during the
+                stated term. If canceled, no refund, cash payment, or monetary compensation is due
+                for the gift or its unused portion. Renewal is $279 annually after the gifted year.
+                Customer authorization is required before any renewal charge.
+              </p>
+            </TermsSection>
+
+            <TermsSection title="8. Your right to cancel within 3 business days">
               <p>
                 You may cancel this agreement within 3 business days of the date you accepted it.
                 If you cancel, your payment will be refunded within 14 business days of our receipt
                 of your notice, less the value of any services already performed. To cancel, email{" "}
                 {emailLink} within 3 business days, or mail or deliver a signed and dated written
-                notice, postmarked within 72 hours, to: Air Force HVAC, Inc., 4350 NW 19th Avenue,
+                notice, postmarked within 3 business days, to: Air Force HVAC, Inc., 4350 NW 19th Avenue,
                 Unit E, Deerfield Beach, FL 33064.
               </p>
             </TermsSection>
